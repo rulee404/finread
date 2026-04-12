@@ -1,0 +1,126 @@
+{
+  "ticker": "HOOD",
+  "name": "Robinhood Markets, Inc.",
+  "exchange": "NASDAQ",
+  "sector": "金融科技 / 零售经纪",
+  "tagline": "Financial SuperApp — 从经纪App到全方位金融服务公司的转型",
+  "iconLetter": "H",
+  "iconGradient": "linear-gradient(135deg, #00c805 0%, #00a804 100%)",
+  "tags": [
+    { "label": "FY2025 Revenue", "value": "$3.96B" },
+    { "label": "Adj EBITDA", "value": "$1.76B" },
+    { "label": "Funded Customers", "value": "25.2M" },
+    { "label": "Gold 会员", "value": "3.2M" },
+    { "label": "Rule of 40", "value": "102" }
+  ],
+  "kpis": [
+    { "label": "FY 总收入", "value": "$3.96B", "change": "+58% Y/Y", "direction": "up" },
+    { "label": "FY Adj EBITDA", "value": "$1.76B", "change": "+157% Y/Y", "direction": "up" },
+    { "label": "Q4 收入", "value": "$1.01B", "change": "+115% Y/Y", "direction": "up" },
+    { "label": "Q4 GAAP EPS", "value": "$1.01", "note": "Diluted" },
+    { "label": "平台总资产", "value": "$193B", "change": "+88% Y/Y", "direction": "up" },
+    { "label": "净存款 (FY)", "value": "$56B", "change": "+48% Y/Y", "direction": "up" },
+    { "label": "Gold 会员", "value": "3.2M", "change": "+86% Y/Y", "direction": "up" },
+    { "label": "ARPU", "value": "$164", "change": "+65% Y/Y", "direction": "up" }
+  ],
+  "summaries": [
+    {
+      "title": "I. 收入结构",
+      "content": "Transaction Revenue $1.56B (+112%) — 期权 $545M、加密 $509M、股票 $137M、Event Contracts $126M\nNet Interest Revenue $1.72B (+25%) — 保证金贷款、Cash Sweep、信用卡利息\nOther Revenue $682M (+74%) — Gold 订阅 + Robinhood 代理转账"
+    },
+    {
+      "title": "II. 产品亮点",
+      "content": "预测市场：Rothera JV · 事件合约交易量快速增长 · FY $126M收入\nRobinhood Gold：320万会员(+86%) · 3%返现信用卡 · 高收益储蓄 · IRA匹配\nCortex (AI)：AI投资工具 · 三阶段AI战略(辅助→代理→自主)\nRobinhood Chain：Layer-2区块链 · 股票代币化 · 欧洲Stock Tokens"
+    },
+    {
+      "title": "III. 费用与指引",
+      "content": "FY2025 OpEx $2.38B (+22%) · SBC $618M\n2026 指引：费用增长 +5%(存量) +3%(并购) +10%(新计划) = 总约+18%\n管理层强调：Rule of 40 达到 102，收入增长远超费用增长"
+    },
+    {
+      "title": "IV. 国际化",
+      "content": "英国：完整经纪牌照 · 加密+股票\n欧洲：MiFID通行证 · Stock Tokens(代币化股票) · 立陶宛实体\n亚太：新加坡MAS原则性批准 · 日本/韩国/澳洲路线图"
+    },
+    {
+      "title": "V. 资本配置",
+      "content": "FY2025 回购 $1.5B 股票 + $333M 并购(Bitstamp等) + 有机增长投资\n账上现金充裕 · 管理层倾向「攻势型」资本部署"
+    },
+    {
+      "title": "VI. 风险关注",
+      "content": "① PFOF监管不确定性(占收入大头) ② 加密交易收入波动性 ③ 预测市场法律挑战\n④ 国际扩张执行风险 ⑤ SBC仍较高($618M) ⑥ 竞争加剧(券商+加密平台)"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Vlad Tenev",
+      "role": "CEO",
+      "text": "Robinhood is transforming from a brokerage app into a full-scale financial services company. Every product we've launched—Gold Card, prediction markets, banking—reinforces the flywheel. We're not a single-product company anymore.",
+      "textCn": "Robinhood正在从一个经纪App转型为全方位金融服务公司。我们推出的每一个产品——Gold Card、预测市场、银行——都在强化飞轮。我们不再是一家单一产品公司。",
+      "color": "green"
+    },
+    {
+      "speaker": "Shiv Verma",
+      "role": "CFO",
+      "text": "We achieved our Rule of 40 target well ahead of schedule at 102. Revenue grew 58% while we maintained disciplined expense management. We expect to continue investing aggressively in 2026 while sustaining strong profitability.",
+      "textCn": "我们远超计划地实现了Rule of 40目标，达到102。收入增长58%的同时保持了审慎的费用管理。2026年我们预计将继续激进投资同时维持强劲盈利能力。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "Vlad Tenev",
+      "role": "CEO",
+      "text": "The generational wealth transfer of $80+ trillion over the next two decades is the single biggest opportunity in financial services. Robinhood is the default platform for the next generation of investors.",
+      "textCn": "未来二十年80万亿美元+的代际财富转移是金融服务业最大的单一机遇。Robinhood是下一代投资者的默认平台。",
+      "color": "green"
+    },
+    {
+      "speaker": "Vlad Tenev",
+      "role": "CEO",
+      "text": "Prediction markets are one of the fastest-growing products we've ever launched. We see event contracts as a core pillar of the Everything Exchange, and we're expanding into sports and more categories.",
+      "textCn": "预测市场是我们推出过的增长最快的产品之一。我们将事件合约视为万物交易所的核心支柱，正在向体育和更多类别扩展。",
+      "color": "green"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Options", "fy2025": "$545M", "fy2024": "$327M", "yoy": "+67%", "direction": "up", "note": "最大交易收入来源" },
+    { "label": "Cryptocurrencies", "fy2025": "$509M", "fy2024": "$285M", "yoy": "+79%", "direction": "up", "note": "加密周期利好" },
+    { "label": "Equities", "fy2025": "$137M", "fy2024": "$115M", "yoy": "+19%", "direction": "up" },
+    { "label": "Event Contracts", "fy2025": "$126M", "fy2024": "$4M", "yoy": "nm", "direction": "up", "note": "预测市场新品类" },
+    { "label": "Other Transaction", "fy2025": "$240M", "fy2024": "$5M", "yoy": "nm", "direction": "up", "note": "期货+指数期权" },
+    { "label": "Total Transaction", "fy2025": "$1,557M", "fy2024": "$736M", "yoy": "+112%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Margin Interest", "fy2025": "$590M", "fy2024": "$523M", "yoy": "+13%", "direction": "up" },
+    { "label": "Cash Sweep", "fy2025": "$519M", "fy2024": "$524M", "yoy": "-1%", "direction": "down", "note": "利率下降影响" },
+    { "label": "Other Interest", "fy2025": "$606M", "fy2024": "$324M", "yoy": "+87%", "direction": "up", "note": "含信用卡利息" },
+    { "label": "Net Interest Rev", "fy2025": "$1,716M", "fy2024": "$1,371M", "yoy": "+25%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Other Revenue", "fy2025": "$682M", "fy2024": "$392M", "yoy": "+74%", "direction": "up", "note": "Gold订阅+代理转账" },
+    { "label": "Total Net Revenue", "fy2025": "$3,955M", "fy2024": "$2,499M", "yoy": "+58%", "direction": "up", "isTotal": true }
+  ],
+  "docs": [
+    { "type": "10k", "typeLabel": "10-K", "title": "Annual Report on Form 10-K · FY2025", "meta": "CIK 0001783879 · 英文原文 399页", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }, { "label": "下载 PDF", "href": "#" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "Q4 2025 Earnings Presentation", "meta": "投资者演示稿 · 含图表", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] },
+    { "type": "8k", "typeLabel": "8-K", "title": "Q4 2025 Exhibit 99.1 · 业绩新闻稿", "meta": "第四季度与全年业绩", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "录音", "title": "Q4 2025 Earnings Call Transcript", "meta": "CEO Vlad Tenev · CFO · 含分析师Q&A", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] },
+    { "type": "special", "typeLabel": "特别", "title": "March 2026 Investor Presentation", "meta": "10年愿景 · TAM估算 · 战略优先级", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Vlad Tenev",
+      "role": "CEO — Opening Remarks",
+      "text": "2025 was a landmark year for Robinhood. We are no longer just a brokerage—we are building a financial super app... We launched prediction markets, expanded internationally, and crossed 3 million Gold subscribers.",
+      "textCn": "2025年是Robinhood具有里程碑意义的一年。我们不再只是一个经纪商——我们正在构建一个金融超级App。我们推出了预测市场，进行了国际扩张，Gold会员突破300万。",
+      "color": "green"
+    },
+    {
+      "speaker": "Shiv Verma",
+      "role": "CFO — Financial Review",
+      "text": "Total net revenues were $3.96 billion, up 58% year-over-year. Adjusted EBITDA was $1.76 billion, with a margin of 45%. We returned $1.5 billion to shareholders through buybacks while continuing to invest in growth.",
+      "textCn": "总净收入39.6亿美元，同比增长58%。调整后EBITDA为17.6亿美元，利润率45%。我们通过回购向股东返还了15亿美元，同时继续投资于增长。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": [
+    { "title": "投资周报 #12", "date": "2026-04-06", "slug": "weekly-12", "description": "HOOD预测市场扩展至体育、Gold Card增长数据、Bitstamp整合进展" },
+    { "title": "投资周报 #8", "date": "2026-03-09", "slug": "weekly-8", "description": "HOOD Q4财报深度拆分：为什么Rule of 40达到102？预测市场$126M从何而来？" },
+    { "title": "投资周报 #5", "date": "2026-02-16", "slug": "weekly-5", "description": "三大经纪平台对比：HOOD vs COIN vs IBKR · 谁更适合「万物上链」主题？" }
+  ]
+}

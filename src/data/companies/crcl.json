@@ -1,0 +1,121 @@
+{
+  "ticker": "CRCL",
+  "name": "Circle Internet Group, Inc.",
+  "exchange": "NYSE",
+  "sector": "稳定币基础设施",
+  "tagline": "从USDC发行者到全栈互联网金融平台 — 构建价值互联网的基础设施",
+  "iconLetter": "●",
+  "iconGradient": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+  "tags": [
+    { "label": "FY2025 总收入", "value": "$27.5亿" },
+    { "label": "Adj EBITDA", "value": "$5.82亿" },
+    { "label": "USDC 流通量", "value": "$753亿" },
+    { "label": "RLDC Margin", "value": "39.4%" },
+    { "label": "非利息收入", "value": "$1.10亿" }
+  ],
+  "kpis": [
+    { "label": "FY 总收入", "value": "$27.5亿", "change": "+64% Y/Y", "direction": "up" },
+    { "label": "Adj EBITDA", "value": "$5.82亿", "change": "+104% Y/Y", "direction": "up" },
+    { "label": "USDC 流通量", "value": "$753亿", "change": "+72% Y/Y", "direction": "up" },
+    { "label": "Q4 链上交易量", "value": "$11.9万亿", "change": "+247% Y/Y", "direction": "up" },
+    { "label": "非利息收入", "value": "$1.10亿", "change": "+624% Y/Y", "direction": "up" },
+    { "label": "RLDC Margin", "value": "39.4%", "change": "vs 39% FY24", "direction": "up" },
+    { "label": "CPN 年化 TPV", "value": "$57亿", "change": "+68%", "direction": "up" },
+    { "label": "CPN 机构数", "value": "55家", "change": "+90% Q/Q", "direction": "up" }
+  ],
+  "summaries": [
+    {
+      "title": "I. 宏观叙事 — CEO",
+      "content": "监管清晰化+技术成熟与AI平台碰撞 → 「价值时代」\n构建新互联网金融系统与基础设施\n三大支柱：Arc区块链 + Circle数字资产服务 + Circle应用层\n类比互联网从封闭网络到开放标准化基础设施的演变"
+    },
+    {
+      "title": "II. 竞争壁垒",
+      "content": "市场实际上只有两个主要发行者 · 重大进入壁垒\nCircle交易量份额：39%(Q3) → ~50%(Q4) (Visa分析)\n其他稳定币在真实交易中使用量几乎为零\n市场中立基础设施 · 不与客户/合作伙伴竞争"
+    },
+    {
+      "title": "III. CPN 支付网络",
+      "content": "2025年6月上线 · 55家金融机构(+90% Q/Q) · 年化TPV $57亿(+68%)\n应用场景：B2B跨境商户结算 · 亚洲出口商 · 南北汇款\n多边网络效应 · 合作伙伴已开始变现\nCEO：规模化后将显著变现"
+    },
+    {
+      "title": "IV. Arc 与 CCTP",
+      "content": "Arc：「互联网的经济操作系统」 · 近100%正常运行 · 0.5秒终结性 · >1.66亿笔交易 · 2026主网\nCCTP：几乎承载全部跨链USDC流量 · 超50%所有桥接量 · 1月份达62%\n探索Arc代币(激励/治理/安全) · 无具体时间表"
+    },
+    {
+      "title": "V. AI + Agentic",
+      "content": "Circle Gateway测试网：AI代理跨链USDC成本仅千分之一美分\n未来可能有数百亿AI代理 · 货币流通速度将提升数个数量级\n2026年起AI平台与区块链OS「紧密结合」\nCEO：没有其他支付系统能做到如此低成本"
+    },
+    {
+      "title": "VI. 财务指引",
+      "content": "FY2026 Other Revenue指引：$150-170M (vs FY25实际$110M)\nFY2026 RLDC margin：38-40% · Adj OpEx：$570-585M\nUSDC多年CAGR预期：40%（非正式指引）\n指引哲学：不提供详细季度/完整财务指引 · 保守设定+超额完成"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Jeremy Allaire",
+      "role": "CEO — Earnings Call",
+      "text": "We're at the beginning of what I think will be the most significant transformation in global money markets. USDC has achieved remarkable network effects — our share of real transaction volume went from 39% to nearly 50% in a single quarter.",
+      "textCn": "我们正处于我认为将是全球货币市场最重大转变的起点。USDC已实现显著的网络效应——我们在真实交易量中的份额在一个季度内从39%上升到近50%。",
+      "color": "green"
+    },
+    {
+      "speaker": "Jeremy Allaire",
+      "role": "CEO — Q&A",
+      "text": "CPN launched in June from essentially zero. We now have 55 financial institutions on the network. Annualized TPV is approximately $5.7 billion as of last Friday, up 68% since we last talked about it.",
+      "textCn": "CPN从六月的几乎为零开始。现在网络上有55家金融机构。截至上周五，年化TPV约为57亿美元，比我们上次提到时增长了68%。",
+      "color": "green"
+    },
+    {
+      "speaker": "Jeremy Fox-Geen",
+      "role": "CFO — Earnings Call",
+      "text": "Other revenue was $37 million in Q4. This monetization is very early — the line is only about a year old. We're pleased with $110 million for the full year and guide $150-170 million for FY2026.",
+      "textCn": "Q4其他收入为3700万美元。这个变现还非常早期——这条收入线仅约一年历史。全年1.1亿美元令人满意，FY2026指引为1.5-1.7亿美元。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "Jeremy Allaire",
+      "role": "CEO — Q&A",
+      "text": "We see tens or even hundreds of billions of AI agents transacting. Money velocity will be orders of magnitude higher. The convergence of AI, stablecoins, and blockchains is the next great infrastructure wave.",
+      "textCn": "我们预见数百亿甚至千亿AI代理在进行交易。货币流通速度将提升数个数量级。AI、稳定币和区块链的融合是下一个伟大的基础设施浪潮。",
+      "color": "green"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Reserve Income", "fy2025": "$2,637M", "fy2024": "$1,661M", "yoy": "+59%", "direction": "up", "note": "储备利息收入" },
+    { "label": "Other Revenue", "fy2025": "$110M", "fy2024": "$15M", "yoy": "+624%", "direction": "up", "note": "非利息新收入线" },
+    { "label": "Total Revenue", "fy2025": "$2,747M", "fy2024": "$1,676M", "yoy": "+64%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "分销和交易成本", "fy2025": "$1,662M", "fy2024": "$1,011M", "yoy": "+64%", "direction": "down", "note": "随USDC增长等比上升" },
+    { "label": "RLDC (收入-分销成本)", "fy2025": "$1,083M", "fy2024": "$659M", "yoy": "+64%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "薪酬费用", "fy2025": "$845M", "fy2024": "$263M", "yoy": "+221%", "direction": "down", "note": "含IPO SBC" },
+    { "label": "G&A + IT + 营销", "fy2025": "$329M", "fy2024": "$232M", "yoy": "+42%", "direction": "down" },
+    { "label": "Adj EBITDA", "fy2025": "$582M", "fy2024": "$285M", "yoy": "+104%", "direction": "up", "isSectionTotal": true },
+    { "label": "GAAP 净利润 (亏损)", "fy2025": "($70M)", "fy2024": "$156M", "yoy": "转亏", "direction": "down", "isTotal": true, "note": "IPO SBC冲击" }
+  ],
+  "docs": [
+    { "type": "10k", "typeLabel": "10-K", "title": "Annual Report on Form 10-K · FY2025", "meta": "Circle Internet Group, Inc. · SEC Filing", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }, { "label": "下载 PDF", "href": "#" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "4Q25 Earnings Presentation", "meta": "Q4/FY2025 投资者演示稿", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] },
+    { "type": "8k", "typeLabel": "8-K", "title": "4Q25 Earnings Release", "meta": "第四季度与全年业绩新闻稿", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "录音", "title": "Q4'25 Earnings Call Transcript", "meta": "CEO Jeremy Allaire · CFO Jeremy Fox-Geen · 含分析师Q&A", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Jeremy Allaire",
+      "role": "CEO — Opening Remarks",
+      "text": "Regulatory clarity and technology maturity are colliding with AI platforms. We are at the beginning of what I call the 'value era' — internet-native money combined with AI and agentic activity is likely to drive the greatest acceleration of economic activity in history.",
+      "textCn": "监管清晰化和技术成熟正与AI平台碰撞。我们正处于我所说的「价值时代」的起点——互联网原生货币与AI和代理活动相结合，可能推动历史上最大规模的经济活动加速。",
+      "color": "green"
+    },
+    {
+      "speaker": "Jeremy Fox-Geen",
+      "role": "CFO — Financial Review",
+      "text": "We are building for long-term success. We do not provide detailed quarterly or full financial guidance. We provide certain metrics and will update when there is material deviation. We see the beginning of meaningful shifts in global money markets.",
+      "textCn": "我们在为长期成功而建设。我们不提供详细的季度或完整财务指引。我们提供部分指标，在出现重大偏差时更新。我们看到全球货币市场重大转变的开始。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": [
+    { "title": "投资周报 #10", "date": "2026-03-23", "slug": "weekly-10", "description": "Circle IPO后首份财报解读 · USDC $753亿流通量意味着什么？" },
+    { "title": "投资周报 #5", "date": "2026-02-16", "slug": "weekly-5", "description": "稳定币三巨头格局：USDC vs USDT vs PayPal USD · 谁在真实交易中领先？" }
+  ]
+}

@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinRead · 原典财报
 
-## Getting Started
+面向中国投资者的 SEC 披露原文、管理层原话与结构化投研摘要；中英对照，数据与引文可溯源。
 
-First, run the development server:
+## 已覆盖公司 (Q4/FY2025)
+
+| Ticker | Company | Exchange |
+|--------|---------|----------|
+| HOOD | Robinhood Markets, Inc. | NASDAQ |
+| COIN | Coinbase Global, Inc. | NASDAQ |
+| CRCL | Circle Internet Group, Inc. | NYSE |
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router, TypeScript)
+- **Styling**: Tailwind CSS v4
+- **Auth**: Supabase Auth (email/password)
+- **Deploy**: Vercel
+- **Data**: Static JSON (no database needed for content)
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy env file and add your Supabase keys
+cp .env.example .env.local
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Supabase Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Go to [supabase.com](https://supabase.com) and create a free project
+2. Go to **Settings → API** and copy:
+   - `Project URL` → `NEXT_PUBLIC_SUPABASE_URL`
+   - `anon public` key → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+3. Paste them into `.env.local`
 
-## Learn More
+> Auth works out of the box - Supabase creates the `auth.users` table automatically.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Option A: One-click deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/finread)
 
-## Deploy on Vercel
+### Option B: CLI
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Deploy
+vercel
+
+# Add environment variables in Vercel dashboard:
+# NEXT_PUBLIC_SUPABASE_URL
+# NEXT_PUBLIC_SUPABASE_ANON_KEY
+```
+
+### Option C: GitHub auto-deploy
+
+1. Push this repo to GitHub
+2. Go to [vercel.com](https://vercel.com) → New Project → Import from GitHub
+3. Add environment variables in the Vercel dashboard
+4. Every push to `main` auto-deploys
+
+## Custom Domain
+
+After deploying to Vercel:
+
+1. Go to Vercel Dashboard → Project → Settings → Domains
+2. Add your domain (e.g., `finread.app`)
+3. Update DNS records as instructed by Vercel
+
+### Domain Suggestions
+
+| Domain | Notes |
+|--------|-------|
+| `finread.app` | 简洁，品牌感强 |
+| `finread.cc` | 备选 |
+| `caibao.one` | 中文域名，直观 |
+| `yuandoc.com` | 源文档，突出一手信息 |
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx                    # Homepage
+│   ├── company/[ticker]/           # Company pages (HOOD/COIN/CRCL)
+│   ├── weekly/                     # Weekly report list
+│   ├── weekly/[slug]/              # Weekly report detail
+│   ├── login/                      # Login page
+│   ├── register/                   # Register page
+│   └── pro/                        # Pro upgrade page
+├── components/                     # Shared UI components
+├── data/
+│   ├── companies/                  # Company data (JSON)
+│   └── weekly/                     # Weekly report data
+└── lib/
+    ├── types.ts                    # TypeScript types
+    ├── companies.ts                # Company data helpers
+    └── supabase/                   # Supabase client setup
+```
+
+## Adding a New Company
+
+1. Create `src/data/companies/new-ticker.json` following the `CompanyData` type
+2. Import it in `src/lib/companies.ts`
+3. That's it - routes are generated automatically
+
+## License
+
+Private - All rights reserved.

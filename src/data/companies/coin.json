@@ -1,0 +1,123 @@
+{
+  "ticker": "COIN",
+  "name": "Coinbase Global, Inc.",
+  "exchange": "NASDAQ",
+  "sector": "数字资产交易平台",
+  "tagline": "Everything Exchange — 构建单一平台交易所有可交易资产",
+  "iconLetter": "C",
+  "iconGradient": "linear-gradient(135deg, #0052ff 0%, #0038b8 100%)",
+  "tags": [
+    { "label": "FY2025 Net Revenue", "value": "$6.9B" },
+    { "label": "Adj EBITDA", "value": "$2.8B" },
+    { "label": "AOP", "value": "$376B" },
+    { "label": "MTU", "value": "9.2M" },
+    { "label": "Trading Volume", "value": "$1.22T" }
+  ],
+  "kpis": [
+    { "label": "FY Net Revenue", "value": "$6.9B", "change": "+9% Y/Y", "direction": "up" },
+    { "label": "FY Adj EBITDA", "value": "$2.8B", "change": "-16% Y/Y", "direction": "down" },
+    { "label": "Q4 Total Revenue", "value": "$1.8B", "change": "-5% Q/Q", "direction": "down" },
+    { "label": "Q4 Adj EBITDA", "value": "$566M", "note": "Adj Net $178M" },
+    { "label": "平台资产 AOP", "value": "$376B", "change": "-7% Y/Y", "direction": "down" },
+    { "label": "MTU", "value": "9.2M", "change": "+10% Y/Y", "direction": "up" },
+    { "label": "Trading Volume", "value": "$1.22T", "change": "+3% Y/Y", "direction": "up" },
+    { "label": "S&S Revenue", "value": "$2.83B", "change": "+23% Y/Y", "direction": "up" }
+  ],
+  "summaries": [
+    {
+      "title": "I. 收入结构",
+      "content": "Transaction Revenue $4.06B (+2%) — Consumer $3.32B、Institutional $480M(+39% Deribit驱动)、Other $253M\nS&S Revenue $2.83B (+23%) — Stablecoin $1.35B(+48%)、Blockchain Rewards $677M、Coinbase One订阅快速增长\n总净收入 $6.88B (+9%) — S&S占比从37%提升至41%，收入结构持续优化"
+    },
+    {
+      "title": "II. 产品全景",
+      "content": "Everything Exchange：一站式交易所有可交易资产(加密/股票/预测市场/商品)\nUSDC：与Circle分成 · 平台余额+链外余额双增长 · FY稳定币收入$1.35B\nBase (L2)：以太坊第一L2 · 支付/DeFi/AI代理 · Sequencer Fee变现\nDeribit：衍生品收购 · 机构交易$982B · 推动Institutional +39%\nCoinbase One：订阅制高粘性用户 · 12个产品>$1亿年化收入"
+    },
+    {
+      "title": "III. 费用与资本配置",
+      "content": "FY OpEx增长（投资年） · SBC/D&A占比较高\nQ1'26 指引：T&D+G&A $925-975M(持平) · S&M $215-315M(持平至下降)\n资本配置：$4B回购授权（已用$1.7B完全对冲SBC稀释） · 持续DCA比特币 · 现金$11.3B"
+    },
+    {
+      "title": "IV. 竞争优势",
+      "content": "① 托管规模：存储全球12%加密资产，超后四名竞争对手之和\n② 交易量/份额：$1.22T FY交易量\n③ 收入多元化：12个>$1亿年化收入产品，6个>$2.5亿\n④ 加密深度：横跨交易/托管/质押/支付/L2全链条"
+    },
+    {
+      "title": "V. 国际化与监管",
+      "content": "美国84%收入 · 国际扩张加速：欧洲MiCA合规、印度、新加坡、Deribit/迪拜\n监管里程碑：SEC案件撤销(2025.2) · GENIUS Act稳定币法 · Clarity Act数字资产法\n数据盗窃事件：总成本$345M · 无密码/密钥泄露 · Adj EBITDA剔除处理"
+    },
+    {
+      "title": "VI. 风险因素",
+      "content": "① 加密价格波动直接影响AOP和交易收入 ② BTC/ETH集中度高(占比>40%交易量)\n③ 利率下降影响稳定币收入(±$540M/100bps) ④ Circle协议依赖与续约风险\n⑤ 费率压缩趋势(Simple→Advanced迁移) ⑥ 竞争加剧(DEX/传统券商进军加密)"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Brian Armstrong",
+      "role": "Co-Founder & CEO",
+      "text": "Financial services is a huge industry and there's multiple trillions of dollars of revenue up for grabs. Crypto is updating the financial system, from trading to payments to lending. Coinbase is the best positioned company in the world to capitalize on this transformation.",
+      "textCn": "金融服务是一个巨大的行业，有数万亿美元的收入机会。加密正在升级金融系统——从交易到支付到借贷。Coinbase是全球最具优势的公司来把握这一转型。",
+      "color": "green"
+    },
+    {
+      "speaker": "Brian Armstrong",
+      "role": "CEO",
+      "text": "We store more crypto than any other company. We're the most trusted brand in crypto... We store 12% of all crypto, more than next 4 competitors combined. Assets on platform has grown 3x over the past 3 years, these assets are sticky.",
+      "textCn": "我们存储的加密资产比任何其他公司都多，是加密领域最受信任的品牌。我们存储了所有加密资产的12%，超过后四名竞争对手之和。过去3年平台资产增长了3倍，粘性越来越强。",
+      "color": "green"
+    },
+    {
+      "speaker": "Alesia Haas",
+      "role": "CFO",
+      "text": "Our commitment is that we will be adjusted EBITDA positive in any market environment. So, we will dynamically revisit our expenses if we see a material degradation in our revenue opportunities this year.",
+      "textCn": "我们的承诺是在任何市场环境下都保持Adj EBITDA盈利。如果今年我们看到收入机会出现实质性恶化，我们将动态重新审视支出。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "Brian Armstrong",
+      "role": "CEO",
+      "text": "Today, about half of 1% of global GDP runs on crypto rails. I don't see any reason why that couldn't be 10% or 20% in the next decade.",
+      "textCn": "今天，全球GDP的约0.5%运行在加密轨道上。我看不出有什么理由这个数字不能在未来十年达到10%或20%。",
+      "color": "green"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Consumer Transaction", "fy2025": "$3,323M", "fy2024": "$3,430M", "yoy": "-3%", "direction": "down", "note": "Simple→Advanced迁移" },
+    { "label": "Institutional Transaction", "fy2025": "$480M", "fy2024": "$346M", "yoy": "+39%", "direction": "up", "note": "Deribit驱动" },
+    { "label": "Other Transaction", "fy2025": "$253M", "fy2024": "$210M", "yoy": "+20%", "direction": "up", "note": "含Base sequencer" },
+    { "label": "Total Transaction", "fy2025": "$4,055M", "fy2024": "$3,986M", "yoy": "+2%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Stablecoin Revenue", "fy2025": "$1,349M", "fy2024": "$910M", "yoy": "+48%", "direction": "up", "note": "USDC余额增长" },
+    { "label": "Blockchain Rewards", "fy2025": "$677M", "fy2024": "$706M", "yoy": "-4%", "direction": "down", "note": "ETH/SOL价格下降" },
+    { "label": "Interest & Finance Fee", "fy2025": "$247M", "fy2024": "$266M", "yoy": "-7%", "direction": "down", "note": "利率下降" },
+    { "label": "Other S&S Revenue", "fy2025": "$555M", "fy2024": "$425M", "yoy": "+31%", "direction": "up", "note": "Coinbase One增长" },
+    { "label": "Total S&S Revenue", "fy2025": "$2,828M", "fy2024": "$2,307M", "yoy": "+23%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Corporate Interest", "fy2025": "$298M", "fy2024": "$271M", "yoy": "+10%", "direction": "up" },
+    { "label": "Total Net Revenue", "fy2025": "$6,883M", "fy2024": "$6,293M", "yoy": "+9%", "direction": "up", "isTotal": true }
+  ],
+  "docs": [
+    { "type": "10k", "typeLabel": "10-K", "title": "Annual Report on Form 10-K · FY2025", "meta": "Coinbase Global, Inc. · 英文原文", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }, { "label": "下载 PDF", "href": "#" }] },
+    { "type": "ppt", "typeLabel": "Letter", "title": "Q4'25 Shareholder Letter", "meta": "季度股东信 · 战略重点 · 含图表", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "录音", "title": "Q4'25 Earnings Call Transcript", "meta": "CEO Brian Armstrong · CFO Alesia Haas", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "Q&A", "title": "Q4'25 Analyst Q&A Call Transcript", "meta": "分析师问答专场 · 深度问答", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Brian Armstrong",
+      "role": "CEO — Opening",
+      "text": "Financial services is a huge industry and there's multiple trillions of dollars of revenue up for grabs. Crypto is updating the financial system, from trading to payments to lending.",
+      "textCn": "金融服务是一个巨大的行业，有数万亿美元的收入机会。加密正在升级金融系统——从交易到支付到借贷。",
+      "color": "green"
+    },
+    {
+      "speaker": "Alesia Haas",
+      "role": "CFO — Financial Review",
+      "text": "We have 12 products with over $100 million of annualized revenue. We're working hard to scale, and we see more and more of these products able to graduate and hope that they will join the $250 million tier.",
+      "textCn": "我们有12个产品超过$1亿年化收入。我们正在努力扩展，看到越来越多产品能够毕业并加入$2.5亿级别。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": [
+    { "title": "投资周报 #12", "date": "2026-04-06", "slug": "weekly-12", "description": "COIN Q1交易量追踪、Base链TVL新高、Deribit整合最新进展" },
+    { "title": "投资周报 #5", "date": "2026-02-16", "slug": "weekly-5", "description": "三大经纪平台对比：HOOD vs COIN vs IBKR · 谁更适合「万物上链」主题？" }
+  ]
+}
