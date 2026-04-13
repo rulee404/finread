@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AuthButton from "./AuthButton";
 
 const navItems = [
   { href: "/", label: "首页", match: (p: string) => p === "/" },
@@ -29,6 +30,7 @@ const navItems = [
     activeBg: "bg-theme-space-dim border-theme-space/30",
   },
   { href: "/opinions", label: "观点", match: (p: string) => p.startsWith("/opinions") },
+  { href: "/article", label: "全文 ☕", match: (p: string) => p.startsWith("/article") },
   { href: "/weekly", label: "周报", match: (p: string) => p.startsWith("/weekly") },
 ];
 
@@ -66,12 +68,7 @@ export default function Header() {
               </Link>
             );
           })}
-          <Link
-            href="/login"
-            className="rounded-full border border-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-gold/20 hover:text-white"
-          >
-            登录
-          </Link>
+          <AuthButton />
         </nav>
       </div>
     </header>

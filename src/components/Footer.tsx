@@ -33,6 +33,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col gap-1">
                 <Link href="/opinions" className="text-xs text-muted hover:text-white">投资观点</Link>
+                <Link href="/article" className="text-xs text-muted hover:text-white">全文库 ☕</Link>
                 <Link href="/weekly" className="text-xs text-muted hover:text-white">每周周报</Link>
                 <Link href="/pro" className="text-xs text-muted hover:text-white">Pro 会员</Link>
               </div>

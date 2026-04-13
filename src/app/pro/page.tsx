@@ -93,8 +93,24 @@ export default function ProPage() {
         </div>
       </div>
 
+      {/* Token & Coffee alternative */}
+      <div className="mt-8 rounded-xl border border-border bg-surface p-6 text-center">
+        <h3 className="text-[15px] font-semibold text-white">
+          不想订阅？试试 Token &amp; Coffee ☕
+        </h3>
+        <p className="mt-2 text-sm text-muted">
+          单篇打赏 ¥5.9-9.9，只为你感兴趣的内容付费
+        </p>
+        <Link
+          href="/article"
+          className="mt-3 inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-sm text-text transition-colors hover:bg-white/[0.06]"
+        >
+          浏览全文库 →
+        </Link>
+      </div>
+
       {/* Membership group upsell */}
-      <div className="mt-10 rounded-xl border border-gold/20 bg-gold-dim/20 p-6 text-center">
+      <div className="mt-5 rounded-xl border border-gold/20 bg-gold-dim/20 p-6 text-center">
         <h3 className="text-lg font-semibold text-white">会员群 · ¥99/月</h3>
         <p className="mt-2 text-sm text-muted">
           包含 Pro 全部权益 + 微信社群实时讨论 + 建仓逻辑分享 + 深度行业报告

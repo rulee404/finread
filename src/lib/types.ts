@@ -75,3 +75,29 @@ export interface Opinion {
   sentiment?: "bullish" | "bearish" | "neutral";
   tickers?: string[];
 }
+
+export interface Article {
+  id: string;
+  date: string;
+  theme: "ai" | "defi" | "space" | "macro";
+  title: string;
+  subtitle: string;
+  sourceType: "earnings" | "research" | "filing" | "interview";
+  sourceLabel: string;
+  tickers: string[];
+  price: number;
+  freePreview: ArticleSection[];
+  paidContent: ArticleSection[];
+  wordCount: number;
+}
+
+export interface ArticleSection {
+  heading?: string;
+  paragraphs: ArticleParagraph[];
+}
+
+export interface ArticleParagraph {
+  en: string;
+  cn: string;
+  highlight?: boolean;
+}
