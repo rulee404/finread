@@ -1,4 +1,8 @@
 import type { CompanyDoc, RelatedContent, Discussion } from "@/lib/types";
+import {
+  crclQ4TranscriptFreePreview,
+  crclQ4TranscriptPaidContent,
+} from "./crcl-q4fy25-transcript-full";
 
 /* ═══════════════════════════════════════════
    HOOD — Robinhood
@@ -215,38 +219,14 @@ const crclDocs: CompanyDoc[] = [
     quarter: "Q4 FY2025",
     category: "transcript",
     categoryLabel: "Earnings Call Transcript",
-    title: "Q4 FY2025 Earnings Call 全文中英对照",
+    title: "Q4 FY2025 Earnings Call 完整全文中英对照",
     date: "2026-02-25",
     summary:
-      "Jeremy Allaire 描绘 AI + 稳定币愿景。USDC 流通量 $753B（+72% Y/Y），Adj EBITDA $582M（+104%），CPN 55 家机构入网，年化 TPV $57 亿。管理层给出 USDC 多年 40% CAGR 预期。",
-    price: 9.9,
-    wordCount: 12400,
-    freePreview: [
-      {
-        heading: "CEO Opening — USDC 增长叙事",
-        paragraphs: [
-          { en: "We achieved total revenues of $1.68 billion in FY2025, representing 16% growth year over year, with adjusted EBITDA of $582 million, more than doubling from the prior year.", cn: "FY2025 全年总收入 16.8 亿美元，同比增长 16%；调整后 EBITDA 为 5.82 亿美元，较上年翻倍有余。", highlight: true },
-          { en: "USDC circulation reached $75.3 billion by year end, growing 72% year over year. On-chain transaction volume surged to $11.9 trillion, up 247%.", cn: "USDC 年末流通量达 753 亿美元，同比增长 72%。链上交易量飙升至 11.9 万亿美元，增长 247%。" },
-          { en: "Let me be clear about our vision: we believe there will be tens of billions of AI agents that need to transact value, and the only payment rail that can support micro-transactions at a fraction of a cent is stablecoins on blockchain.", cn: "让我明确我们的愿景：我们相信未来将有数百亿 AI Agent 需要进行价值交易，而唯一能以千分之一美分级别支持微支付的支付通道就是区块链上的稳定币。", highlight: true },
-        ],
-      },
-    ],
-    paidContent: [
-      {
-        heading: "CFO 财务细节 — 收入结构拆解",
-        paragraphs: [
-          { en: "Reserve income reached $1.61 billion, up 13% year over year. Distribution costs increased to $1.01 billion, representing 60.1% of revenue — primarily payments to Coinbase and other distribution partners.", cn: "储备金收入达 16.1 亿美元，同比增长 13%。分发成本增至 10.1 亿美元，占收入的 60.1% — 主要是支付给 Coinbase 和其他分发合作伙伴的费用。", highlight: true },
-          { en: "Compensation and SBC was $845 million in FY2025, inflated by IPO-related stock-based compensation. Excluding one-time IPO SBC, normalized compensation was approximately $320 million.", cn: "FY2025 薪酬和股权激励为 8.45 亿美元，因 IPO 相关 SBC 而膨胀。剔除一次性 IPO SBC 后，正常化薪酬约为 3.2 亿美元。" },
-        ],
-      },
-      {
-        heading: "FY2026 指引与分析师 Q&A",
-        paragraphs: [
-          { en: "For FY2026, we expect USDC circulation to continue growing at a multi-year CAGR of approximately 40%. We're guiding other revenue of $150-170 million as CPN and new products begin to contribute.", cn: "对于 FY2026，我们预期 USDC 流通量将继续以约 40% 的多年复合增长率增长。其他收入指引 1.5-1.7 亿美元。", highlight: true },
-          { en: "Q: Can you quantify the AI agent transaction opportunity? A (Allaire): If you have billions of AI agents doing millions of micro-transactions per second, even at basis point-level fees, the aggregate revenue opportunity is enormous.", cn: "问：能否量化 AI Agent 交易机会？答（Allaire）：如果数十亿 AI Agent 每秒进行数百万笔微交易，即使是基点级别费率，总收入机会也是巨大的。" },
-        ],
-      },
-    ],
+      "Jeremy Allaire 描绘 AI + 稳定币愿景，CFO Jeremy Fox-Geen 详解财务数据。涵盖 CEO 开场（USDC $753B +72%、链上交易量 $12T +247%、Q4 收入 $770M +77%、Adj EBITDA $167M +412%）、平台扩展（Arc 测试网、CPN 55 家机构入网 TPV $57B、StableFX）、企业合作（Intuit/Visa/Polymarket/Cash App/JPMorgan）、竞争格局（交易量份额从 39%→50%、双头垄断格局）、CCTP 互操作性（占全部桥接量 62%）、EURC（3.8x 增长至 €310M）与 USYC（$1.7B）、AI Agent 支付愿景、CFO 全年财务回顾、FY2026 指引（USDC 40% CAGR、其他收入 $150-170M）、分析师 Q&A（Arc 代币探索、GENIUS/CLARITY 法案影响、CPN B2B 跨境用例、分发成本与 Coinbase 关系）。完整 20 页逐段翻译。",
+    price: 19.9,
+    wordCount: 28000,
+    freePreview: crclQ4TranscriptFreePreview,
+    paidContent: crclQ4TranscriptPaidContent,
   },
   {
     id: "crcl-q4fy25-earnings-ppt",

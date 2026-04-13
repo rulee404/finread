@@ -1,5 +1,11 @@
 import { createClient } from "@/lib/supabase/client";
 
+const ADMIN_EMAILS = ["liru9628@gmail.com"];
+
+function isAdmin(email: string | undefined): boolean {
+  return !!email && ADMIN_EMAILS.includes(email.toLowerCase());
+}
+
 export async function checkPurchase(docId: string): Promise<boolean> {
   const supabase = createClient();
   const {
@@ -46,6 +52,10 @@ export async function checkAccess(docId: string): Promise<{
   } = await supabase.auth.getUser();
 
   if (!user) return { hasAccess: false, isPro: false, isLoggedIn: false };
+
+  if (isAdmin(user.email)) {
+    return { hasAccess: true, isPro: true, isLoggedIn: true };
+  }
 
   const [purchaseResult, subResult] = await Promise.all([
     supabase
