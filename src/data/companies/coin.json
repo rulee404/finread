@@ -3,6 +3,7 @@
   "name": "Coinbase Global, Inc.",
   "exchange": "NASDAQ",
   "sector": "数字资产交易平台",
+  "theme": "defi",
   "tagline": "Everything Exchange — 构建单一平台交易所有可交易资产",
   "iconLetter": "C",
   "iconGradient": "linear-gradient(135deg, #0052ff 0%, #0038b8 100%)",

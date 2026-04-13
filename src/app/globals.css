@@ -15,6 +15,17 @@
   --color-text: #d4d8e3;
   --color-muted: #7c8396;
   --color-white: #f0f2f7;
+
+  --color-theme-ai: #818cf8;
+  --color-theme-ai-dim: rgba(129, 140, 248, 0.1);
+  --color-theme-ai-glow: rgba(129, 140, 248, 0.25);
+  --color-theme-defi: #34d399;
+  --color-theme-defi-dim: rgba(52, 211, 153, 0.1);
+  --color-theme-defi-glow: rgba(52, 211, 153, 0.25);
+  --color-theme-space: #f59e0b;
+  --color-theme-space-dim: rgba(245, 158, 11, 0.1);
+  --color-theme-space-glow: rgba(245, 158, 11, 0.25);
+
   --font-sans: "system-ui", "-apple-system", "Segoe UI", sans-serif;
   --font-mono: "SF Mono", "Menlo", ui-monospace, monospace;
 }
@@ -43,4 +54,72 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Theme icon animations ── */
+
+@keyframes ai-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes ai-circuit {
+  0% { stroke-dashoffset: 60; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes defi-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes defi-pulse-node {
+  0%, 100% { r: 3; opacity: 0.7; }
+  50% { r: 4.5; opacity: 1; }
+}
+
+@keyframes space-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes space-thrust {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 0.9; transform: scaleY(1.2); }
+}
+
+@keyframes space-star {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* Theme card glow effects */
+.theme-card-ai:hover {
+  box-shadow: 0 0 40px var(--color-theme-ai-glow), 0 0 80px rgba(129, 140, 248, 0.08);
+}
+.theme-card-defi:hover {
+  box-shadow: 0 0 40px var(--color-theme-defi-glow), 0 0 80px rgba(52, 211, 153, 0.08);
+}
+.theme-card-space:hover {
+  box-shadow: 0 0 40px var(--color-theme-space-glow), 0 0 80px rgba(245, 158, 11, 0.08);
 }

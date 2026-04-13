@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FinRead · 原典财报 · 中英投研摘要",
+  title: "FinRead · AI · DeFi · Space · 三大赛道一手投研",
   description:
-    "面向中国投资者的 SEC 披露原文、管理层原话与结构化投研摘要；中英对照，数据与引文可溯源。",
+    "聚焦 AI、DeFi、Space 三大赛道的 SEC 原典解读、管理层原话中英对照与作者投资观点。",
 };
 
 export default function RootLayout({

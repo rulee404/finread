@@ -1,0 +1,109 @@
+{
+  "ticker": "RKLB",
+  "name": "Rocket Lab USA, Inc.",
+  "exchange": "NASDAQ",
+  "sector": "太空发射与航天系统",
+  "theme": "space",
+  "tagline": "End-to-End Space Company — 从小型火箭到全栈太空服务的垂直整合先锋",
+  "iconLetter": "R",
+  "iconGradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+  "tags": [
+    { "label": "FY2025 Revenue", "value": "$436M" },
+    { "label": "Backlog", "value": "$1.1B" },
+    { "label": "Electron 发射", "value": "56次 (累计)" },
+    { "label": "Neutron 首飞", "value": "2026 H2" },
+    { "label": "Adj Gross Margin", "value": "29.5%" }
+  ],
+  "kpis": [
+    { "label": "FY 总收入", "value": "$436M", "change": "+81% Y/Y", "direction": "up" },
+    { "label": "Q4 收入", "value": "$132M", "change": "+93% Y/Y", "direction": "up" },
+    { "label": "Backlog", "value": "$1.1B", "change": "+80% Y/Y", "direction": "up" },
+    { "label": "Electron 发射次数", "value": "56次", "note": "累计 · 行业第二" },
+    { "label": "Space Systems 收入", "value": "$305M", "change": "+99% Y/Y", "direction": "up" },
+    { "label": "Launch Services 收入", "value": "$131M", "change": "+47% Y/Y", "direction": "up" },
+    { "label": "Adj Gross Margin", "value": "29.5%", "change": "+550bps Y/Y", "direction": "up" },
+    { "label": "现金及等价物", "value": "$540M", "note": "充足跑道" }
+  ],
+  "summaries": [
+    {
+      "title": "I. 收入结构",
+      "content": "Space Systems $305M (+99%) — 卫星组件、航天器制造、星座解决方案\nLaunch Services $131M (+47%) — Electron 火箭发射 · 行业第二高频率\n总收入 $436M (+81%) — 双引擎增长 · Space Systems 占比从 64% 升至 70%"
+    },
+    {
+      "title": "II. Electron 火箭",
+      "content": "累计56次发射 · 仅次于SpaceX的最高频率私人火箭\n碳复合材料箭体 · 3D打印 Rutherford 引擎\n成本效率领先 · 单次发射价格 $7.5M\n复用计划推进中 · 第一级海上回收已验证"
+    },
+    {
+      "title": "III. Neutron 中型火箭",
+      "content": "8吨LEO运力 · 填补中型火箭市场空白\n2026 H2 首飞目标 · Archimedes 引擎已进入热火测试\n可复用设计 · 整流罩「Hungry Hippo」机构\n目标客户：星座部署 + 国防任务 + 载人预研"
+    },
+    {
+      "title": "IV. Space Systems 业务",
+      "content": "从「发射公司」到「全栈太空公司」的关键转型\n卫星组件：太阳能电池板、反应轮、分离系统 — 对外+自用\nSolAero (太阳能) + Sinclair (姿态控制) + PSC (分离系统) 收购整合\n为GlobalStar/MDA/Synspective等建造完整航天器"
+    },
+    {
+      "title": "V. 竞争优势",
+      "content": "① 垂直整合：从引擎到卫星到发射的全链条控制\n② 飞行遗产：56次发射的可靠性记录\n③ 产能规模：全球唯一能批量制造碳复合材料箭体的私企\n④ 国防关系：NSSL Lane 2认证 + SDA合同"
+    },
+    {
+      "title": "VI. 风险因素",
+      "content": "① Neutron 首飞延迟风险 — 新火箭开发不确定性\n② 仍在亏损 — FY2025 Adj EBITDA -$57M\n③ SpaceX 竞争压力 — Starship 成功将改变行业格局\n④ 政府合同依赖 — 美国国防预算波动\n⑤ 太空保险和发射失败风险"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Peter Beck",
+      "role": "CEO",
+      "text": "Rocket Lab is the only company besides SpaceX that has successfully built and operated a reliable orbital launch vehicle. We are now building Neutron to go after the medium-lift market — a $10 billion annual opportunity that currently has no real competition.",
+      "textCn": "除SpaceX外，Rocket Lab是唯一成功建造并运营可靠轨道运载火箭的公司。我们现在正在建造Neutron来进军中型运力市场——这是一个年规模100亿美元、目前没有真正竞争对手的机会。",
+      "color": "green"
+    },
+    {
+      "speaker": "Peter Beck",
+      "role": "CEO",
+      "text": "We are not just a launch company anymore. Space Systems is growing twice as fast as Launch and represents 70% of revenue. We build everything from solar panels to star trackers to complete spacecraft. That vertical integration is our moat.",
+      "textCn": "我们不再只是一家发射公司。航天系统业务增速是发射的两倍，占收入70%。从太阳能板到星敏感器到完整航天器，我们全部自主制造。这种垂直整合就是我们的护城河。",
+      "color": "green"
+    },
+    {
+      "speaker": "Adam Spice",
+      "role": "CFO",
+      "text": "We exited the year with a $1.1 billion backlog, up 80% year-over-year. The pipeline continues to strengthen across both segments, and we see a clear path to profitability as Neutron scales.",
+      "textCn": "我们以11亿美元的在手订单结束了这一年，同比增长80%。两个业务板块的管线持续增强，随着Neutron规模化，我们看到了清晰的盈利路径。",
+      "color": "cyan"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Launch Services", "fy2025": "$131M", "fy2024": "$89M", "yoy": "+47%", "direction": "up", "note": "Electron 频率提升" },
+    { "label": "Space Systems", "fy2025": "$305M", "fy2024": "$153M", "yoy": "+99%", "direction": "up", "note": "航天器制造+组件" },
+    { "label": "Total Revenue", "fy2025": "$436M", "fy2024": "$241M", "yoy": "+81%", "direction": "up", "isSectionTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Adj Gross Profit", "fy2025": "$129M", "fy2024": "$58M", "yoy": "+122%", "direction": "up" },
+    { "label": "Adj Gross Margin", "fy2025": "29.5%", "fy2024": "24.0%", "yoy": "+550bps", "direction": "up" },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Adj EBITDA", "fy2025": "($57M)", "fy2024": "($96M)", "yoy": "改善", "direction": "up", "note": "亏损收窄" },
+    { "label": "GAAP Net Loss", "fy2025": "($166M)", "fy2024": "($170M)", "yoy": "基本持平", "direction": "flat", "isTotal": true, "note": "含SBC" }
+  ],
+  "docs": [
+    { "type": "10k", "typeLabel": "10-K", "title": "Annual Report on Form 10-K · FY2025", "meta": "Rocket Lab USA, Inc. · SEC Filing", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }, { "label": "下载 PDF", "href": "#" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "Q4 2025 Earnings Presentation", "meta": "含 Neutron 进度更新", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "录音", "title": "Q4 2025 Earnings Call Transcript", "meta": "CEO Peter Beck · CFO Adam Spice", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Peter Beck",
+      "role": "CEO — Opening",
+      "text": "2025 was a transformative year for Rocket Lab. We grew revenue 81%, expanded our backlog to over a billion dollars, and made significant progress on Neutron. We are building the most vertically integrated space company in the world.",
+      "textCn": "2025年是Rocket Lab变革性的一年。收入增长81%，在手订单扩大到超过10亿美元，Neutron取得重大进展。我们正在建设世界上垂直整合度最高的太空公司。",
+      "color": "green"
+    },
+    {
+      "speaker": "Adam Spice",
+      "role": "CFO — Financial Review",
+      "text": "Q4 revenue was $132 million, up 93% year-over-year. Space Systems grew 99% for the full year. Gross margins expanded over 500 basis points as we gained operating leverage.",
+      "textCn": "Q4收入1.32亿美元，同比增长93%。航天系统全年增长99%。随着运营杠杆释放，毛利率扩大了500多个基点。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": []
+}

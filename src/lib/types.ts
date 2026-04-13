@@ -51,6 +51,7 @@ export interface CompanyData {
   name: string;
   exchange: string;
   sector: string;
+  theme: "ai" | "defi" | "space";
   tagline: string;
   iconLetter: string;
   iconGradient: string;
@@ -62,4 +63,15 @@ export interface CompanyData {
   docs: DocItem[];
   transcriptPreview: Quote[];
   weeklyRefs: WeeklyRef[];
+}
+
+export interface Opinion {
+  id: string;
+  date: string;
+  theme: "ai" | "defi" | "space" | "macro";
+  title: string;
+  summary: string;
+  content: string;
+  sentiment?: "bullish" | "bearish" | "neutral";
+  tickers?: string[];
 }

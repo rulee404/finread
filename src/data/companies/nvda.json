@@ -1,0 +1,110 @@
+{
+  "ticker": "NVDA",
+  "name": "NVIDIA Corporation",
+  "exchange": "NASDAQ",
+  "sector": "AI 算力芯片",
+  "theme": "ai",
+  "tagline": "The Engine of AI — 全球 AI 基础设施的核心算力供应商",
+  "iconLetter": "N",
+  "iconGradient": "linear-gradient(135deg, #76b900 0%, #4a7a00 100%)",
+  "tags": [
+    { "label": "FY2026 Revenue", "value": "$130.5B" },
+    { "label": "Data Center", "value": "$115.2B" },
+    { "label": "Gross Margin", "value": "73.0%" },
+    { "label": "Q4 Revenue", "value": "$39.3B" },
+    { "label": "Blackwell 出货", "value": "$11B+ (Q4)" }
+  ],
+  "kpis": [
+    { "label": "FY 总收入", "value": "$130.5B", "change": "+114% Y/Y", "direction": "up" },
+    { "label": "Data Center 收入", "value": "$115.2B", "change": "+142% Y/Y", "direction": "up" },
+    { "label": "Q4 收入", "value": "$39.3B", "change": "+78% Y/Y", "direction": "up" },
+    { "label": "GAAP EPS", "value": "$2.94", "change": "+147% Y/Y", "direction": "up" },
+    { "label": "Gross Margin", "value": "73.0%", "change": "vs 72.7% FY25", "direction": "up" },
+    { "label": "FCF", "value": "$60.9B", "change": "+125% Y/Y", "direction": "up" },
+    { "label": "Blackwell Q4 出货", "value": "$11B+", "note": "首个完整季度" },
+    { "label": "推理收入占比", "value": "~50%", "change": "历史新高", "direction": "up" }
+  ],
+  "summaries": [
+    {
+      "title": "I. 收入结构",
+      "content": "Data Center $115.2B (+142%) — 大型云厂商 + 主权AI基础设施驱动\nGaming $11.4B (+9%) — GeForce RTX 50系列周期\nProfessional Visualization $2.1B (+21%)\nAutomotive & Robotics $1.8B (+55%) — 自动驾驶平台增长"
+    },
+    {
+      "title": "II. Blackwell 平台",
+      "content": "Blackwell GPU 架构：性能/功耗比 Hopper 提升 4x\nQ4首个完整出货季度 > $11B · 供不应求状态\nGB200 NVL72 机架级方案 · 推理性能提升 30x\n客户：所有主要云厂商 + Meta, Tesla, xAI, Oracle"
+    },
+    {
+      "title": "III. AI 推理爆发",
+      "content": "推理收入占 Data Center ~50%（历史新高）\nReasoning models (CoT) 使推理计算量增长 100x\nTest-time scaling 改变了推理的经济模型\nNIM 微服务 + TensorRT-LLM 生态系统"
+    },
+    {
+      "title": "IV. 护城河与生态",
+      "content": "CUDA 开发者生态 > 500万 · 25年积累\n全栈平台：芯片+系统+网络+软件一体\n客户转换成本极高：重写 CUDA 代码需数年\n市占率 > 90%（AI训练GPU市场）"
+    },
+    {
+      "title": "V. 前瞻指引",
+      "content": "Q1 FY2027 指引：$43B (±2%) · 超市场预期\n新架构 Rubin 2026 年发布 · 保持年度更新节奏\n主权AI：各国政府建设本土AI基础设施需求激增\nRobotics + 自动驾驶 = 下一个万亿级TAM"
+    },
+    {
+      "title": "VI. 风险因素",
+      "content": "① 美中芯片出口管制 — 中国收入受限\n② 客户自研芯片 (Google TPU, Amazon Trainium) 竞争\n③ Scaling Law 减速风险 → 资本开支缩减\n④ 估值已充分反映乐观预期\n⑤ 供应链集中度（台积电依赖）"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Jensen Huang",
+      "role": "CEO",
+      "text": "AI is the most transformative technology of our time. Every company, every country needs AI infrastructure. The demand for accelerated computing is surging across the entire technology stack, from training to inference.",
+      "textCn": "AI是我们这个时代最具变革性的技术。每家公司、每个国家都需要AI基础设施。从训练到推理，整个技术栈对加速计算的需求正在激增。",
+      "color": "green"
+    },
+    {
+      "speaker": "Jensen Huang",
+      "role": "CEO",
+      "text": "Inference is now approximately half of our data center revenue. Reasoning models that use chain-of-thought can consume 100x more compute per query. This is an entirely new scaling vector that didn't exist a year ago.",
+      "textCn": "推理现在约占我们数据中心收入的一半。使用思维链的推理模型每次查询可消耗100倍的计算量。这是一年前完全不存在的全新扩展向量。",
+      "color": "green"
+    },
+    {
+      "speaker": "Colette Kress",
+      "role": "CFO",
+      "text": "Blackwell demand is staggering and different from anything we've ever seen. Our visibility into future demand continues to extend, and we're working closely with our supply chain partners to scale production as fast as possible.",
+      "textCn": "Blackwell的需求令人震惊，与我们以往见过的任何情况都不同。我们对未来需求的可见度持续延伸，正在与供应链伙伴紧密合作以尽快扩大产能。",
+      "color": "cyan"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Data Center", "fy2025": "$115,199M", "fy2024": "$47,525M", "yoy": "+142%", "direction": "up", "note": "核心增长引擎" },
+    { "label": "Gaming", "fy2025": "$11,360M", "fy2024": "$10,447M", "yoy": "+9%", "direction": "up" },
+    { "label": "Prof. Visualization", "fy2025": "$2,079M", "fy2024": "$1,716M", "yoy": "+21%", "direction": "up" },
+    { "label": "Auto & Robotics", "fy2025": "$1,835M", "fy2024": "$1,185M", "yoy": "+55%", "direction": "up", "note": "自动驾驶平台" },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Total Revenue", "fy2025": "$130,497M", "fy2024": "$60,922M", "yoy": "+114%", "direction": "up", "isTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Gross Profit", "fy2025": "$95,267M", "fy2024": "$44,803M", "yoy": "+113%", "direction": "up", "isSectionTotal": true },
+    { "label": "Operating Income", "fy2025": "$81,450M", "fy2024": "$33,996M", "yoy": "+140%", "direction": "up" },
+    { "label": "Net Income", "fy2025": "$72,880M", "fy2024": "$29,760M", "yoy": "+145%", "direction": "up", "isSectionTotal": true }
+  ],
+  "docs": [
+    { "type": "10k", "typeLabel": "10-K", "title": "Annual Report on Form 10-K · FY2026", "meta": "NVIDIA Corporation · 英文原文", "links": [{ "label": "SEC 原文", "href": "#", "primary": true }, { "label": "中文全文", "href": "#" }, { "label": "下载 PDF", "href": "#" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "Q4 FY2026 Earnings Presentation", "meta": "投资者演示稿 · 含 Blackwell 路线图", "links": [{ "label": "IR 下载", "href": "#", "primary": true }, { "label": "摘要", "href": "#" }] },
+    { "type": "transcript", "typeLabel": "录音", "title": "Q4 FY2026 Earnings Call", "meta": "CEO Jensen Huang · CFO Colette Kress", "links": [{ "label": "英文实录", "href": "#", "primary": true }, { "label": "中英对照", "href": "#" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Jensen Huang",
+      "role": "CEO — Opening",
+      "text": "The age of AI is here. Every data center will be accelerated. Every enterprise will use AI. Every nation will build sovereign AI infrastructure. NVIDIA is at the center of this transformation.",
+      "textCn": "AI时代已经到来。每个数据中心都将被加速。每个企业都将使用AI。每个国家都将建设主权AI基础设施。NVIDIA处于这一变革的中心。",
+      "color": "green"
+    },
+    {
+      "speaker": "Colette Kress",
+      "role": "CFO — Financial Review",
+      "text": "Revenue for the fourth quarter was a record $39.3 billion, up 78% year-over-year. For the full fiscal year, revenue was $130.5 billion, more than doubling year-over-year.",
+      "textCn": "第四季度收入创纪录达393亿美元，同比增长78%。整个财年收入为1305亿美元，同比翻倍以上。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": []
+}
