@@ -102,10 +102,10 @@ export default function ProPage() {
           单篇打赏 ¥5.9-9.9，只为你感兴趣的内容付费
         </p>
         <Link
-          href="/article"
+          href="/theme/defi"
           className="mt-3 inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-sm text-text transition-colors hover:bg-white/[0.06]"
         >
-          浏览全文库 →
+          进入公司页面查看 →
         </Link>
       </div>
 

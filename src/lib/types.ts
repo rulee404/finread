@@ -101,3 +101,47 @@ export interface ArticleParagraph {
   cn: string;
   highlight?: boolean;
 }
+
+/* ── Company Documents (per-company, per-quarter) ── */
+
+export type DocCategory = "transcript" | "10k" | "10q" | "8k" | "shareholder-letter" | "earnings-ppt" | "press-release";
+
+export interface CompanyDoc {
+  id: string;
+  ticker: string;
+  quarter: string;
+  category: DocCategory;
+  categoryLabel: string;
+  title: string;
+  date: string;
+  summary: string;
+  price: number;
+  wordCount: number;
+  externalUrl?: string;
+  freePreview: ArticleSection[];
+  paidContent: ArticleSection[];
+}
+
+export interface RelatedContent {
+  id: string;
+  ticker: string;
+  type: "interview" | "kol" | "analysis" | "news";
+  typeLabel: string;
+  title: string;
+  author?: string;
+  date: string;
+  summary: string;
+  price: number;
+  wordCount: number;
+  freePreview: ArticleSection[];
+  paidContent: ArticleSection[];
+}
+
+export interface Discussion {
+  id: string;
+  ticker: string;
+  date: string;
+  title: string;
+  content: string;
+  sentiment?: "bullish" | "bearish" | "neutral";
+}

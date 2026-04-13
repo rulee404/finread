@@ -30,7 +30,6 @@ const navItems = [
     activeBg: "bg-theme-space-dim border-theme-space/30",
   },
   { href: "/opinions", label: "观点", match: (p: string) => p.startsWith("/opinions") },
-  { href: "/article", label: "全文 ☕", match: (p: string) => p.startsWith("/article") },
   { href: "/weekly", label: "周报", match: (p: string) => p.startsWith("/weekly") },
 ];
 

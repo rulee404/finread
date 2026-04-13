@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getAllThemes } from "@/lib/themes";
 import { getCompaniesByTheme } from "@/lib/companies";
 import { getLatestOpinions } from "@/data/opinions";
-import { getLatestArticles } from "@/data/articles";
 import ThemeIcon from "@/components/ThemeIcon";
 import OpinionCard from "@/components/OpinionCard";
 
@@ -33,7 +32,6 @@ const cardStyles: Record<string, { border: string; hoverBorder: string; text: st
 export default function HomePage() {
   const themes = getAllThemes();
   const latestOpinions = getLatestOpinions(4);
-  const latestArticles = getLatestArticles(3);
 
   return (
     <div className="mx-auto max-w-[1080px] px-5 py-10">
@@ -168,60 +166,6 @@ export default function HomePage() {
           {latestOpinions.map((op) => (
             <OpinionCard key={op.id} opinion={op} compact />
           ))}
-        </div>
-      </section>
-
-      {/* Token & Coffee — Latest Articles */}
-      <section className="mb-16">
-        <div className="mb-5 flex items-center justify-between">
-          <div>
-            <h2 className="text-lg font-semibold text-white">
-              全文库 · Token &amp; Coffee ☕
-            </h2>
-            <p className="mt-0.5 text-xs text-muted">
-              一手原典全文中英对照 · 打赏一杯咖啡解锁
-            </p>
-          </div>
-          <Link
-            href="/article"
-            className="text-xs text-muted hover:text-gold"
-          >
-            查看全部 →
-          </Link>
-        </div>
-
-        <div className="space-y-3">
-          {latestArticles.map((article) => {
-            const freeParagraphs = article.freePreview.reduce(
-              (n, s) => n + s.paragraphs.length,
-              0,
-            );
-            return (
-              <Link
-                key={article.id}
-                href={`/article/${article.id}`}
-                className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all hover:border-gold/20 hover:bg-surface2"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-dim text-lg">
-                  ☕
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="mb-0.5 flex items-center gap-2">
-                    <span className="text-[10px] text-muted">{article.date}</span>
-                    <span className="text-[10px] text-accent-green">
-                      免费 {freeParagraphs} 段
-                    </span>
-                  </div>
-                  <h3 className="truncate text-sm font-semibold text-white group-hover:text-gold">
-                    {article.title}
-                  </h3>
-                </div>
-                <div className="shrink-0 rounded-lg border border-gold/30 bg-gold-dim px-2.5 py-1 text-xs font-bold text-gold">
-                  ¥{article.price}
-                </div>
-              </Link>
-            );
-          })}
         </div>
       </section>
 

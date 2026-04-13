@@ -3,9 +3,9 @@
 import type { CompanyData } from "@/lib/types";
 import Tabs from "@/components/Tabs";
 import OverviewPanel from "./panels/OverviewPanel";
-import DocsPanel from "./panels/DocsPanel";
-import TranscriptPanel from "./panels/TranscriptPanel";
-import WeeklyPanel from "./panels/WeeklyPanel";
+import EarningsPanel from "./panels/EarningsPanel";
+import RelatedPanel from "./panels/RelatedPanel";
+import DiscussionPanel from "./panels/DiscussionPanel";
 
 export default function CompanyTabs({ company }: { company: CompanyData }) {
   return (
@@ -13,23 +13,23 @@ export default function CompanyTabs({ company }: { company: CompanyData }) {
       tabs={[
         {
           key: "overview",
-          label: "概览与摘要",
+          label: "概览",
           content: <OverviewPanel company={company} />,
         },
         {
-          key: "docs",
-          label: "原始文档",
-          content: <DocsPanel company={company} />,
+          key: "earnings",
+          label: "财报",
+          content: <EarningsPanel company={company} />,
         },
         {
-          key: "transcript",
-          label: "电话会实录",
-          content: <TranscriptPanel company={company} />,
+          key: "related",
+          label: "相关",
+          content: <RelatedPanel company={company} />,
         },
         {
-          key: "weekly",
-          label: "周报引用",
-          content: <WeeklyPanel company={company} />,
+          key: "discussion",
+          label: "讨论",
+          content: <DiscussionPanel company={company} />,
         },
       ]}
     />
