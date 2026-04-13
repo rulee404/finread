@@ -12,10 +12,13 @@ const totalParagraphs = (a: Article) =>
 const paidParagraphs = (a: Article) =>
   a.paidContent.reduce((n, s) => n + s.paragraphs.length, 0);
 
+type PayMethod = "stripe" | "alipay";
+
 export default function CoffeeGate({ article }: { article: Article }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [payMethod, setPayMethod] = useState<PayMethod>("stripe");
   const router = useRouter();
 
   const paid = paidParagraphs(article);
@@ -31,12 +34,20 @@ export default function CoffeeGate({ article }: { article: Article }) {
 
   async function handleCheckout() {
     if (!isLoggedIn) {
-      router.push(`/login?redirect=${encodeURIComponent(window.location.pathname)}`);
+      router.push(
+        `/login?redirect=${encodeURIComponent(window.location.pathname)}`,
+      );
       return;
     }
 
     setLoading(true);
     setError(null);
+
+    if (payMethod === "alipay") {
+      setError("支付宝通道即将上线，目前请使用 Stripe（支持银行卡/Apple Pay）");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch("/api/checkout", {
@@ -132,16 +143,55 @@ export default function CoffeeGate({ article }: { article: Article }) {
           </div>
         </div>
 
+        {/* Payment method selector */}
+        <div className="mb-4 flex gap-2">
+          <button
+            onClick={() => setPayMethod("stripe")}
+            className={`flex flex-1 items-center justify-center gap-2 rounded-lg border py-2.5 text-xs font-medium transition-colors ${
+              payMethod === "stripe"
+                ? "border-gold/40 bg-gold-dim/40 text-white"
+                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-white"
+            }`}
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+              <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
+            </svg>
+            Stripe
+          </button>
+          <button
+            onClick={() => setPayMethod("alipay")}
+            className={`flex flex-1 items-center justify-center gap-2 rounded-lg border py-2.5 text-xs font-medium transition-colors ${
+              payMethod === "alipay"
+                ? "border-[#1677FF]/40 bg-[#1677FF]/10 text-white"
+                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-white"
+            }`}
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+              <path d="M21.422 15.358c-1.04-.378-5.064-2.187-6.504-2.965-.445.628-1.626 2.004-2.844 2.96-1.218.955-2.785 1.508-4.05 1.508-1.51 0-3.046-.738-3.046-2.95 0-2.94 2.798-4.468 7.197-4.544-.503-1.108-.792-2.388-.792-3.164 0-.502.068-1.01.177-1.493H7.68v-.972h4.463c.21-.616.52-1.204.92-1.71H7.68V1.06h7.398a6.496 6.496 0 012.508 1.578v-.007c-.65-.348-2.48-.62-3.873.33-.865.586-1.516 1.556-1.84 2.067h4.413v.968H11.54c-.117.41-.188.84-.188 1.28 0 1.196.578 2.716 1.2 3.66 1.62-.056 5.89.302 8.67 1.6.347.163.672.32.972.48C22.82 10.852 23 8.51 23 6.003 23 2.687 20.313 0 17 0H6C2.687 0 0 2.687 0 6v12c0 3.313 2.687 6 6 6h11c3.313 0 6-2.687 6-6v-1.54c-.415-.366-.966-.738-1.578-1.102zM8.06 17.85c.96 0 2.058-.378 3.12-1.15.782-.57 1.47-1.297 1.98-1.96-2.96-.22-6.154.532-6.154 2.67 0 .902.6 1.4 1.31 1.44h.04c.234 0 .467-.033.704-.04z"/>
+            </svg>
+            支付宝
+            <span className="rounded bg-white/10 px-1 py-0.5 text-[9px] text-muted">
+              即将上线
+            </span>
+          </button>
+        </div>
+
         {/* Payment button */}
         <button
           onClick={handleCheckout}
           disabled={loading}
-          className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-bg transition-opacity hover:opacity-90 disabled:opacity-50"
+          className={`w-full rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-50 ${
+            payMethod === "alipay"
+              ? "bg-[#1677FF] text-white"
+              : "bg-gold text-bg"
+          }`}
         >
           {loading
             ? "跳转支付中…"
             : isLoggedIn
-              ? `☕ 立即解锁 ¥${article.price}`
+              ? payMethod === "alipay"
+                ? `支付宝支付 ¥${article.price}`
+                : `☕ 立即解锁 ¥${article.price}`
               : "登录后解锁全文"}
         </button>
 
@@ -152,7 +202,7 @@ export default function CoffeeGate({ article }: { article: Article }) {
         )}
 
         <p className="mt-2 text-center text-[10px] text-muted/60">
-          支持微信支付 · 支付宝 · 银行卡 · 付款即刻解锁
+          Stripe 支持 Visa / Mastercard / Apple Pay · 付款即刻解锁
         </p>
 
         {/* Value proposition */}

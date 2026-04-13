@@ -100,11 +100,20 @@ export interface ArticleParagraph {
   en: string;
   cn: string;
   highlight?: boolean;
+  speaker?: string;
+  speakerTitle?: string;
 }
 
 /* ── Company Documents (per-company, per-quarter) ── */
 
 export type DocCategory = "transcript" | "10k" | "10q" | "8k" | "shareholder-letter" | "earnings-ppt" | "press-release";
+
+export interface SummaryCard {
+  icon: string;
+  label: string;
+  value: string;
+  note?: string;
+}
 
 export interface CompanyDoc {
   id: string;
@@ -115,6 +124,7 @@ export interface CompanyDoc {
   title: string;
   date: string;
   summary: string;
+  summaryCards?: SummaryCard[];
   price: number;
   wordCount: number;
   externalUrl?: string;

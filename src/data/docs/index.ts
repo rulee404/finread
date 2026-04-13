@@ -2,6 +2,7 @@ import type { CompanyDoc, RelatedContent, Discussion } from "@/lib/types";
 import {
   crclQ4TranscriptFreePreview,
   crclQ4TranscriptPaidContent,
+  crclQ4SummaryCards,
 } from "./crcl-q4fy25-transcript-full";
 
 /* ═══════════════════════════════════════════
@@ -222,7 +223,8 @@ const crclDocs: CompanyDoc[] = [
     title: "Q4 FY2025 Earnings Call 完整全文中英对照",
     date: "2026-02-25",
     summary:
-      "Jeremy Allaire 描绘 AI + 稳定币愿景，CFO Jeremy Fox-Geen 详解财务数据。涵盖 CEO 开场（USDC $753B +72%、链上交易量 $12T +247%、Q4 收入 $770M +77%、Adj EBITDA $167M +412%）、平台扩展（Arc 测试网、CPN 55 家机构入网 TPV $57B、StableFX）、企业合作（Intuit/Visa/Polymarket/Cash App/JPMorgan）、竞争格局（交易量份额从 39%→50%、双头垄断格局）、CCTP 互操作性（占全部桥接量 62%）、EURC（3.8x 增长至 €310M）与 USYC（$1.7B）、AI Agent 支付愿景、CFO 全年财务回顾、FY2026 指引（USDC 40% CAGR、其他收入 $150-170M）、分析师 Q&A（Arc 代币探索、GENIUS/CLARITY 法案影响、CPN B2B 跨境用例、分发成本与 Coinbase 关系）。完整 20 页逐段翻译。",
+      "Circle Internet Group Q4 FY2025 财报电话会完整记录。CEO Jeremy Allaire 与 CFO Jeremy Fox-Geen 管理层演讲 + 7 位华尔街分析师（Citizens JMP / Canaccord / Needham / Citi / Mizuho / Autonomous Research / Morgan Stanley）全部提问与回答。逐段中英文对照翻译，说话人标注，关键数据高亮。",
+    summaryCards: crclQ4SummaryCards,
     price: 19.9,
     wordCount: 28000,
     freePreview: crclQ4TranscriptFreePreview,

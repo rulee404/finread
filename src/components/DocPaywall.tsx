@@ -11,12 +11,23 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
     <div
       className={`rounded-lg border p-4 ${
         p.highlight
-          ? "border-gold/20 bg-gold-dim/30"
+          ? "border-gold/30 bg-gold-dim/30 shadow-[0_0_12px_rgba(255,204,0,0.05)]"
           : "border-border bg-surface"
       }`}
     >
-      <p className="text-[13px] leading-relaxed text-white/90">{p.en}</p>
-      <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.cn}</p>
+      {p.speaker && (
+        <div className="mb-2 flex items-baseline gap-2">
+          <span className="text-[13px] font-bold text-white">{p.speaker}</span>
+          {p.speakerTitle && (
+            <span className="text-[11px] text-muted">{p.speakerTitle}</span>
+          )}
+        </div>
+      )}
+      <p className="text-[13px] leading-[1.85] text-white/90">{p.en}</p>
+      <p className="mt-2 text-[13px] leading-[1.85] text-muted">{p.cn}</p>
+      {p.highlight && (
+        <div className="mt-2 h-px bg-gradient-to-r from-gold/40 via-gold/10 to-transparent" />
+      )}
     </div>
   );
 }
@@ -25,7 +36,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="text-base font-semibold text-white">
+        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-white">
           {section.heading}
         </h2>
       )}
