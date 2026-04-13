@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProButton from "./ProButton";
 
 export const metadata = {
   title: "Pro 会员 | FinRead",
@@ -82,13 +83,9 @@ export default function ProPage() {
             ))}
           </ul>
 
-          <button
-            className="mt-6 w-full rounded-lg bg-gold py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
-          >
-            即将开放 · 敬请期待
-          </button>
+          <ProButton />
           <p className="mt-2 text-center text-[10px] text-muted">
-            先注册免费版，Pro 上线后优先通知
+            支持微信支付 · 支付宝 · 银行卡 · 随时取消
           </p>
         </div>
       </div>

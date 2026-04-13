@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginForm() {
@@ -10,6 +10,8 @@ export default function LoginForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,7 +27,7 @@ export default function LoginForm() {
       return;
     }
 
-    router.push("/");
+    router.push(redirect ?? "/");
     router.refresh();
   }
 

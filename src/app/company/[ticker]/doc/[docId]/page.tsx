@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import type { ArticleParagraph, ArticleSection } from "@/lib/types";
 import { getDoc, getRelatedDoc, getAllDocIds } from "@/data/docs";
 import { getCompany } from "@/lib/companies";
-import CoffeeGate from "@/components/CoffeeGate";
+import DocPaywall from "@/components/DocPaywall";
 
 interface Props {
   params: Promise<{ ticker: string; docId: string }>;
@@ -92,7 +92,10 @@ export default async function DocDetailPage({ params }: Props) {
     <div className="mx-auto max-w-[800px] px-5 py-10">
       {/* Breadcrumb */}
       <div className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-muted">
-        <Link href={`/company/${ticker.toLowerCase()}`} className="hover:text-gold">
+        <Link
+          href={`/company/${ticker.toLowerCase()}`}
+          className="hover:text-gold"
+        >
           {company.ticker} {company.name}
         </Link>
         <span>›</span>
@@ -117,7 +120,6 @@ export default async function DocDetailPage({ params }: Props) {
           {doc.title}
         </h1>
 
-        {/* Summary card */}
         <div className="mt-4 rounded-xl border border-border bg-surface p-4">
           <div className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-gold">
             摘要
@@ -125,7 +127,6 @@ export default async function DocDetailPage({ params }: Props) {
           <p className="text-sm leading-relaxed text-text">{doc.summary}</p>
         </div>
 
-        {/* Stats */}
         <div className="mt-3 flex flex-wrap gap-4 text-xs text-muted">
           <span>
             <span className="font-semibold text-white">
@@ -146,16 +147,17 @@ export default async function DocDetailPage({ params }: Props) {
             </span>{" "}
             段
           </span>
-          {"externalUrl" in doc && (doc as { externalUrl?: string }).externalUrl && (
-            <a
-              href={(doc as { externalUrl: string }).externalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-blue hover:underline"
-            >
-              SEC 原文 ↗
-            </a>
-          )}
+          {"externalUrl" in doc &&
+            (doc as { externalUrl?: string }).externalUrl && (
+              <a
+                href={(doc as { externalUrl: string }).externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-blue hover:underline"
+              >
+                SEC 原文 ↗
+              </a>
+            )}
         </div>
       </header>
 
@@ -166,10 +168,14 @@ export default async function DocDetailPage({ params }: Props) {
         ))}
       </div>
 
-      {/* Paywall */}
-      {doc.paidContent.length > 0 && <CoffeeGate article={coffeeArticle} />}
+      {/* Paid content — checks purchase status client-side */}
+      <DocPaywall
+        docId={doc.id}
+        paidContent={doc.paidContent}
+        coffeeArticle={coffeeArticle}
+      />
 
-      {/* Back to company */}
+      {/* Back */}
       <div className="mt-10 text-center">
         <Link
           href={`/company/${ticker.toLowerCase()}`}
