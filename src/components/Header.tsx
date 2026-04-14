@@ -31,6 +31,13 @@ const navItems = [
   },
   { href: "/opinions", label: "观点", match: (p: string) => p.startsWith("/opinions") },
   { href: "/weekly", label: "周报", match: (p: string) => p.startsWith("/weekly") },
+  {
+    href: "/pro",
+    label: "Pro",
+    match: (p: string) => p.startsWith("/pro"),
+    color: "text-gold",
+    activeBg: "bg-gold-dim border-gold/30",
+  },
 ];
 
 export default function Header() {

@@ -4,6 +4,8 @@ import { getCompaniesByTheme } from "@/lib/companies";
 import { getLatestOpinions } from "@/data/opinions";
 import ThemeIcon from "@/components/ThemeIcon";
 import OpinionCard from "@/components/OpinionCard";
+import HeroCTA from "@/components/HeroCTA";
+import BottomCTA from "@/components/BottomCTA";
 
 const cardStyles: Record<string, { border: string; hoverBorder: string; text: string; glow: string; tagBg: string }> = {
   ai: {
@@ -52,20 +54,7 @@ export default function HomePage() {
           <br />
           SEC 原典解读 · 管理层原话中英对照 · 作者持仓逻辑实时公开。
         </p>
-        <div className="mt-6 flex justify-center gap-3">
-          <Link
-            href="/register"
-            className="rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
-          >
-            免费订阅
-          </Link>
-          <Link
-            href="/opinions"
-            className="rounded-lg border border-gold/30 bg-gold-dim px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold/20"
-          >
-            作者观点
-          </Link>
-        </div>
+        <HeroCTA />
       </section>
 
       {/* Three Theme Cards */}
@@ -234,26 +223,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="rounded-2xl border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-8 text-center">
-        <h3 className="text-lg font-bold text-white">加入 FinRead</h3>
-        <p className="mt-2 max-w-lg mx-auto text-sm text-muted">
-          每周日发布投资周报 · 财报季实时解读 · 三赛道持仓逻辑公开分享
-        </p>
-        <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link
-            href="/register"
-            className="rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
-          >
-            免费注册
-          </Link>
-          <Link
-            href="/pro"
-            className="rounded-lg border border-gold/30 bg-gold-dim px-6 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold/20"
-          >
-            了解 Pro 会员
-          </Link>
-        </div>
-      </section>
+      <BottomCTA />
     </div>
   );
 }

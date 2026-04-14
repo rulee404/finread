@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginForm() {
@@ -9,9 +10,21 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [loggedInEmail, setLoggedInEmail] = useState<string | null>(null);
+  const [checking, setChecking] = useState(true);
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirect = searchParams.get("redirect");
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user?.email) {
+        setLoggedInEmail(data.user.email);
+      }
+      setChecking(false);
+    });
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -29,6 +42,40 @@ export default function LoginForm() {
 
     router.push(redirect ?? "/");
     router.refresh();
+  }
+
+  if (checking) {
+    return (
+      <div className="w-full py-8 text-center text-sm text-muted">
+        检查登录状态…
+      </div>
+    );
+  }
+
+  if (loggedInEmail) {
+    return (
+      <div className="w-full rounded-lg border border-gold/20 bg-gold-dim/20 p-6 text-center">
+        <div className="mb-2 inline-block h-2 w-2 rounded-full bg-accent-green" />
+        <p className="text-sm font-semibold text-white">
+          你已登录为 <span className="text-gold">{loggedInEmail.split("@")[0]}</span>
+        </p>
+        {redirect ? (
+          <Link
+            href={redirect}
+            className="mt-4 inline-block rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
+          >
+            继续前往 →
+          </Link>
+        ) : (
+          <Link
+            href="/"
+            className="mt-4 inline-block rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
+          >
+            返回首页
+          </Link>
+        )}
+      </div>
+    );
   }
 
   return (

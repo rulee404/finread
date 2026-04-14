@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ProButton from "./ProButton";
 
 export const metadata = {
   title: "Pro 会员 | FinRead",
@@ -57,7 +56,7 @@ export default function ProPage() {
             href="/register"
             className="mt-6 block rounded-lg border border-border bg-surface2 py-2.5 text-center text-sm font-semibold text-text transition-colors hover:bg-white/[0.06]"
           >
-            免费注册
+            免费注册 →
           </Link>
         </div>
 
@@ -83,9 +82,14 @@ export default function ProPage() {
             ))}
           </ul>
 
-          <ProButton />
+          <div className="mt-6 w-full rounded-lg border border-gold/20 bg-gold-dim/30 py-3 text-center">
+            <p className="text-sm font-semibold text-gold">即将开放</p>
+            <p className="mt-1 text-[11px] text-muted">
+              Pro 会员功能正在筹备中，敬请期待
+            </p>
+          </div>
           <p className="mt-2 text-center text-[10px] text-muted">
-            支持微信支付 · 支付宝 · 银行卡 · 随时取消
+            开放后支持微信支付 · 支付宝 · 银行卡 · 随时取消
           </p>
         </div>
       </div>
@@ -115,6 +119,9 @@ export default function ProPage() {
         <p className="mt-1 text-xs text-muted/60">
           限额 200 人 · 满员后需等待名额
         </p>
+        <div className="mt-3 inline-block rounded-md border border-gold/20 bg-gold-dim/20 px-4 py-1.5 text-xs text-gold">
+          即将开放
+        </div>
       </div>
     </div>
   );
