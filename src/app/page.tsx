@@ -49,10 +49,12 @@ export default function HomePage() {
         <h1 className="mb-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
           三大赛道，一手投研
         </h1>
-        <p className="mx-auto max-w-xl text-sm leading-relaxed text-muted">
-          聚焦未来十年最重要的三条投资主线 — 人工智能、去中心化金融、太空经济。
+        <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted">
+          聚焦三条投资主线 — 人工智能、去中心化金融、太空经济。
           <br />
-          SEC 原典解读 · 管理层原话中英对照 · 作者持仓逻辑实时公开。
+          财报 Presentation / Shareholder Letter / 会议 Transcript 实录中英文全文对照深度解读
+          <br />
+          10-K · 10-Q 报告解读 · 管理层采访全文翻译 · 机构研报解读
         </p>
         <HeroCTA />
       </section>

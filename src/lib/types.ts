@@ -155,3 +155,20 @@ export interface Discussion {
   content: string;
   sentiment?: "bullish" | "bearish" | "neutral";
 }
+
+/* ── Institutional Research Reports ── */
+
+export interface ResearchReport {
+  id: string;
+  date: string;
+  theme: "ai" | "defi" | "space" | "macro";
+  institution: string;
+  title: string;
+  subtitle: string;
+  tickers: string[];
+  coverPoints: string[];
+  freePreview: ArticleSection[];
+  paidContent: ArticleSection[];
+  wordCount: number;
+  tipAmount: number;
+}

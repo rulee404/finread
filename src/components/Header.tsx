@@ -32,6 +32,13 @@ const navItems = [
   { href: "/opinions", label: "观点", match: (p: string) => p.startsWith("/opinions") },
   { href: "/weekly", label: "周报", match: (p: string) => p.startsWith("/weekly") },
   {
+    href: "/reports",
+    label: "研报",
+    match: (p: string) => p.startsWith("/reports"),
+    color: "text-accent-blue",
+    activeBg: "bg-accent-blue/10 border-accent-blue/30",
+  },
+  {
     href: "/pro",
     label: "Pro",
     match: (p: string) => p.startsWith("/pro"),

@@ -12,7 +12,7 @@ export default function Footer() {
             <p className="mt-1 max-w-xs text-xs text-muted">
               聚焦 AI · DeFi · Space 三大赛道
               <br />
-              SEC 原典解读 · 中英对照 · 作者观点实时公开
+              财报中英全文对照 · 10-K/10-Q 解读 · 机构研报
             </p>
           </div>
 
@@ -34,6 +34,7 @@ export default function Footer() {
               <div className="flex flex-col gap-1">
                 <Link href="/opinions" className="text-xs text-muted hover:text-white">投资观点</Link>
                 <Link href="/weekly" className="text-xs text-muted hover:text-white">每周周报</Link>
+                <Link href="/reports" className="text-xs text-muted hover:text-white">机构研报</Link>
                 <Link href="/pro" className="text-xs text-muted hover:text-white">Pro 会员</Link>
               </div>
             </div>
