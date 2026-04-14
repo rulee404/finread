@@ -68,7 +68,7 @@ export default function OpinionCard({
       </div>
 
       <h3
-        className={`font-semibold text-white group-hover:text-gold ${compact ? "text-[13px]" : "text-sm"}`}
+        className={`font-semibold text-ink group-hover:text-gold ${compact ? "text-[13px]" : "text-sm"}`}
       >
         {opinion.title}
       </h3>

@@ -10,7 +10,7 @@ export default function WeeklyListPage() {
 
   return (
     <div className="mx-auto max-w-[800px] px-5 py-10">
-      <h1 className="mb-2 text-2xl font-bold text-white">每周投资周报</h1>
+      <h1 className="mb-2 text-2xl font-bold text-ink">每周投资周报</h1>
       <p className="mb-8 text-sm text-muted">
         每周日发布 · 用一手数据解读本周美股动态 · 包含持仓思考与下周关注
       </p>
@@ -30,7 +30,7 @@ export default function WeeklyListPage() {
                   </span>
                   <span className="text-[11px] text-muted">{post.date}</span>
                 </div>
-                <h2 className="text-sm font-semibold text-white group-hover:text-gold">
+                <h2 className="text-sm font-semibold text-ink group-hover:text-gold">
                   {post.title}
                 </h2>
                 <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted">

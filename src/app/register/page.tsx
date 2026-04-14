@@ -8,7 +8,7 @@ export const metadata = {
 export default function RegisterPage() {
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-sm flex-col items-center justify-center px-5 py-16">
-      <h1 className="mb-1 text-2xl font-bold text-white">注册 FinRead</h1>
+      <h1 className="mb-1 text-2xl font-bold text-ink">注册 FinRead</h1>
       <p className="mb-8 text-sm text-muted">
         免费获取 SEC 原典摘要与管理层原话中英对照
       </p>

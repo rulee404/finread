@@ -4,14 +4,14 @@ export default function CompanyHeader({ company }: { company: CompanyData }) {
   return (
     <div className="flex flex-wrap items-start gap-4 py-7">
       <div
-        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-extrabold text-white"
+        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-extrabold text-[#fff]"
         style={{ background: company.iconGradient }}
       >
         {company.iconLetter}
       </div>
 
       <div>
-        <h1 className="text-xl font-bold tracking-tight text-white md:text-2xl">
+        <h1 className="text-xl font-bold tracking-tight text-ink md:text-2xl">
           {company.name}
         </h1>
         <p className="mt-1 text-xs text-muted">

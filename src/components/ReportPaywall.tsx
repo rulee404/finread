@@ -12,7 +12,7 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
           : "border-border bg-surface"
       }`}
     >
-      <p className="text-[13px] leading-relaxed text-white/90">{p.en}</p>
+      <p className="text-[13px] leading-relaxed text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.cn}</p>
     </div>
   );
@@ -22,7 +22,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="flex items-center gap-2 border-l-2 border-accent-blue/50 pl-3 text-base font-semibold text-white">
+        <h2 className="flex items-center gap-2 border-l-2 border-accent-blue/50 pl-3 text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}
@@ -68,7 +68,7 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
         <div className="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold-dim/40 to-surface p-6 md:p-8">
           <div className="mb-5 text-center">
             <div className="mb-2 text-2xl">📱</div>
-            <h3 className="text-lg font-bold text-white">扫码打赏解锁</h3>
+            <h3 className="text-lg font-bold text-ink">扫码打赏解锁</h3>
             <p className="mt-1 text-sm text-muted">
               ¥{report.tipAmount} 解锁「{report.institution}」完整研报
             </p>
@@ -76,7 +76,7 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
 
           <div className="mx-auto max-w-xs rounded-xl border border-border bg-bg/60 p-5">
             <div className="flex items-center justify-center gap-4">
-              <div className="flex h-32 w-32 items-center justify-center rounded-lg border border-border bg-white">
+              <div className="flex h-32 w-32 items-center justify-center rounded-lg border border-border bg-surface2">
                 <div className="text-center">
                   <div className="text-3xl text-black/80">📱</div>
                   <p className="mt-1 text-[9px] font-medium text-black/40">
@@ -98,14 +98,14 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
 
           <button
             onClick={() => setState("unlocked")}
-            className="mt-5 w-full rounded-xl bg-accent-blue py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="mt-5 w-full rounded-xl bg-accent-blue py-3 text-sm font-semibold text-[#fff] transition-opacity hover:opacity-90"
           >
             我已完成打赏，解锁全文
           </button>
 
           <button
             onClick={() => setState("locked")}
-            className="mt-3 block w-full text-center text-xs text-muted hover:text-white"
+            className="mt-3 block w-full text-center text-xs text-muted hover:text-ink"
           >
             返回
           </button>
@@ -121,9 +121,9 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
       <div className="rounded-2xl border border-accent-blue/30 bg-gradient-to-b from-accent-blue/10 to-surface p-6 md:p-8">
         <div className="mb-5 text-center">
           <div className="mb-2 text-2xl">📊</div>
-          <h3 className="text-lg font-bold text-white">打赏解锁完整研报</h3>
+          <h3 className="text-lg font-bold text-ink">打赏解锁完整研报</h3>
           <p className="mt-1 text-sm text-muted">
-            剩余 <span className="font-semibold text-white">{paidParagraphs}</span> 段
+            剩余 <span className="font-semibold text-ink">{paidParagraphs}</span> 段
             中英对照深度分析等待解锁
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
             {report.paidContent.map((section, i) => (
               <div key={i} className="flex items-center gap-2 text-xs">
                 <span className="text-accent-blue">▸</span>
-                <span className="text-white/80">{section.heading ?? `章节 ${i + 1}`}</span>
+                <span className="text-ink/80">{section.heading ?? `章节 ${i + 1}`}</span>
                 <span className="text-muted">
                   — {section.paragraphs.length} 段中英对照
                 </span>
@@ -146,7 +146,7 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
         </div>
 
         <div className="mb-4 text-center">
-          <div className="text-3xl font-bold text-white">
+          <div className="text-3xl font-bold text-ink">
             ¥{report.tipAmount}
           </div>
           <div className="mt-0.5 text-xs text-muted">
@@ -156,7 +156,7 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
 
         <button
           onClick={() => setState("tipping")}
-          className="w-full rounded-xl bg-accent-blue py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          className="w-full rounded-xl bg-accent-blue py-3 text-sm font-semibold text-[#fff] transition-opacity hover:opacity-90"
         >
           打赏 ¥{report.tipAmount} 解锁全文
         </button>

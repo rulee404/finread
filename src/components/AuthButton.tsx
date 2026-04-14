@@ -60,7 +60,7 @@ export default function AuthButton() {
   return (
     <Link
       href="/login"
-      className="rounded-full border border-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-gold/20 hover:text-white"
+      className="rounded-full border border-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-gold/20 hover:text-ink"
     >
       登录
     </Link>

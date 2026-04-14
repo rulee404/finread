@@ -12,7 +12,7 @@ export default function Card({
       className={`rounded-[10px] border border-border bg-surface p-5 ${className ?? ""}`}
     >
       {title && (
-        <h3 className="mb-3 text-sm font-semibold text-white">{title}</h3>
+        <h3 className="mb-3 text-sm font-semibold text-ink">{title}</h3>
       )}
       {children}
     </div>

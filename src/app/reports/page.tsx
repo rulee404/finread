@@ -25,7 +25,7 @@ export default function ReportsPage() {
             📊
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-white">机构研报</h1>
+            <h1 className="text-2xl font-bold text-ink">机构研报</h1>
             <p className="text-xs text-muted">
               Morgan Stanley · Goldman Sachs · UBS · 更多机构持续收录
             </p>
@@ -67,7 +67,7 @@ export default function ReportsPage() {
               </div>
 
               {/* Title */}
-              <h2 className="mb-1.5 text-base font-bold text-white group-hover:text-accent-blue transition-colors">
+              <h2 className="mb-1.5 text-base font-bold text-ink group-hover:text-accent-blue transition-colors">
                 {report.title}
               </h2>
               <p className="mb-4 text-sm text-muted">{report.subtitle}</p>
@@ -111,7 +111,7 @@ export default function ReportsPage() {
 
       {/* CTA */}
       <div className="mt-12 rounded-2xl border border-accent-blue/20 bg-accent-blue/5 p-6 text-center">
-        <h3 className="text-base font-bold text-white">更多研报持续收录中</h3>
+        <h3 className="text-base font-bold text-ink">更多研报持续收录中</h3>
         <p className="mt-2 text-sm text-muted">
           覆盖 AI · DeFi · Space 三大赛道 — 每周更新 1-2 篇顶级机构深度报告
         </p>

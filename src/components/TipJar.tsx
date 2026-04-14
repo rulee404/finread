@@ -27,14 +27,14 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
           <div className="mb-3 text-4xl" style={{ animation: "tip-pop .5s cubic-bezier(.34,1.56,.64,1)" }}>
             {picked.emoji}
           </div>
-          <h3 className="text-lg font-bold text-white">感谢打赏！</h3>
+          <h3 className="text-lg font-bold text-ink">感谢打赏！</h3>
           <p className="mt-1 text-sm text-muted">
             你的 ¥{picked.amount} 是对作者最好的鼓励
           </p>
           <div className="mx-auto mt-5 max-w-xs rounded-xl border border-border bg-bg/60 p-4">
             <p className="mb-2 text-[11px] font-semibold text-muted">扫码完成支付</p>
             <div className="flex items-center justify-center gap-3">
-              <div className="flex h-28 w-28 items-center justify-center rounded-lg border border-border bg-white">
+              <div className="flex h-28 w-28 items-center justify-center rounded-lg border border-border bg-surface2">
                 <div className="text-center">
                   <div className="text-2xl text-black/80">📱</div>
                   <p className="mt-1 text-[9px] font-medium text-black/40">
@@ -53,7 +53,7 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
           </div>
           <button
             onClick={() => { setState("idle"); setPicked(null); }}
-            className="mt-4 text-xs text-muted hover:text-white"
+            className="mt-4 text-xs text-muted hover:text-ink"
           >
             返回
           </button>
@@ -67,7 +67,7 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
       {state === "idle" ? (
         <div className="px-6 py-8 text-center">
           <div className="mb-2 text-2xl">❤️</div>
-          <h3 className="text-base font-bold text-white">觉得有用？打赏作者</h3>
+          <h3 className="text-base font-bold text-ink">觉得有用？打赏作者</h3>
           <p className="mt-1 text-xs text-muted">
             {articleTitle
               ? `如果这篇「${articleTitle}」对你有帮助`
@@ -84,7 +84,7 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
       ) : (
         <div className="p-6">
           <div className="mb-4 text-center">
-            <h3 className="text-base font-bold text-white">选择打赏金额</h3>
+            <h3 className="text-base font-bold text-ink">选择打赏金额</h3>
             <p className="mt-0.5 text-xs text-muted">
               每一份支持都是继续创作的动力
             </p>
@@ -100,7 +100,7 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
                 <span className="text-2xl transition-transform group-hover:scale-110">
                   {p.emoji}
                 </span>
-                <span className="text-lg font-bold text-white">
+                <span className="text-lg font-bold text-ink">
                   ¥{p.amount}
                 </span>
                 <span className="text-[10px] text-muted">{p.label}</span>
@@ -110,7 +110,7 @@ export default function TipJar({ articleTitle }: { articleTitle?: string }) {
 
           <button
             onClick={() => setState("idle")}
-            className="mt-4 block w-full text-center text-xs text-muted hover:text-white"
+            className="mt-4 block w-full text-center text-xs text-muted hover:text-ink"
           >
             取消
           </button>

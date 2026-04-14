@@ -35,7 +35,7 @@ function RelatedCard({
         <span className="text-[10px] text-muted">{item.date}</span>
       </div>
 
-      <h4 className="mb-1 text-sm font-semibold text-white group-hover:text-gold">
+      <h4 className="mb-1 text-sm font-semibold text-ink group-hover:text-gold">
         {item.title}
       </h4>
       {item.author && (

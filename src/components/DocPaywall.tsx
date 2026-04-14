@@ -17,13 +17,13 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
     >
       {p.speaker && (
         <div className="mb-2 flex items-baseline gap-2">
-          <span className="text-[13px] font-bold text-white">{p.speaker}</span>
+          <span className="text-[13px] font-bold text-ink">{p.speaker}</span>
           {p.speakerTitle && (
             <span className="text-[11px] text-muted">{p.speakerTitle}</span>
           )}
         </div>
       )}
-      <p className="text-[13px] leading-[1.85] text-white/90">{p.en}</p>
+      <p className="text-[13px] leading-[1.85] text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-[1.85] text-muted">{p.cn}</p>
       {p.highlight && (
         <div className="mt-2 h-px bg-gradient-to-r from-gold/40 via-gold/10 to-transparent" />
@@ -36,7 +36,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-white">
+        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}

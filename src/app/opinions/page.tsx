@@ -41,14 +41,14 @@ function OpinionDetail({ opinion }: { opinion: Opinion }) {
         <span className="text-[11px] text-muted">{opinion.date}</span>
       </div>
 
-      <h2 className="mb-2 text-lg font-bold text-white">{opinion.title}</h2>
+      <h2 className="mb-2 text-lg font-bold text-ink">{opinion.title}</h2>
       <p className="mb-4 text-sm leading-relaxed text-muted">{opinion.summary}</p>
 
       <div className="whitespace-pre-line text-[13px] leading-relaxed text-text">
         {opinion.content.split("\n").map((line, i) => {
           if (line.startsWith("**") && line.endsWith("**")) {
             return (
-              <p key={i} className="mt-3 mb-1 font-semibold text-white">
+              <p key={i} className="mt-3 mb-1 font-semibold text-ink">
                 {line.replace(/\*\*/g, "")}
               </p>
             );
@@ -59,7 +59,7 @@ function OpinionDetail({ opinion }: { opinion: Opinion }) {
               <p key={i} className="mt-2">
                 {parts.map((part, j) =>
                   j % 2 === 1 ? (
-                    <strong key={j} className="text-white">{part}</strong>
+                    <strong key={j} className="text-ink">{part}</strong>
                   ) : (
                     <span key={j}>{part}</span>
                   ),
@@ -95,7 +95,7 @@ export default function OpinionsPage() {
   return (
     <div className="mx-auto max-w-[800px] px-5 py-10">
       <div className="mb-8">
-        <h1 className="mb-2 text-2xl font-bold text-white">投资观点</h1>
+        <h1 className="mb-2 text-2xl font-bold text-ink">投资观点</h1>
         <p className="text-sm text-muted">
           作者的实时投资思考与持仓分析 · 覆盖 AI / DeFi / Space 三大赛道 ·
           持续更新

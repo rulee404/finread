@@ -28,7 +28,7 @@ export default function ProPage() {
   return (
     <div className="mx-auto max-w-[800px] px-5 py-12">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-white">FinRead Pro</h1>
+        <h1 className="text-3xl font-bold text-ink">FinRead Pro</h1>
         <p className="mt-2 text-sm text-muted">
           从「看个大概」到「看懂细节」，用一手数据做投资决策
         </p>
@@ -40,7 +40,7 @@ export default function ProPage() {
           <div className="text-xs font-semibold uppercase tracking-wider text-muted">
             免费版
           </div>
-          <div className="mt-2 text-3xl font-bold text-white">¥0</div>
+          <div className="mt-2 text-3xl font-bold text-ink">¥0</div>
           <div className="mt-1 text-xs text-muted">永久免费</div>
 
           <ul className="mt-6 space-y-2.5">
@@ -54,7 +54,7 @@ export default function ProPage() {
 
           <Link
             href="/register"
-            className="mt-6 block rounded-lg border border-border bg-surface2 py-2.5 text-center text-sm font-semibold text-text transition-colors hover:bg-white/[0.06]"
+            className="mt-6 block rounded-lg border border-border bg-surface2 py-2.5 text-center text-sm font-semibold text-text transition-colors hover:bg-wash-hover"
           >
             免费注册 →
           </Link>
@@ -65,7 +65,7 @@ export default function ProPage() {
           <div className="text-xs font-semibold uppercase tracking-wider text-gold">
             Pro 会员
           </div>
-          <div className="mt-2 text-3xl font-bold text-white">
+          <div className="mt-2 text-3xl font-bold text-ink">
             ¥49
             <span className="text-base font-normal text-muted">/月</span>
           </div>
@@ -75,7 +75,7 @@ export default function ProPage() {
 
           <ul className="mt-6 space-y-2.5">
             {proFeatures.map((f) => (
-              <li key={f} className="flex items-start gap-2 text-xs text-white/80">
+              <li key={f} className="flex items-start gap-2 text-xs text-ink/80">
                 <span className="mt-0.5 text-gold">★</span>
                 {f}
               </li>
@@ -96,7 +96,7 @@ export default function ProPage() {
 
       {/* Token & Coffee alternative */}
       <div className="mt-8 rounded-xl border border-border bg-surface p-6 text-center">
-        <h3 className="text-[15px] font-semibold text-white">
+        <h3 className="text-[15px] font-semibold text-ink">
           不想订阅？试试 Token &amp; Coffee ☕
         </h3>
         <p className="mt-2 text-sm text-muted">
@@ -104,7 +104,7 @@ export default function ProPage() {
         </p>
         <Link
           href="/theme/defi"
-          className="mt-3 inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-sm text-text transition-colors hover:bg-white/[0.06]"
+          className="mt-3 inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-sm text-text transition-colors hover:bg-wash-hover"
         >
           进入公司页面查看 →
         </Link>
@@ -112,7 +112,7 @@ export default function ProPage() {
 
       {/* Membership group upsell */}
       <div className="mt-5 rounded-xl border border-gold/20 bg-gold-dim/20 p-6 text-center">
-        <h3 className="text-lg font-semibold text-white">会员群 · ¥99/月</h3>
+        <h3 className="text-lg font-semibold text-ink">会员群 · ¥99/月</h3>
         <p className="mt-2 text-sm text-muted">
           包含 Pro 全部权益 + 微信社群实时讨论 + 建仓逻辑分享 + 深度行业报告
         </p>

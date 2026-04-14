@@ -90,7 +90,7 @@ export default function CoffeeGate({ article }: { article: Article }) {
         {/* Header */}
         <div className="mb-5 text-center">
           <div className="mb-2 text-2xl">☕</div>
-          <h3 className="text-lg font-bold text-white">Token &amp; Coffee</h3>
+          <h3 className="text-lg font-bold text-ink">Token &amp; Coffee</h3>
           <p className="mt-1 text-sm text-muted">
             请作者喝杯咖啡，解锁完整中英对照全文
           </p>
@@ -134,7 +134,7 @@ export default function CoffeeGate({ article }: { article: Article }) {
 
         {/* Price */}
         <div className="mb-4 text-center">
-          <div className="text-3xl font-bold text-white">
+          <div className="text-3xl font-bold text-ink">
             ¥{article.price}
           </div>
           <div className="mt-0.5 text-xs text-muted">
@@ -149,8 +149,8 @@ export default function CoffeeGate({ article }: { article: Article }) {
             onClick={() => setPayMethod("stripe")}
             className={`flex flex-1 items-center justify-center gap-2 rounded-lg border py-2.5 text-xs font-medium transition-colors ${
               payMethod === "stripe"
-                ? "border-gold/40 bg-gold-dim/40 text-white"
-                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-white"
+                ? "border-gold/40 bg-gold-dim/40 text-ink"
+                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-ink"
             }`}
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
@@ -162,15 +162,15 @@ export default function CoffeeGate({ article }: { article: Article }) {
             onClick={() => setPayMethod("alipay")}
             className={`flex flex-1 items-center justify-center gap-2 rounded-lg border py-2.5 text-xs font-medium transition-colors ${
               payMethod === "alipay"
-                ? "border-[#1677FF]/40 bg-[#1677FF]/10 text-white"
-                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-white"
+                ? "border-[#1677FF]/40 bg-[#1677FF]/10 text-ink"
+                : "border-border bg-surface2/50 text-muted hover:border-border hover:text-ink"
             }`}
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
               <path d="M21.422 15.358c-1.04-.378-5.064-2.187-6.504-2.965-.445.628-1.626 2.004-2.844 2.96-1.218.955-2.785 1.508-4.05 1.508-1.51 0-3.046-.738-3.046-2.95 0-2.94 2.798-4.468 7.197-4.544-.503-1.108-.792-2.388-.792-3.164 0-.502.068-1.01.177-1.493H7.68v-.972h4.463c.21-.616.52-1.204.92-1.71H7.68V1.06h7.398a6.496 6.496 0 012.508 1.578v-.007c-.65-.348-2.48-.62-3.873.33-.865.586-1.516 1.556-1.84 2.067h4.413v.968H11.54c-.117.41-.188.84-.188 1.28 0 1.196.578 2.716 1.2 3.66 1.62-.056 5.89.302 8.67 1.6.347.163.672.32.972.48C22.82 10.852 23 8.51 23 6.003 23 2.687 20.313 0 17 0H6C2.687 0 0 2.687 0 6v12c0 3.313 2.687 6 6 6h11c3.313 0 6-2.687 6-6v-1.54c-.415-.366-.966-.738-1.578-1.102zM8.06 17.85c.96 0 2.058-.378 3.12-1.15.782-.57 1.47-1.297 1.98-1.96-2.96-.22-6.154.532-6.154 2.67 0 .902.6 1.4 1.31 1.44h.04c.234 0 .467-.033.704-.04z"/>
             </svg>
             支付宝
-            <span className="rounded bg-white/10 px-1 py-0.5 text-[9px] text-muted">
+            <span className="rounded bg-ink/10 px-1 py-0.5 text-[9px] text-muted">
               即将上线
             </span>
           </button>
@@ -182,7 +182,7 @@ export default function CoffeeGate({ article }: { article: Article }) {
           disabled={loading}
           className={`w-full rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-50 ${
             payMethod === "alipay"
-              ? "bg-[#1677FF] text-white"
+              ? "bg-[#1677FF] text-[#fff]"
               : "bg-gold text-bg"
           }`}
         >

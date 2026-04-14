@@ -10,7 +10,7 @@ const iconStyles: Record<string, string> = {
 
 export default function DocRow({ doc }: { doc: DocItem }) {
   return (
-    <div className="flex items-center gap-3 border-b border-border px-4 py-3 transition-colors last:border-b-0 hover:bg-white/[0.01]">
+    <div className="flex items-center gap-3 border-b border-border px-4 py-3 transition-colors last:border-b-0 hover:bg-wash-row">
       <div
         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${
           iconStyles[doc.type] ?? "bg-surface2 text-muted"
@@ -20,7 +20,7 @@ export default function DocRow({ doc }: { doc: DocItem }) {
       </div>
 
       <div className="min-w-0 flex-1">
-        <div className="truncate text-[13px] font-semibold text-white">
+        <div className="truncate text-[13px] font-semibold text-ink">
           {doc.title}
         </div>
         <div className="text-[11px] text-muted">{doc.meta}</div>
@@ -34,7 +34,7 @@ export default function DocRow({ doc }: { doc: DocItem }) {
             className={`inline-flex items-center gap-1 whitespace-nowrap rounded-md border px-2.5 py-1.5 text-[11px] transition-colors ${
               link.primary
                 ? "border-gold/30 bg-gold-dim text-gold hover:bg-gold/20"
-                : "border-border bg-surface2 text-text hover:bg-white/[0.06]"
+                : "border-border bg-surface2 text-text hover:bg-wash-hover"
             }`}
           >
             {link.label}

@@ -46,7 +46,7 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
           : "border-border bg-surface"
       }`}
     >
-      <p className="text-[13px] leading-relaxed text-white/90">{p.en}</p>
+      <p className="text-[13px] leading-relaxed text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.cn}</p>
     </div>
   );
@@ -56,7 +56,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="text-base font-semibold text-white">
+        <h2 className="text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}
@@ -104,7 +104,7 @@ export default async function ArticlePage({ params }: Props) {
           </span>
         </div>
 
-        <h1 className="text-xl font-bold text-white md:text-2xl">
+        <h1 className="text-xl font-bold text-ink md:text-2xl">
           {article.title}
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -127,16 +127,16 @@ export default async function ArticlePage({ params }: Props) {
         {/* Article stats */}
         <div className="mt-4 flex flex-wrap gap-4 rounded-lg border border-border bg-surface p-3">
           <div className="text-xs text-muted">
-            <span className="font-semibold text-white">{(article.wordCount / 1000).toFixed(1)}k</span> 字
+            <span className="font-semibold text-ink">{(article.wordCount / 1000).toFixed(1)}k</span> 字
           </div>
           <div className="text-xs text-muted">
-            <span className="font-semibold text-white">{totalParagraphCount}</span> 段中英对照
+            <span className="font-semibold text-ink">{totalParagraphCount}</span> 段中英对照
           </div>
           <div className="text-xs text-muted">
             <span className="font-semibold text-accent-green">全文免费</span>
           </div>
           <div className="text-xs text-muted">
-            来源: <span className="font-semibold text-white">{article.sourceLabel}</span>
+            来源: <span className="font-semibold text-ink">{article.sourceLabel}</span>
           </div>
         </div>
       </header>
@@ -162,7 +162,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="mt-3 flex flex-wrap justify-center gap-3">
           <Link
             href="/article"
-            className="rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-white/[0.06]"
+            className="rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-wash-hover"
           >
             浏览全文库 →
           </Link>

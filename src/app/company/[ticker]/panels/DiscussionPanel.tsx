@@ -59,7 +59,7 @@ export default function DiscussionPanel({
               <span className="text-[11px] text-muted">{disc.date}</span>
             </div>
 
-            <h3 className="mb-3 text-[15px] font-semibold text-white">
+            <h3 className="mb-3 text-[15px] font-semibold text-ink">
               {disc.title}
             </h3>
 
@@ -67,7 +67,7 @@ export default function DiscussionPanel({
               {disc.content.split("\n").map((line, i) => {
                 if (line.startsWith("**") && line.endsWith("**")) {
                   return (
-                    <p key={i} className="mt-3 mb-1 font-semibold text-white">
+                    <p key={i} className="mt-3 mb-1 font-semibold text-ink">
                       {line.replace(/\*\*/g, "")}
                     </p>
                   );
@@ -78,7 +78,7 @@ export default function DiscussionPanel({
                     <p key={i} className="mt-2">
                       {parts.map((part, j) =>
                         j % 2 === 1 ? (
-                          <strong key={j} className="text-white">
+                          <strong key={j} className="text-ink">
                             {part}
                           </strong>
                         ) : (

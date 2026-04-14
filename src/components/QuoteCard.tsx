@@ -17,7 +17,7 @@ export default function QuoteCard({ quote }: { quote: Quote }) {
       <div className="mb-1.5 text-[11px] font-bold text-muted">
         {quote.speaker} — {quote.role}
       </div>
-      <p className="text-[13px] italic leading-relaxed text-white/80">
+      <p className="text-[13px] italic leading-relaxed text-ink/80">
         &ldquo;{quote.text}&rdquo;
       </p>
       <div className="mt-2.5 border-t border-dashed border-white/5 pt-2.5 text-xs leading-relaxed text-muted">

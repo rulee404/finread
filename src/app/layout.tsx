@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -21,8 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className="h-full antialiased">
+    <html lang="zh-CN" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex min-h-full flex-col">
+        <Script id="finread-theme-init" strategy="beforeInteractive">
+          {`(function(){try{var k='finread-theme';if(localStorage.getItem(k)==='light')document.documentElement.classList.add('light');}catch(e){}})();`}
+        </Script>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

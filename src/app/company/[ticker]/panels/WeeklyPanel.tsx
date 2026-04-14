@@ -18,7 +18,7 @@ export default function WeeklyPanel({ company }: { company: CompanyData }) {
               className="flex items-center gap-3 rounded-lg border border-border p-3.5 transition-colors hover:border-gold/20 hover:bg-surface2"
             >
               <div className="min-w-0 flex-1">
-                <div className="text-[13px] font-semibold text-white">
+                <div className="text-[13px] font-semibold text-ink">
                   {ref.title} · {ref.date}
                 </div>
                 <div className="mt-0.5 text-[11px] text-muted">
@@ -35,7 +35,7 @@ export default function WeeklyPanel({ company }: { company: CompanyData }) {
 
       {/* YouTube promo */}
       <div className="rounded-[10px] border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-5">
-        <h3 className="text-[15px] font-semibold text-white">
+        <h3 className="text-[15px] font-semibold text-ink">
           🎬 YouTube 视频
         </h3>
         <p className="mt-2 text-[13px] leading-relaxed text-muted">
@@ -50,7 +50,7 @@ export default function WeeklyPanel({ company }: { company: CompanyData }) {
           </a>
           <a
             href="#"
-            className="rounded-lg border border-border bg-surface2 px-4 py-2 text-xs text-text transition-colors hover:bg-white/[0.06]"
+            className="rounded-lg border border-border bg-surface2 px-4 py-2 text-xs text-text transition-colors hover:bg-wash-hover"
           >
             B站同步更新
           </a>

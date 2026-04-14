@@ -27,7 +27,7 @@ export default function ArticleListPage() {
   return (
     <div className="mx-auto max-w-[800px] px-5 py-10">
       <div className="mb-8">
-        <h1 className="mb-2 text-2xl font-bold text-white">
+        <h1 className="mb-2 text-2xl font-bold text-ink">
           全文库 · Token &amp; Coffee ☕
         </h1>
         <p className="text-sm text-muted">
@@ -77,7 +77,7 @@ export default function ArticleListPage() {
                 <span className="text-[11px] text-muted">{article.date}</span>
               </div>
 
-              <h2 className="mb-1 text-[15px] font-semibold text-white group-hover:text-gold">
+              <h2 className="mb-1 text-[15px] font-semibold text-ink group-hover:text-gold">
                 {article.title}
               </h2>
               <p className="mb-3 line-clamp-2 text-xs leading-relaxed text-muted">
@@ -119,7 +119,7 @@ export default function ArticleListPage() {
 
       {/* Pro upsell */}
       <div className="mt-10 rounded-xl border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-6 text-center">
-        <h3 className="text-[15px] font-semibold text-white">
+        <h3 className="text-[15px] font-semibold text-ink">
           经常阅读？Pro 更划算
         </h3>
         <p className="mt-2 text-[13px] text-muted">
@@ -134,7 +134,7 @@ export default function ArticleListPage() {
           </Link>
           <Link
             href="/register"
-            className="rounded-lg border border-border bg-surface2 px-5 py-2.5 text-xs text-text transition-colors hover:bg-white/[0.06]"
+            className="rounded-lg border border-border bg-surface2 px-5 py-2.5 text-xs text-text transition-colors hover:bg-wash-hover"
           >
             先免费注册
           </Link>

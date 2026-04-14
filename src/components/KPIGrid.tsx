@@ -17,7 +17,7 @@ export default function KPIGrid({ items, cols = 4 }: { items: KPI[]; cols?: 2 | 
           <div className="text-[10px] uppercase tracking-wider text-muted">
             {kpi.label}
           </div>
-          <div className="mt-0.5 text-xl font-bold text-white">{kpi.value}</div>
+          <div className="mt-0.5 text-xl font-bold text-ink">{kpi.value}</div>
           {kpi.change && (
             <div
               className={`mt-0.5 text-[11px] ${

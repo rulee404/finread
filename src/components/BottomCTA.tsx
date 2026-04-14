@@ -24,7 +24,7 @@ export default function BottomCTA() {
 
   return (
     <section className="rounded-2xl border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-8 text-center">
-      <h3 className="text-lg font-bold text-white">加入 FinRead</h3>
+      <h3 className="text-lg font-bold text-ink">加入 FinRead</h3>
       <p className="mt-2 max-w-lg mx-auto text-sm text-muted">
         每周日发布投资周报 · 财报季实时解读 · 三赛道持仓逻辑公开分享
       </p>

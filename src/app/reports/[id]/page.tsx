@@ -39,7 +39,7 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
           : "border-border bg-surface"
       }`}
     >
-      <p className="text-[13px] leading-relaxed text-white/90">{p.en}</p>
+      <p className="text-[13px] leading-relaxed text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.cn}</p>
     </div>
   );
@@ -49,7 +49,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="flex items-center gap-2 border-l-2 border-accent-blue/50 pl-3 text-base font-semibold text-white">
+        <h2 className="flex items-center gap-2 border-l-2 border-accent-blue/50 pl-3 text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}
@@ -91,13 +91,13 @@ export default async function ReportDetailPage({ params }: Props) {
           <span className={`rounded-md px-2 py-0.5 text-[10px] font-semibold ${theme.bg} ${theme.text}`}>
             {theme.label}
           </span>
-          <span className="rounded-md bg-surface2 px-2 py-0.5 text-[10px] font-semibold text-white/80">
+          <span className="rounded-md bg-surface2 px-2 py-0.5 text-[10px] font-semibold text-ink/80">
             📊 {report.institution}
           </span>
           <span className="text-[11px] text-muted">{report.date}</span>
         </div>
 
-        <h1 className="text-xl font-bold text-white md:text-2xl">
+        <h1 className="text-xl font-bold text-ink md:text-2xl">
           {report.title}
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -164,7 +164,7 @@ export default async function ReportDetailPage({ params }: Props) {
                     ? "font-semibold text-accent-green"
                     : s.gold
                       ? "font-semibold text-gold"
-                      : "font-semibold text-white"
+                      : "font-semibold text-ink"
                 }
               >
                 {s.value}
@@ -188,7 +188,7 @@ export default async function ReportDetailPage({ params }: Props) {
       <div className="mt-10 text-center">
         <Link
           href="/reports"
-          className="inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-white/[0.06]"
+          className="inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-wash-hover"
         >
           ← 返回研报列表
         </Link>

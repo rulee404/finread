@@ -90,7 +90,7 @@ export default function UpdatesFeed({ updates }: { updates: SiteUpdate[] }) {
                     {relativeDate(update.date)}
                   </span>
                 </div>
-                <p className="text-[13px] leading-snug text-text transition-colors group-hover:text-white">
+                <p className="text-[13px] leading-snug text-text transition-colors group-hover:text-ink">
                   {update.title}
                 </p>
               </div>

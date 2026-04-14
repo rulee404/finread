@@ -35,13 +35,13 @@ function Paragraph({ p }: { p: ArticleParagraph }) {
     >
       {p.speaker && (
         <div className="mb-2 flex items-baseline gap-2">
-          <span className="text-[13px] font-bold text-white">{p.speaker}</span>
+          <span className="text-[13px] font-bold text-ink">{p.speaker}</span>
           {p.speakerTitle && (
             <span className="text-[11px] text-muted">{p.speakerTitle}</span>
           )}
         </div>
       )}
-      <p className="text-[13px] leading-[1.85] text-white/90">{p.en}</p>
+      <p className="text-[13px] leading-[1.85] text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-[1.85] text-muted">{p.cn}</p>
       {p.highlight && (
         <div className="mt-2 h-px bg-gradient-to-r from-gold/40 via-gold/10 to-transparent" />
@@ -54,7 +54,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-white">
+        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}
@@ -74,7 +74,7 @@ function SummaryCards({ cards }: { cards: SummaryCard[] }) {
           className="rounded-xl border border-border bg-surface p-3 text-center"
         >
           <div className="text-lg">{c.icon}</div>
-          <div className="mt-1 text-lg font-bold text-white">{c.value}</div>
+          <div className="mt-1 text-lg font-bold text-ink">{c.value}</div>
           <div className="text-[10px] font-medium text-muted">{c.label}</div>
           {c.note && (
             <div className="mt-0.5 text-[10px] font-semibold text-accent-green">
@@ -123,7 +123,7 @@ export default async function DocDetailPage({ params }: Props) {
           {company.ticker} {company.name}
         </Link>
         <span>›</span>
-        <span className="text-white/60">文档详情</span>
+        <span className="text-ink/60">文档详情</span>
       </div>
 
       {/* Header */}
@@ -140,7 +140,7 @@ export default async function DocDetailPage({ params }: Props) {
           </span>
         </div>
 
-        <h1 className="text-xl font-bold text-white md:text-2xl">
+        <h1 className="text-xl font-bold text-ink md:text-2xl">
           {doc.title}
         </h1>
 
@@ -176,7 +176,7 @@ export default async function DocDetailPage({ params }: Props) {
               className="rounded-lg border border-border bg-surface2/50 px-3 py-1.5 text-xs"
             >
               <span className="text-muted">{s.label} </span>
-              <span className={s.green ? "font-semibold text-accent-green" : "font-semibold text-white"}>
+              <span className={s.green ? "font-semibold text-accent-green" : "font-semibold text-ink"}>
                 {s.value}
               </span>
             </div>
@@ -219,7 +219,7 @@ export default async function DocDetailPage({ params }: Props) {
       <div className="mt-10 text-center">
         <Link
           href={`/company/${ticker.toLowerCase()}`}
-          className="inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-white/[0.06]"
+          className="inline-block rounded-lg border border-border bg-surface2 px-5 py-2 text-xs text-text transition-colors hover:bg-wash-hover"
         >
           ← 返回 {company.ticker} 主页
         </Link>

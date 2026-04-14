@@ -42,7 +42,7 @@ export default function RevenueTable({ rows }: { rows: RevenueRow[] }) {
                 <td
                   className={`border-b border-white/[0.03] px-3 py-2 ${
                     row.isTotal || row.isSectionTotal
-                      ? "font-semibold text-white"
+                      ? "font-semibold text-ink"
                       : "text-text"
                   } ${row.isTotal ? "text-sm" : ""}`}
                 >
@@ -51,7 +51,7 @@ export default function RevenueTable({ rows }: { rows: RevenueRow[] }) {
                 <td
                   className={`border-b border-white/[0.03] px-3 py-2 text-right tabular-nums ${
                     row.isTotal || row.isSectionTotal
-                      ? "font-semibold text-white"
+                      ? "font-semibold text-ink"
                       : "text-text"
                   } ${row.isTotal ? "text-sm" : ""}`}
                 >

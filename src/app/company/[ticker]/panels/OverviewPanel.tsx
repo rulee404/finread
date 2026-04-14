@@ -40,7 +40,7 @@ export default function OverviewPanel({ company }: { company: CompanyData }) {
 
       {/* Promo CTA */}
       <div className="rounded-[10px] border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-5">
-        <h3 className="text-[15px] font-semibold text-white">
+        <h3 className="text-[15px] font-semibold text-ink">
           📬 想更深入地跟踪 {company.ticker}？
         </h3>
         <p className="mt-2 text-[13px] leading-relaxed text-muted">
@@ -63,7 +63,7 @@ export default function OverviewPanel({ company }: { company: CompanyData }) {
           </Link>
           <Link
             href="/weekly"
-            className="rounded-lg border border-border bg-surface2 px-4 py-2 text-xs text-text transition-colors hover:bg-white/[0.06]"
+            className="rounded-lg border border-border bg-surface2 px-4 py-2 text-xs text-text transition-colors hover:bg-wash-hover"
           >
             查看周报 →
           </Link>

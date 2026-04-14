@@ -34,7 +34,7 @@ function DocCard({ doc, ticker }: { doc: CompanyDoc; ticker: string }) {
           </span>
           <span className="text-[10px] text-muted">{doc.date}</span>
         </div>
-        <h4 className="mb-1 text-sm font-semibold text-white group-hover:text-gold">
+        <h4 className="mb-1 text-sm font-semibold text-ink group-hover:text-gold">
           {doc.title}
         </h4>
         <p className="line-clamp-2 text-xs leading-relaxed text-muted">
@@ -81,7 +81,7 @@ export default function EarningsPanel({ company }: { company: CompanyData }) {
         return (
           <section key={quarter}>
             <div className="mb-3 flex items-center gap-2">
-              <h3 className="text-sm font-semibold text-white">{quarter}</h3>
+              <h3 className="text-sm font-semibold text-ink">{quarter}</h3>
               <span className="text-[10px] text-muted">
                 {qDocs.length} 份文档
               </span>

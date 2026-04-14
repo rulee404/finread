@@ -57,7 +57,7 @@ export default function LoginForm() {
     return (
       <div className="w-full rounded-lg border border-gold/20 bg-gold-dim/20 p-6 text-center">
         <div className="mb-2 inline-block h-2 w-2 rounded-full bg-accent-green" />
-        <p className="text-sm font-semibold text-white">
+        <p className="text-sm font-semibold text-ink">
           你已登录为 <span className="text-gold">{loggedInEmail.split("@")[0]}</span>
         </p>
         {redirect ? (
@@ -91,7 +91,7 @@ export default function LoginForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-white placeholder-muted/50 outline-none transition-colors focus:border-gold/40"
+          className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder-muted/50 outline-none transition-colors focus:border-gold/40"
           placeholder="you@example.com"
         />
       </div>
@@ -107,7 +107,7 @@ export default function LoginForm() {
           minLength={6}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-white placeholder-muted/50 outline-none transition-colors focus:border-gold/40"
+          className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder-muted/50 outline-none transition-colors focus:border-gold/40"
           placeholder="至少 6 位"
         />
       </div>

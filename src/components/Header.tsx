@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AuthButton from "./AuthButton";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { href: "/", label: "首页", match: (p: string) => p === "/" },
@@ -53,20 +54,20 @@ export default function Header() {
   return (
     <header className="border-b border-border">
       <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-between gap-3 px-5 py-3">
-        <Link href="/" className="flex items-center gap-2 text-[15px] font-bold tracking-tight text-white">
+        <Link href="/" className="flex items-center gap-2 text-[15px] font-bold tracking-tight text-ink">
           Fin<span className="text-gold">Read</span>
           <span className="rounded-md bg-surface2 px-1.5 py-0.5 text-[9px] font-medium text-muted">
             AI · DeFi · Space
           </span>
         </Link>
 
-        <nav className="flex flex-wrap gap-1.5">
+        <nav className="flex flex-wrap items-center gap-1.5">
           {navItems.map((item) => {
             const isActive = item.match(pathname);
             const activeClasses = item.activeBg
               ? item.activeBg
               : "border-gold/30 bg-gold-dim";
-            const activeText = item.color ?? "text-white";
+            const activeText = item.color ?? "text-ink";
             return (
               <Link
                 key={item.href}
@@ -74,13 +75,14 @@ export default function Header() {
                 className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
                   isActive
                     ? `${activeClasses} ${activeText}`
-                    : "border-border text-muted hover:border-gold/20 hover:text-white"
+                    : "border-border text-muted hover:border-gold/20 hover:text-ink"
                 }`}
               >
                 {item.label}
               </Link>
             );
           })}
+          <ThemeToggle />
           <AuthButton />
         </nav>
       </div>

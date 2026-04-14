@@ -49,7 +49,7 @@ export default function HomePage() {
           <span className="text-muted/40">·</span>
           <span className="text-theme-space text-2xl font-black tracking-tight">Space</span>
         </div>
-        <h1 className="mb-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h1 className="mb-3 text-3xl font-bold tracking-tight text-ink md:text-4xl">
           三大赛道，
           <span className="relative inline-block">
             <span className="relative z-10">一手信息</span>
@@ -59,7 +59,7 @@ export default function HomePage() {
         <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted">
           聚焦三条投资主线 — 人工智能、去中心化金融、太空经济。
           <br />
-          <span className="text-white/70">不做二手搬运</span>
+          <span className="text-ink/70">不做二手搬运</span>
           {" — "}
           财报 Presentation · Shareholder Letter · Earnings Call 实录
           <br />
@@ -100,7 +100,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Hero line */}
-                <p className="mb-4 text-center text-[13px] font-medium text-white/80">
+                <p className="mb-4 text-center text-[13px] font-medium text-ink/80">
                   {theme.heroLine}
                 </p>
 
@@ -112,7 +112,7 @@ export default function HomePage() {
                       className="rounded-lg bg-bg/60 px-2.5 py-2 text-center"
                     >
                       <div className="text-[10px] text-muted">{m.label}</div>
-                      <div className="text-xs font-bold text-white">
+                      <div className="text-xs font-bold text-ink">
                         {m.value}
                       </div>
                     </div>
@@ -137,7 +137,7 @@ export default function HomePage() {
                 )}
 
                 {/* Hover arrow */}
-                <div className="mt-4 text-center text-xs text-muted/50 transition-colors group-hover:text-white/60">
+                <div className="mt-4 text-center text-xs text-muted/50 transition-colors group-hover:text-ink/60">
                   进入赛道 →
                 </div>
               </Link>
@@ -150,7 +150,7 @@ export default function HomePage() {
       <section className="mb-16">
         <div className="mb-5 flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-ink">
               作者投资观点
             </h2>
             <p className="mt-0.5 text-xs text-muted">
@@ -174,7 +174,7 @@ export default function HomePage() {
 
       {/* Investment Thesis Summary */}
       <section className="mb-16">
-        <h2 className="mb-5 text-lg font-semibold text-white">
+        <h2 className="mb-5 text-lg font-semibold text-ink">
           为什么是这三条赛道？
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
@@ -199,7 +199,7 @@ export default function HomePage() {
               key={f.title}
               className={`rounded-xl border border-border ${f.color} border-l-[3px] bg-surface p-5`}
             >
-              <h3 className="mb-2 text-sm font-semibold text-white">
+              <h3 className="mb-2 text-sm font-semibold text-ink">
                 {f.title}
               </h3>
               <p className="text-xs leading-relaxed text-muted">{f.desc}</p>
@@ -228,7 +228,7 @@ export default function HomePage() {
             key={f.title}
             className="rounded-xl border border-border bg-surface p-5"
           >
-            <h3 className="mb-2 text-sm font-semibold text-white">
+            <h3 className="mb-2 text-sm font-semibold text-ink">
               {f.title}
             </h3>
             <p className="text-xs leading-relaxed text-muted">{f.desc}</p>

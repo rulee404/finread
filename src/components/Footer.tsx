@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1080px]">
         <div className="flex flex-wrap items-start justify-between gap-8">
           <div>
-            <div className="text-sm font-bold text-white">
+            <div className="text-sm font-bold text-ink">
               Fin<span className="text-gold">Read</span>
             </div>
             <p className="mt-1 max-w-xs text-xs text-muted">
@@ -32,10 +32,10 @@ export default function Footer() {
                 内容
               </div>
               <div className="flex flex-col gap-1">
-                <Link href="/opinions" className="text-xs text-muted hover:text-white">投资观点</Link>
-                <Link href="/weekly" className="text-xs text-muted hover:text-white">每周周报</Link>
-                <Link href="/reports" className="text-xs text-muted hover:text-white">机构研报</Link>
-                <Link href="/pro" className="text-xs text-muted hover:text-white">Pro 会员</Link>
+                <Link href="/opinions" className="text-xs text-muted hover:text-ink">投资观点</Link>
+                <Link href="/weekly" className="text-xs text-muted hover:text-ink">每周周报</Link>
+                <Link href="/reports" className="text-xs text-muted hover:text-ink">机构研报</Link>
+                <Link href="/pro" className="text-xs text-muted hover:text-ink">Pro 会员</Link>
               </div>
             </div>
           </div>

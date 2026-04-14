@@ -44,7 +44,7 @@ export default async function WeeklyDetailPage({ params }: Props) {
           </span>
           <span className="text-[11px] text-muted">{post.date}</span>
         </div>
-        <h1 className="text-xl font-bold text-white md:text-2xl">
+        <h1 className="text-xl font-bold text-ink md:text-2xl">
           {post.title}
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -67,7 +67,7 @@ export default async function WeeklyDetailPage({ params }: Props) {
       <div className="space-y-8">
         {post.sections.map((section, i) => (
           <section key={i}>
-            <h2 className="mb-3 text-base font-semibold text-white">
+            <h2 className="mb-3 text-base font-semibold text-ink">
               {section.heading}
             </h2>
             <div className="whitespace-pre-line text-[13px] leading-relaxed text-text">
@@ -80,7 +80,7 @@ export default async function WeeklyDetailPage({ params }: Props) {
       {/* Quote */}
       {post.quote && (
         <div className="mt-10 rounded-xl border border-border bg-surface p-5 text-center">
-          <p className="text-sm italic text-white/80">
+          <p className="text-sm italic text-ink/80">
             &ldquo;{post.quote.text}&rdquo;
           </p>
           <p className="mt-2 text-xs text-muted">— {post.quote.author}</p>

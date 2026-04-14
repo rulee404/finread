@@ -64,7 +64,7 @@ export default async function ThemePage({ params }: Props) {
         <div className="animate-float mb-4">
           <ThemeIcon theme={theme.id} size={100} />
         </div>
-        <h1 className="mb-1 text-3xl font-bold text-white md:text-4xl">
+        <h1 className="mb-1 text-3xl font-bold text-ink md:text-4xl">
           <span className={style.text}>{theme.name}</span>{" "}
           <span className="text-muted">·</span> {theme.subtitle}
         </h1>
@@ -90,7 +90,7 @@ export default async function ThemePage({ params }: Props) {
 
       {/* Investment Angles */}
       <section className="mb-10">
-        <h2 className="mb-4 text-lg font-semibold text-white">投资主题</h2>
+        <h2 className="mb-4 text-lg font-semibold text-ink">投资主题</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {theme.investmentAngles.map((angle) => (
             <div
@@ -110,7 +110,7 @@ export default async function ThemePage({ params }: Props) {
 
       {/* Companies */}
       <section className="mb-10">
-        <h2 className="mb-4 text-lg font-semibold text-white">
+        <h2 className="mb-4 text-lg font-semibold text-ink">
           跟踪公司
           <span className="ml-2 text-sm font-normal text-muted">
             {companies.length} 家
@@ -133,13 +133,13 @@ export default async function ThemePage({ params }: Props) {
               >
                 <div className="mb-3 flex items-center gap-3">
                   <div
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-extrabold text-white"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-extrabold text-[#fff]"
                     style={{ background: co.iconGradient }}
                   >
                     {co.iconLetter}
                   </div>
                   <div className="min-w-0">
-                    <div className="truncate text-sm font-semibold text-white">
+                    <div className="truncate text-sm font-semibold text-ink">
                       {co.name}
                     </div>
                     <div className="text-xs text-muted">
@@ -161,7 +161,7 @@ export default async function ThemePage({ params }: Props) {
                       <div className="text-[10px] uppercase tracking-wide text-muted">
                         {kpi.label}
                       </div>
-                      <div className="text-sm font-bold text-white">
+                      <div className="text-sm font-bold text-ink">
                         {kpi.value}
                       </div>
                       {kpi.change && (
@@ -190,7 +190,7 @@ export default async function ThemePage({ params }: Props) {
       {opinions.length > 0 && (
         <section className="mb-10">
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-ink">
               作者观点
               <span className="ml-2 text-sm font-normal text-muted">
                 关于 {theme.name}
@@ -213,7 +213,7 @@ export default async function ThemePage({ params }: Props) {
 
       {/* CTA */}
       <div className="rounded-xl border border-gold/20 bg-gradient-to-br from-gold-dim/60 to-gold-dim/20 p-6 text-center">
-        <h3 className="text-[15px] font-semibold text-white">
+        <h3 className="text-[15px] font-semibold text-ink">
           深入跟踪 {theme.name} 赛道？
         </h3>
         <p className="mt-2 text-[13px] text-muted">
@@ -228,7 +228,7 @@ export default async function ThemePage({ params }: Props) {
           </Link>
           <Link
             href="/weekly"
-            className="rounded-lg border border-border bg-surface2 px-5 py-2.5 text-xs text-text transition-colors hover:bg-white/[0.06]"
+            className="rounded-lg border border-border bg-surface2 px-5 py-2.5 text-xs text-text transition-colors hover:bg-wash-hover"
           >
             查看往期周报 →
           </Link>
