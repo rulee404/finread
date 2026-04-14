@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AuthButton from "./AuthButton";
-import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { href: "/", label: "首页", match: (p: string) => p === "/" },
@@ -53,7 +52,7 @@ export default function Header() {
 
   return (
     <header className="border-b border-border">
-      <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-between gap-3 px-5 py-3">
+      <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-between gap-3 px-5 py-3 max-lg:pr-16">
         <Link href="/" className="flex items-center gap-2 text-[15px] font-bold tracking-tight text-ink">
           Fin<span className="text-gold">Read</span>
           <span className="rounded-md bg-surface2 px-1.5 py-0.5 text-[9px] font-medium text-muted">
@@ -82,7 +81,6 @@ export default function Header() {
               </Link>
             );
           })}
-          <ThemeToggle />
           <AuthButton />
         </nav>
       </div>

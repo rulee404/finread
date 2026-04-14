@@ -1,33 +1,96 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-bg: #080a0f;
-  --color-surface: #11141c;
-  --color-surface2: #181d28;
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-gold: #c9a227;
-  --color-gold-dim: rgba(201, 162, 39, 0.12);
-  --color-accent-blue: #3b82f6;
-  --color-accent-green: #22c55e;
-  --color-accent-red: #ef4444;
-  --color-accent-cyan: #06b6d4;
-  --color-accent-purple: #8b5cf6;
-  --color-text: #d4d8e3;
-  --color-muted: #7c8396;
-  --color-white: #f0f2f7;
-  --color-ink: #f0f2f7;
-  --color-wash-hover: rgba(255, 255, 255, 0.06);
-  --color-wash-row: rgba(255, 255, 255, 0.03);
+/*
+ * Runtime theme tokens — Tailwind v4 inlines literal hex from @theme,
+ * so we bridge through --finread-* so html.light actually updates colors.
+ */
+:root {
+  --finread-bg: #080a0f;
+  --finread-surface: #11141c;
+  --finread-surface2: #181d28;
+  --finread-border: rgba(255, 255, 255, 0.07);
+  --finread-gold: #c9a227;
+  --finread-gold-dim: rgba(201, 162, 39, 0.12);
+  --finread-accent-blue: #3b82f6;
+  --finread-accent-green: #22c55e;
+  --finread-accent-red: #ef4444;
+  --finread-accent-cyan: #06b6d4;
+  --finread-accent-purple: #8b5cf6;
+  --finread-text: #d4d8e3;
+  --finread-muted: #7c8396;
+  --finread-white: #f0f2f7;
+  --finread-ink: #f0f2f7;
+  --finread-wash-hover: rgba(255, 255, 255, 0.06);
+  --finread-wash-row: rgba(255, 255, 255, 0.03);
+  --finread-theme-ai: #818cf8;
+  --finread-theme-ai-dim: rgba(129, 140, 248, 0.1);
+  --finread-theme-ai-glow: rgba(129, 140, 248, 0.25);
+  --finread-theme-defi: #34d399;
+  --finread-theme-defi-dim: rgba(52, 211, 153, 0.1);
+  --finread-theme-defi-glow: rgba(52, 211, 153, 0.25);
+  --finread-theme-space: #f59e0b;
+  --finread-theme-space-dim: rgba(245, 158, 11, 0.1);
+  --finread-theme-space-glow: rgba(245, 158, 11, 0.25);
+}
 
-  --color-theme-ai: #818cf8;
-  --color-theme-ai-dim: rgba(129, 140, 248, 0.1);
-  --color-theme-ai-glow: rgba(129, 140, 248, 0.25);
-  --color-theme-defi: #34d399;
-  --color-theme-defi-dim: rgba(52, 211, 153, 0.1);
-  --color-theme-defi-glow: rgba(52, 211, 153, 0.25);
-  --color-theme-space: #f59e0b;
-  --color-theme-space-dim: rgba(245, 158, 11, 0.1);
-  --color-theme-space-glow: rgba(245, 158, 11, 0.25);
+html.light {
+  color-scheme: light;
+  --finread-bg: #e4e7ee;
+  --finread-surface: #ffffff;
+  --finread-surface2: #eef1f6;
+  --finread-border: rgba(8, 12, 22, 0.12);
+  --finread-gold: #8a6a0a;
+  --finread-gold-dim: rgba(138, 106, 10, 0.14);
+  --finread-accent-blue: #1d4ed8;
+  --finread-accent-green: #15803d;
+  --finread-accent-red: #b91c1c;
+  --finread-accent-cyan: #0e7490;
+  --finread-accent-purple: #6d28d9;
+  --finread-text: #1c2433;
+  --finread-muted: #4b5568;
+  --finread-white: #ffffff;
+  --finread-ink: #0a0e16;
+  --finread-wash-hover: rgba(0, 0, 0, 0.06);
+  --finread-wash-row: rgba(0, 0, 0, 0.035);
+  --finread-theme-ai: #4338ca;
+  --finread-theme-ai-dim: rgba(67, 56, 202, 0.12);
+  --finread-theme-ai-glow: rgba(67, 56, 202, 0.2);
+  --finread-theme-defi: #047857;
+  --finread-theme-defi-dim: rgba(4, 120, 87, 0.12);
+  --finread-theme-defi-glow: rgba(4, 120, 87, 0.18);
+  --finread-theme-space: #b45309;
+  --finread-theme-space-dim: rgba(180, 83, 9, 0.14);
+  --finread-theme-space-glow: rgba(180, 83, 9, 0.22);
+}
+
+@theme inline {
+  --color-bg: var(--finread-bg);
+  --color-surface: var(--finread-surface);
+  --color-surface2: var(--finread-surface2);
+  --color-border: var(--finread-border);
+  --color-gold: var(--finread-gold);
+  --color-gold-dim: var(--finread-gold-dim);
+  --color-accent-blue: var(--finread-accent-blue);
+  --color-accent-green: var(--finread-accent-green);
+  --color-accent-red: var(--finread-accent-red);
+  --color-accent-cyan: var(--finread-accent-cyan);
+  --color-accent-purple: var(--finread-accent-purple);
+  --color-text: var(--finread-text);
+  --color-muted: var(--finread-muted);
+  --color-white: var(--finread-white);
+  --color-ink: var(--finread-ink);
+  --color-wash-hover: var(--finread-wash-hover);
+  --color-wash-row: var(--finread-wash-row);
+
+  --color-theme-ai: var(--finread-theme-ai);
+  --color-theme-ai-dim: var(--finread-theme-ai-dim);
+  --color-theme-ai-glow: var(--finread-theme-ai-glow);
+  --color-theme-defi: var(--finread-theme-defi);
+  --color-theme-defi-dim: var(--finread-theme-defi-dim);
+  --color-theme-defi-glow: var(--finread-theme-defi-glow);
+  --color-theme-space: var(--finread-theme-space);
+  --color-theme-space-dim: var(--finread-theme-space-dim);
+  --color-theme-space-glow: var(--finread-theme-space-glow);
 
   --font-sans: "system-ui", "-apple-system", "Segoe UI", sans-serif;
   --font-mono: "SF Mono", "Menlo", ui-monospace, monospace;
@@ -37,37 +100,6 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
-}
-
-/* Light mode — default is dark (no class on html) */
-html.light {
-  color-scheme: light;
-  --color-bg: #e8eaef;
-  --color-surface: #ffffff;
-  --color-surface2: #dce0e8;
-  --color-border: rgba(12, 18, 32, 0.1);
-  --color-gold: #9a7814;
-  --color-gold-dim: rgba(154, 120, 20, 0.16);
-  --color-accent-blue: #2563eb;
-  --color-accent-green: #16a34a;
-  --color-accent-red: #dc2626;
-  --color-accent-cyan: #0891b2;
-  --color-accent-purple: #7c3aed;
-  --color-text: #2a3142;
-  --color-muted: #5c6477;
-  --color-white: #ffffff;
-  --color-ink: #0f141c;
-  --color-wash-hover: rgba(0, 0, 0, 0.05);
-  --color-wash-row: rgba(0, 0, 0, 0.028);
-  --color-theme-ai: #4f46e5;
-  --color-theme-ai-dim: rgba(79, 70, 229, 0.12);
-  --color-theme-ai-glow: rgba(79, 70, 229, 0.18);
-  --color-theme-defi: #059669;
-  --color-theme-defi-dim: rgba(5, 150, 105, 0.12);
-  --color-theme-defi-glow: rgba(5, 150, 105, 0.18);
-  --color-theme-space: #d97706;
-  --color-theme-space-dim: rgba(217, 119, 6, 0.12);
-  --color-theme-space-glow: rgba(217, 119, 6, 0.2);
 }
 
 ::selection {
@@ -161,13 +193,13 @@ html.light ::-webkit-scrollbar-thumb:hover {
 
 /* Theme card glow effects */
 .theme-card-ai:hover {
-  box-shadow: 0 0 40px var(--color-theme-ai-glow), 0 0 80px rgba(129, 140, 248, 0.08);
+  box-shadow: 0 0 40px var(--color-theme-ai-glow), 0 0 80px color-mix(in srgb, var(--color-theme-ai) 8%, transparent);
 }
 .theme-card-defi:hover {
-  box-shadow: 0 0 40px var(--color-theme-defi-glow), 0 0 80px rgba(52, 211, 153, 0.08);
+  box-shadow: 0 0 40px var(--color-theme-defi-glow), 0 0 80px color-mix(in srgb, var(--color-theme-defi) 8%, transparent);
 }
 .theme-card-space:hover {
-  box-shadow: 0 0 40px var(--color-theme-space-glow), 0 0 80px rgba(245, 158, 11, 0.08);
+  box-shadow: 0 0 40px var(--color-theme-space-glow), 0 0 80px color-mix(in srgb, var(--color-theme-space) 8%, transparent);
 }
 
 @keyframes tip-pop {
