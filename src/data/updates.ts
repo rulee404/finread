@@ -22,13 +22,21 @@ export interface SiteUpdate {
  */
 const updates: SiteUpdate[] = [
   {
+    id: "u-20250414-opinion-ai-index",
+    date: "2026-04-14",
+    type: "opinion",
+    theme: "ai",
+    title: "观点更新：《AI Index Report 2026》一条主线与五条速读",
+    href: "/opinions#opinion-ai-index-2026",
+    isNew: true,
+  },
+  {
     id: "u-20250413-stanford-ai",
     date: "2025-04-13",
     type: "report",
     theme: "ai",
     title: "重磅：Stanford HAI AI Index Report 2026 全文中英对照 + PDF 下载",
     href: "/reports/stanford-ai-index-2026",
-    isNew: true,
   },
   {
     id: "u-20250413-crcl-q1",
@@ -70,14 +78,6 @@ const updates: SiteUpdate[] = [
     theme: "space",
     title: "新增研报：UBS — Rocket Lab 垂直整合太空平台深度分析",
     href: "/reports/ubs-rklb-space-2025",
-  },
-  {
-    id: "u-20250405-opinion-defi",
-    date: "2025-04-05",
-    type: "opinion",
-    theme: "defi",
-    title: "作者观点更新：DeFi 赛道 — 稳定币立法催化下的布局逻辑",
-    href: "/opinions",
   },
   {
     id: "u-20250403-weekly12",
