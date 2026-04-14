@@ -3,7 +3,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getArticle, getAllArticles } from "@/data/articles";
 import type { ArticleParagraph, ArticleSection } from "@/lib/types";
-import CoffeeGate from "@/components/CoffeeGate";
 import TipJar from "@/components/TipJar";
 
 interface Props {
@@ -100,8 +99,8 @@ export default async function ArticlePage({ params }: Props) {
             {source.icon} {source.label}
           </span>
           <span className="text-[11px] text-muted">{article.date}</span>
-          <span className="rounded-md border border-gold/20 bg-gold-dim px-2 py-0.5 text-[10px] font-semibold text-gold">
-            ¥{article.price}
+          <span className="rounded-md border border-accent-green/20 bg-accent-green/5 px-2 py-0.5 text-[10px] font-semibold text-accent-green">
+            免费阅读
           </span>
         </div>
 
@@ -134,7 +133,7 @@ export default async function ArticlePage({ params }: Props) {
             <span className="font-semibold text-white">{totalParagraphCount}</span> 段中英对照
           </div>
           <div className="text-xs text-muted">
-            免费预览 <span className="font-semibold text-accent-green">{freeParagraphCount}</span> 段
+            <span className="font-semibold text-accent-green">全文免费</span>
           </div>
           <div className="text-xs text-muted">
             来源: <span className="font-semibold text-white">{article.sourceLabel}</span>
@@ -142,17 +141,17 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </header>
 
-      {/* Free preview sections */}
+      {/* Full article content */}
       <div className="space-y-6">
         {article.freePreview.map((section, i) => (
           <Section key={i} section={section} />
         ))}
+        {article.paidContent.map((section, i) => (
+          <Section key={`paid-${i}`} section={section} />
+        ))}
       </div>
 
-      {/* Paywall */}
-      <CoffeeGate article={article} />
-
-      {/* Tip */}
+      {/* Voluntary tip */}
       <TipJar articleTitle={article.title} />
 
       {/* Related articles CTA */}
@@ -168,10 +167,10 @@ export default async function ArticlePage({ params }: Props) {
             浏览全文库 →
           </Link>
           <Link
-            href="/pro"
+            href="/opinions"
             className="rounded-lg border border-gold/30 bg-gold-dim px-5 py-2 text-xs font-semibold text-gold transition-colors hover:bg-gold/20"
           >
-            Pro 会员无限解锁
+            作者投资观点
           </Link>
         </div>
       </div>

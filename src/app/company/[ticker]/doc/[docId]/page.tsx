@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import type { ArticleParagraph, ArticleSection, SummaryCard } from "@/lib/types";
 import { getDoc, getRelatedDoc, getAllDocIds } from "@/data/docs";
 import { getCompany } from "@/lib/companies";
-import DocPaywall from "@/components/DocPaywall";
 import TipJar from "@/components/TipJar";
 
 interface Props {
@@ -113,21 +112,6 @@ export default async function DocDetailPage({ params }: Props) {
       ? (doc as { summaryCards?: SummaryCard[] }).summaryCards
       : undefined;
 
-  const coffeeArticle = {
-    id: doc.id,
-    date: doc.date,
-    theme: company.theme,
-    title: doc.title,
-    subtitle: doc.summary,
-    sourceType: "earnings" as const,
-    sourceLabel: "",
-    tickers: [doc.ticker],
-    price: doc.price,
-    freePreview: doc.freePreview,
-    paidContent: doc.paidContent,
-    wordCount: doc.wordCount,
-  };
-
   return (
     <div className="mx-auto max-w-[800px] px-5 py-10">
       {/* Breadcrumb */}
@@ -151,8 +135,8 @@ export default async function DocDetailPage({ params }: Props) {
             </span>
           )}
           <span className="text-[11px] text-muted">{doc.date}</span>
-          <span className="rounded-md border border-gold/20 bg-gold-dim px-2 py-0.5 text-[10px] font-semibold text-gold">
-            ☕ ¥{doc.price}
+          <span className="rounded-md border border-accent-green/20 bg-accent-green/5 px-2 py-0.5 text-[10px] font-semibold text-accent-green">
+            免费阅读
           </span>
         </div>
 
@@ -185,7 +169,7 @@ export default async function DocDetailPage({ params }: Props) {
             { label: "字数", value: `${(doc.wordCount / 1000).toFixed(1)}k` },
             { label: "段落", value: `${totalParagraphCount}` },
             { label: "章节", value: `${totalSections}` },
-            { label: "免费预览", value: `${freeParagraphCount} 段`, green: true },
+            { label: "状态", value: "全文免费", green: true },
           ].map((s) => (
             <div
               key={s.label}
@@ -218,21 +202,17 @@ export default async function DocDetailPage({ params }: Props) {
         </div>
       </header>
 
-      {/* Free preview */}
+      {/* Full content */}
       <div className="space-y-6">
         {doc.freePreview.map((section, i) => (
           <Section key={i} section={section} />
         ))}
+        {doc.paidContent.map((section, i) => (
+          <Section key={`paid-${i}`} section={section} />
+        ))}
       </div>
 
-      {/* Paid content */}
-      <DocPaywall
-        docId={doc.id}
-        paidContent={doc.paidContent}
-        coffeeArticle={coffeeArticle}
-      />
-
-      {/* Tip */}
+      {/* Voluntary tip */}
       <TipJar articleTitle={doc.title} />
 
       {/* Back */}

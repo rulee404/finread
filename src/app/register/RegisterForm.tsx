@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import GoogleSignIn from "@/components/GoogleSignIn";
+
 
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -88,15 +88,6 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="w-full space-y-5">
-      <GoogleSignIn redirectTo="/" />
-
-      <div className="flex items-center gap-3">
-        <div className="h-px flex-1 bg-border" />
-        <span className="text-[11px] text-muted/60">或使用邮箱注册</span>
-        <div className="h-px flex-1 bg-border" />
-      </div>
-
     <form onSubmit={handleSubmit} className="w-full space-y-4">
       <div>
         <label htmlFor="reg-email" className="mb-1 block text-xs text-muted">
@@ -147,6 +138,5 @@ export default function RegisterForm() {
         注册即表示同意 FinRead 的服务条款和隐私政策
       </p>
     </form>
-    </div>
   );
 }
