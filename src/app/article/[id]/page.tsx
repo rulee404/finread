@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getArticle, getAllArticles } from "@/data/articles";
 import type { ArticleParagraph, ArticleSection } from "@/lib/types";
 import CoffeeGate from "@/components/CoffeeGate";
+import TipJar from "@/components/TipJar";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -150,6 +151,9 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Paywall */}
       <CoffeeGate article={article} />
+
+      {/* Tip */}
+      <TipJar articleTitle={article.title} />
 
       {/* Related articles CTA */}
       <div className="mt-10 rounded-xl border border-border bg-surface p-5 text-center">

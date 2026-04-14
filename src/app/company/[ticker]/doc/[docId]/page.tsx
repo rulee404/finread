@@ -5,6 +5,7 @@ import type { ArticleParagraph, ArticleSection, SummaryCard } from "@/lib/types"
 import { getDoc, getRelatedDoc, getAllDocIds } from "@/data/docs";
 import { getCompany } from "@/lib/companies";
 import DocPaywall from "@/components/DocPaywall";
+import TipJar from "@/components/TipJar";
 
 interface Props {
   params: Promise<{ ticker: string; docId: string }>;
@@ -230,6 +231,9 @@ export default async function DocDetailPage({ params }: Props) {
         paidContent={doc.paidContent}
         coffeeArticle={coffeeArticle}
       />
+
+      {/* Tip */}
+      <TipJar articleTitle={doc.title} />
 
       {/* Back */}
       <div className="mt-10 text-center">

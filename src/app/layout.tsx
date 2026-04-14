@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: "FinRead · AI · DeFi · Space · 三大赛道一手投研",
   description:
     "聚焦 AI、DeFi、Space 三大赛道的 SEC 原典解读、管理层原话中英对照与作者投资观点。",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.svg",
+  },
 };
 
 export default function RootLayout({
