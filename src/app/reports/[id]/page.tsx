@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getReport, getAllReports } from "@/data/reports";
-import type { ArticleParagraph, ArticleSection } from "@/lib/types";
+import type { ArticleParagraph, ArticleSection, SummaryCard } from "@/lib/types";
 import ReportPaywall from "@/components/ReportPaywall";
 
 interface Props {
@@ -33,14 +33,25 @@ const themeStyles: Record<string, { bg: string; text: string; label: string }> =
 function Paragraph({ p }: { p: ArticleParagraph }) {
   return (
     <div
-      className={`rounded-lg border p-4 ${
+      className={`rounded-lg border p-4 transition-all ${
         p.highlight
-          ? "border-accent-blue/20 bg-accent-blue/5"
+          ? "border-gold/30 bg-gold/5 shadow-[0_0_12px_rgba(212,175,55,0.08)]"
           : "border-border bg-surface"
       }`}
     >
+      {p.speaker && (
+        <div className="mb-2">
+          <span className="font-bold text-ink">{p.speaker}</span>
+          {p.speakerTitle && (
+            <span className="ml-2 text-[11px] text-muted">{p.speakerTitle}</span>
+          )}
+        </div>
+      )}
       <p className="text-[13px] leading-relaxed text-ink/90">{p.en}</p>
       <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.cn}</p>
+      {p.highlight && (
+        <div className="mt-3 h-[2px] rounded-full bg-gradient-to-r from-gold/60 via-gold/20 to-transparent" />
+      )}
     </div>
   );
 }
@@ -49,7 +60,7 @@ function Section({ section }: { section: ArticleSection }) {
   return (
     <section className="space-y-3">
       {section.heading && (
-        <h2 className="flex items-center gap-2 border-l-2 border-accent-blue/50 pl-3 text-base font-semibold text-ink">
+        <h2 className="flex items-center gap-2 border-l-2 border-gold/50 pl-3 text-base font-semibold text-ink">
           {section.heading}
         </h2>
       )}
@@ -60,18 +71,39 @@ function Section({ section }: { section: ArticleSection }) {
   );
 }
 
+function SummaryCards({ cards }: { cards: SummaryCard[] }) {
+  return (
+    <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-5">
+      {cards.map((card) => (
+        <div
+          key={card.label}
+          className="rounded-xl border border-border bg-surface p-3 text-center"
+        >
+          <div className="text-lg">{card.icon}</div>
+          <div className="mt-1 text-[10px] text-muted">{card.label}</div>
+          <div className="mt-0.5 text-sm font-bold text-ink">{card.value}</div>
+          {card.note && (
+            <div className="mt-0.5 text-[10px] text-gold">{card.note}</div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default async function ReportDetailPage({ params }: Props) {
   const { id } = await params;
   const report = getReport(id);
   if (!report) notFound();
 
   const theme = themeStyles[report.theme] ?? themeStyles.macro;
+  const totalSections = report.freePreview.length + report.paidContent.length;
   const freeParagraphCount = report.freePreview.reduce(
-    (n, s) => n + s.paragraphs.length,
+    (n: number, s: ArticleSection) => n + s.paragraphs.length,
     0,
   );
   const paidParagraphCount = report.paidContent.reduce(
-    (n, s) => n + s.paragraphs.length,
+    (n: number, s: ArticleSection) => n + s.paragraphs.length,
     0,
   );
 
@@ -95,6 +127,9 @@ export default async function ReportDetailPage({ params }: Props) {
             📊 {report.institution}
           </span>
           <span className="text-[11px] text-muted">{report.date}</span>
+          <span className="rounded-md bg-accent-green/10 px-2 py-0.5 text-[10px] font-semibold text-accent-green">
+            ✓ 完整全文翻译
+          </span>
         </div>
 
         <h1 className="text-xl font-bold text-ink md:text-2xl">
@@ -106,7 +141,7 @@ export default async function ReportDetailPage({ params }: Props) {
 
         {/* Tickers + PDF download */}
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          {report.tickers.map((t) => (
+          {report.tickers.map((t: string) => (
             <Link
               key={t}
               href={`/company/${t.toLowerCase()}`}
@@ -130,13 +165,16 @@ export default async function ReportDetailPage({ params }: Props) {
           )}
         </div>
 
+        {/* Summary Cards */}
+        {report.summaryCards && <SummaryCards cards={report.summaryCards} />}
+
         {/* Cover points */}
         <div className="mt-4 rounded-xl border border-border bg-surface p-4">
           <div className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-accent-blue">
             核心观点
           </div>
           <div className="space-y-1.5">
-            {report.coverPoints.map((point, i) => (
+            {report.coverPoints.map((point: string, i: number) => (
               <div key={i} className="flex items-start gap-2 text-xs text-text">
                 <span className="mt-0.5 shrink-0 text-accent-blue">▸</span>
                 {point}
@@ -148,7 +186,8 @@ export default async function ReportDetailPage({ params }: Props) {
         {/* Stats */}
         <div className="mt-4 flex flex-wrap gap-3">
           {[
-            { label: "字数", value: `${(report.wordCount / 1000).toFixed(1)}k` },
+            { label: "字数", value: `${(report.wordCount / 1000).toFixed(0)}k` },
+            { label: "章节", value: `${totalSections}` },
             { label: "总段落", value: `${freeParagraphCount + paidParagraphCount}` },
             { label: "免费预览", value: `${freeParagraphCount} 段`, green: true },
             { label: "打赏解锁", value: `${paidParagraphCount} 段`, gold: true },
@@ -176,7 +215,7 @@ export default async function ReportDetailPage({ params }: Props) {
 
       {/* Free preview */}
       <div className="space-y-6">
-        {report.freePreview.map((section, i) => (
+        {report.freePreview.map((section: ArticleSection, i: number) => (
           <Section key={i} section={section} />
         ))}
       </div>

@@ -167,6 +167,7 @@ export interface ResearchReport {
   subtitle: string;
   tickers: string[];
   coverPoints: string[];
+  summaryCards?: SummaryCard[];
   freePreview: ArticleSection[];
   paidContent: ArticleSection[];
   wordCount: number;

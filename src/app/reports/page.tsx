@@ -74,7 +74,7 @@ export default function ReportsPage() {
 
               {/* Cover points */}
               <div className="grid gap-2 sm:grid-cols-2">
-                {report.coverPoints.map((point, i) => (
+                {report.coverPoints.map((point: string, i: number) => (
                   <div
                     key={i}
                     className="flex items-start gap-2 rounded-lg bg-bg/60 px-3 py-2 text-xs text-muted"
@@ -88,7 +88,7 @@ export default function ReportsPage() {
               {/* Tickers + stats */}
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <div className="flex gap-1.5">
-                  {report.tickers.map((t) => (
+                  {report.tickers.map((t: string) => (
                     <span
                       key={t}
                       className="rounded border border-border bg-surface2 px-2 py-0.5 text-[10px] font-semibold text-gold"
