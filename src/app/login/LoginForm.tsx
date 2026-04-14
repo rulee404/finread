@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import GoogleSignIn from "@/components/GoogleSignIn";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -79,6 +80,15 @@ export default function LoginForm() {
   }
 
   return (
+    <div className="w-full space-y-5">
+      <GoogleSignIn redirectTo={redirect ?? "/"} />
+
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-border" />
+        <span className="text-[11px] text-muted/60">或使用邮箱密码</span>
+        <div className="h-px flex-1 bg-border" />
+      </div>
+
     <form onSubmit={handleSubmit} className="w-full space-y-4">
       <div>
         <label htmlFor="email" className="mb-1 block text-xs text-muted">
@@ -125,5 +135,6 @@ export default function LoginForm() {
         {loading ? "登录中…" : "登录"}
       </button>
     </form>
+    </div>
   );
 }
