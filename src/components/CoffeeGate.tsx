@@ -212,7 +212,7 @@ export default function CoffeeGate({ article }: { article: Article }) {
             "省时间 — 不用自己翻墙找原始文档",
             "省 Token — 同等 GPT 翻译约需 ¥" +
               Math.round(article.wordCount * 0.001),
-            "更准确 — 投资术语人工校对，非机翻",
+            "更准确 — Claude Opus 4.6 Max 翻译 + 投资术语精校",
           ].map((v) => (
             <div key={v} className="flex items-start gap-2 text-xs text-muted">
               <span className="mt-0.5 shrink-0 text-accent-green">✓</span>

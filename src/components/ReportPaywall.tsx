@@ -163,10 +163,10 @@ export default function ReportPaywall({ report }: { report: ResearchReport }) {
 
         <div className="mt-5 space-y-2">
           {[
-            "顶级机构原版报告逐段翻译，非 AI 机翻",
+            "顶级机构原版报告逐段翻译，由最领先模型 Claude Opus 4.6 Max 驱动",
             "投资术语精准对照，保留专业含义",
             "数据模型、风险分析完整呈现",
-            `同等内容用 GPT 翻译约需 ¥${Math.round(report.wordCount * 0.001)} token`,
+            `同等内容自行翻译约需 ¥${Math.round(report.wordCount * 0.001)} token`,
           ].map((v) => (
             <div key={v} className="flex items-start gap-2 text-xs text-muted">
               <span className="mt-0.5 shrink-0 text-accent-blue">✓</span>
