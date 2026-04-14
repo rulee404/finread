@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getReport, getAllReports } from "@/data/reports";
 import type { ArticleParagraph, ArticleSection, SummaryCard } from "@/lib/types";
-import ReportPaywall from "@/components/ReportPaywall";
+import TipJar from "@/components/TipJar";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -186,26 +186,17 @@ export default async function ReportDetailPage({ params }: Props) {
         {/* Stats */}
         <div className="mt-4 flex flex-wrap gap-3">
           {[
-            { label: "字数", value: `${(report.wordCount / 1000).toFixed(0)}k` },
-            { label: "章节", value: `${totalSections}` },
-            { label: "总段落", value: `${freeParagraphCount + paidParagraphCount}` },
-            { label: "免费预览", value: `${freeParagraphCount} 段`, green: true },
-            { label: "打赏解锁", value: `${paidParagraphCount} 段`, gold: true },
+            { label: "字数", value: `${(report.wordCount / 1000).toFixed(0)}k`, green: false },
+            { label: "章节", value: `${totalSections}`, green: false },
+            { label: "总段落", value: `${freeParagraphCount + paidParagraphCount}`, green: false },
+            { label: "状态", value: "全文免费", green: true },
           ].map((s) => (
             <div
               key={s.label}
               className="rounded-lg border border-border bg-surface2/50 px-3 py-1.5 text-xs"
             >
               <span className="text-muted">{s.label} </span>
-              <span
-                className={
-                  s.green
-                    ? "font-semibold text-accent-green"
-                    : s.gold
-                      ? "font-semibold text-gold"
-                      : "font-semibold text-ink"
-                }
-              >
+              <span className={s.green ? "font-semibold text-accent-green" : "font-semibold text-ink"}>
                 {s.value}
               </span>
             </div>
@@ -213,15 +204,18 @@ export default async function ReportDetailPage({ params }: Props) {
         </div>
       </header>
 
-      {/* Free preview */}
+      {/* Full content */}
       <div className="space-y-6">
         {report.freePreview.map((section: ArticleSection, i: number) => (
           <Section key={i} section={section} />
         ))}
+        {report.paidContent.map((section: ArticleSection, i: number) => (
+          <Section key={`paid-${i}`} section={section} />
+        ))}
       </div>
 
-      {/* Paywall: tip to unlock */}
-      <ReportPaywall report={report} />
+      {/* Voluntary tip */}
+      <TipJar articleTitle={report.title} />
 
       {/* Back */}
       <div className="mt-10 text-center">
