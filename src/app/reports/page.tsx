@@ -56,6 +56,11 @@ export default function ReportsPage() {
                   {report.institution}
                 </span>
                 <span className="text-[11px] text-muted">{report.date}</span>
+                {report.pdfUrl && (
+                  <span className="rounded-md border border-accent-blue/20 bg-accent-blue/10 px-2 py-0.5 text-[10px] font-semibold text-accent-blue">
+                    附 PDF
+                  </span>
+                )}
                 <span className="ml-auto rounded-md border border-gold/20 bg-gold-dim px-2 py-0.5 text-[10px] font-semibold text-gold">
                   打赏 ¥{report.tipAmount} 解锁
                 </span>

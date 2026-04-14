@@ -171,4 +171,5 @@ export interface ResearchReport {
   paidContent: ArticleSection[];
   wordCount: number;
   tipAmount: number;
+  pdfUrl?: string;
 }

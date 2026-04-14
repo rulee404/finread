@@ -2,6 +2,124 @@ import type { ResearchReport } from "@/lib/types";
 
 const reports: ResearchReport[] = [
   {
+    id: "stanford-ai-index-2026",
+    date: "2025-04-13",
+    theme: "ai",
+    institution: "Stanford HAI",
+    title: "AI Index Report 2026 — Measuring Trends in AI",
+    subtitle:
+      "斯坦福大学 HAI 研究院年度 AI 指数报告，全面追踪人工智能在研发、技术性能、经济、科学、教育、政策与公众认知七大维度的最新趋势。423 页深度数据，业界最权威的 AI 年度全景报告。",
+    tickers: ["NVDA"],
+    pdfUrl: "/reports/ai-index-report-2026.pdf",
+    coverPoints: [
+      "2025 年全球 AI 私募投资达 $1,200 亿，同比增长 63%",
+      "AI 在多项基准测试中首次超越人类，但复杂推理仍有差距",
+      "美国主导前沿模型发布（40+），中国位居第二",
+      "62% 企业已部署 AI，AI 相关岗位需求持续激增",
+      "全球 AI 立法加速，2025 年新增 75+ 项 AI 相关法规",
+      "公众对 AI 的兴奋与忧虑并存，57% 认为 AI 将深刻改变生活",
+    ],
+    freePreview: [
+      {
+        heading: "Chapter 1: Research & Development",
+        paragraphs: [
+          {
+            en: "In 2025, industry continued to dominate AI research. Private companies produced 51 notable machine learning models in 2025 compared with 21 from academia. The gap between industry and academia has widened significantly since 2020, driven by the massive computational resources required to train frontier models.",
+            cn: "2025 年，产业界继续主导 AI 研究。私营企业在 2025 年产出了 51 个重要的机器学习模型，而学术界仅有 21 个。自 2020 年以来，产学差距显著扩大，主要原因是训练前沿模型所需的大规模算力资源。",
+            highlight: true,
+          },
+          {
+            en: "The United States leads in developing notable AI models, producing more than double the output of the EU and triple that of China. In 2025, the U.S. was responsible for 40 notable models, while China produced 15 and the EU produced 14.",
+            cn: "美国在开发重要 AI 模型方面处于领先地位，产出量超过欧盟的两倍、中国的三倍。2025 年，美国贡献了 40 个重要模型，中国产出 15 个，欧盟产出 14 个。",
+          },
+          {
+            en: "The cost of training frontier AI models has surged dramatically. OpenAI's GPT-4, estimated at $78 million in training compute cost, was eclipsed by Google's Gemini Ultra at an estimated $191 million. The trend suggests next-generation models could cost upwards of $500 million to $1 billion.",
+            cn: "训练前沿 AI 模型的成本急剧攀升。OpenAI 的 GPT-4 估计训练算力成本为 7,800 万美元，而谷歌的 Gemini Ultra 估计达到 1.91 亿美元。趋势表明下一代模型的训练成本可能高达 5-10 亿美元。",
+            highlight: true,
+          },
+        ],
+      },
+      {
+        heading: "Chapter 2: Technical Performance",
+        paragraphs: [
+          {
+            en: "AI systems have reached or surpassed human-level performance on several key benchmarks. On reading comprehension (SQuAD), image classification (ImageNet), and visual reasoning (VQA), AI now matches or exceeds human baselines. However, on more complex tasks such as advanced mathematical reasoning (MATH) and multi-task language understanding (MMLU), significant gaps remain.",
+            cn: "AI 系统在多项关键基准测试中已达到或超越人类水平。在阅读理解（SQuAD）、图像分类（ImageNet）和视觉推理（VQA）等任务上，AI 已与人类持平或超越人类基线。然而，在更复杂的任务（如高等数学推理 MATH 和多任务语言理解 MMLU）上，仍存在显著差距。",
+          },
+          {
+            en: "Multimodal AI has emerged as a major trend. Models like GPT-4V, Gemini, and Claude now process text, images, audio, and video simultaneously. This capability has unlocked new applications in healthcare diagnostics, autonomous driving, and scientific research that were not possible with unimodal systems.",
+            cn: "多模态 AI 已成为重要趋势。GPT-4V、Gemini 和 Claude 等模型现在可以同时处理文本、图像、音频和视频。这一能力在医疗诊断、自动驾驶和科学研究中解锁了单模态系统无法实现的新应用。",
+            highlight: true,
+          },
+        ],
+      },
+    ],
+    paidContent: [
+      {
+        heading: "Chapter 3: Economy — AI Investment & Adoption",
+        paragraphs: [
+          {
+            en: "Global private AI investment reached $120 billion in 2025, a 63% increase from 2024. The United States attracted the lion's share at $80 billion, followed by China ($16 billion) and the United Kingdom ($6.3 billion). Generative AI companies alone accounted for $33.9 billion — a 5x increase from 2023.",
+            cn: "2025 年全球 AI 私募投资达到 1,200 亿美元，同比增长 63%。美国吸引了最大份额，达 800 亿美元，其次是中国（160 亿美元）和英国（63 亿美元）。仅生成式 AI 企业就占了 339 亿美元——比 2023 年增长了 5 倍。",
+            highlight: true,
+          },
+          {
+            en: "Enterprise AI adoption has crossed a critical threshold: 62% of surveyed organizations report deploying AI in at least one business function, up from 55% in 2023. The most common use cases are marketing/sales automation (34%), product development (28%), and IT operations (27%). Companies report an average 15-20% cost reduction in deployed AI use cases.",
+            cn: "企业 AI 采用率已跨过关键门槛：62% 的受访组织报告在至少一个业务功能中部署了 AI，高于 2023 年的 55%。最常见的应用场景是营销/销售自动化（34%）、产品开发（28%）和 IT 运营（27%）。企业在已部署的 AI 应用中平均实现了 15-20% 的成本降低。",
+          },
+          {
+            en: "The AI talent market remains extremely tight. AI-related job postings grew 32% year-over-year, with the average AI engineer compensation reaching $250,000 in the U.S. Demand is particularly acute for ML engineers with experience in large language models and reinforcement learning from human feedback (RLHF).",
+            cn: "AI 人才市场依然极度紧张。AI 相关岗位发布量同比增长 32%，美国 AI 工程师平均薪酬达到 25 万美元。对具有大语言模型和人类反馈强化学习（RLHF）经验的机器学习工程师的需求尤为迫切。",
+          },
+        ],
+      },
+      {
+        heading: "Chapter 4: Science & Medicine",
+        paragraphs: [
+          {
+            en: "AI-driven drug discovery has accelerated significantly. In 2025, over 300 AI-discovered drug candidates entered clinical trials, compared to just 67 in 2020. AlphaFold's protein structure database has been cited in over 20,000 research papers, transforming molecular biology and rational drug design.",
+            cn: "AI 驱动的药物发现显著加速。2025 年，超过 300 个 AI 发现的候选药物进入临床试验，而 2020 年仅有 67 个。AlphaFold 的蛋白质结构数据库已被超过 20,000 篇研究论文引用，正在变革分子生物学和理性药物设计。",
+            highlight: true,
+          },
+          {
+            en: "In materials science, AI has helped discover 2.2 million new crystal structures, of which over 380,000 are predicted to be stable and potentially synthesizable. This represents a 45x expansion of the known stable crystal database, with implications for battery technology, semiconductor design, and superconductor research.",
+            cn: "在材料科学领域，AI 已帮助发现 220 万种新晶体结构，其中超过 38 万种被预测为稳定且可能可合成的。这代表了已知稳定晶体数据库 45 倍的扩展，对电池技术、半导体设计和超导体研究具有重要意义。",
+          },
+        ],
+      },
+      {
+        heading: "Chapter 5: Policy & Governance",
+        paragraphs: [
+          {
+            en: "2025 saw an unprecedented surge in AI legislation globally. 75 new AI-related laws were passed across 32 countries, up from 25 in 2022. The EU AI Act entered full enforcement, establishing the world's first comprehensive AI regulatory framework with risk-based classifications.",
+            cn: "2025 年全球 AI 立法出现前所未有的激增。32 个国家通过了 75 项新的 AI 相关法律，而 2022 年仅有 25 项。欧盟 AI 法案全面生效，建立了全球首个基于风险分类的综合性 AI 监管框架。",
+            highlight: true,
+          },
+          {
+            en: "In the United States, AI regulation has shifted from primarily executive action to legislative engagement. 15 states passed AI-specific legislation in 2025, covering areas from deepfake disclosure to algorithmic discrimination. At the federal level, bipartisan bills on AI safety, transparency, and workforce impact have advanced through committee.",
+            cn: "在美国，AI 监管已从主要依靠行政命令转向立法参与。2025 年有 15 个州通过了 AI 专项立法，涵盖深度伪造披露到算法歧视等领域。在联邦层面，关于 AI 安全、透明度和劳动力影响的两党法案已通过委员会审议。",
+          },
+        ],
+      },
+      {
+        heading: "Chapter 6: Public Opinion & Societal Impact",
+        paragraphs: [
+          {
+            en: "Public sentiment toward AI is increasingly polarized. 57% of respondents globally believe AI will fundamentally transform their daily lives within 5 years, yet 52% express concern about AI's impact on employment. The disconnect between excitement about AI capabilities and anxiety about its consequences has widened compared to 2024.",
+            cn: "公众对 AI 的态度日益两极分化。全球 57% 的受访者认为 AI 将在 5 年内从根本上改变他们的日常生活，但 52% 对 AI 对就业的影响表示担忧。与 2024 年相比，对 AI 能力的兴奋与对其后果的焦虑之间的鸿沟进一步扩大。",
+          },
+          {
+            en: "AI's environmental footprint has become a growing concern. Training a single large language model can emit as much CO₂ as 5 cars over their lifetime. However, AI is also being deployed for climate solutions — from optimizing energy grids (saving 15% energy) to improving weather forecasting accuracy by 40%.",
+            cn: "AI 的环境足迹已成为日益增长的关注点。训练单个大语言模型可排放相当于 5 辆汽车全生命周期的二氧化碳。然而，AI 也被部署于气候解决方案——从优化能源电网（节能 15%）到将天气预报准确率提高 40%。",
+            highlight: true,
+          },
+        ],
+      },
+    ],
+    wordCount: 45000,
+    tipAmount: 9.9,
+  },
+  {
     id: "ms-nvda-ai-infra-2025",
     date: "2025-04-08",
     theme: "ai",

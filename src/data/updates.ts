@@ -22,6 +22,15 @@ export interface SiteUpdate {
  */
 const updates: SiteUpdate[] = [
   {
+    id: "u-20250413-stanford-ai",
+    date: "2025-04-13",
+    type: "report",
+    theme: "ai",
+    title: "重磅：Stanford HAI AI Index Report 2026 全文中英对照 + PDF 下载",
+    href: "/reports/stanford-ai-index-2026",
+    isNew: true,
+  },
+  {
     id: "u-20250413-crcl-q1",
     date: "2025-04-13",
     type: "earnings",
@@ -37,7 +46,6 @@ const updates: SiteUpdate[] = [
     theme: "ai",
     title: "新增研报：Morgan Stanley — NVIDIA AI Infrastructure Spending Outlook",
     href: "/reports/ms-nvda-ai-infra-2025",
-    isNew: true,
   },
   {
     id: "u-20250410-gs-stablecoin",
