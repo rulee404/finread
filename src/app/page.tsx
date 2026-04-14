@@ -6,6 +6,8 @@ import ThemeIcon from "@/components/ThemeIcon";
 import OpinionCard from "@/components/OpinionCard";
 import HeroCTA from "@/components/HeroCTA";
 import BottomCTA from "@/components/BottomCTA";
+import UpdatesFeed from "@/components/UpdatesFeed";
+import { getLatestUpdates } from "@/data/updates";
 
 const cardStyles: Record<string, { border: string; hoverBorder: string; text: string; glow: string; tagBg: string }> = {
   ai: {
@@ -34,6 +36,7 @@ const cardStyles: Record<string, { border: string; hoverBorder: string; text: st
 export default function HomePage() {
   const themes = getAllThemes();
   const latestOpinions = getLatestOpinions(4);
+  const latestUpdates = getLatestUpdates(5);
 
   return (
     <div className="mx-auto max-w-[1080px] px-5 py-10">
@@ -47,17 +50,26 @@ export default function HomePage() {
           <span className="text-theme-space text-2xl font-black tracking-tight">Space</span>
         </div>
         <h1 className="mb-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
-          三大赛道，一手投研
+          三大赛道，
+          <span className="relative inline-block">
+            <span className="relative z-10">一手信息</span>
+            <span className="absolute inset-x-0 bottom-0 z-0 h-[40%] bg-gold/25 rounded-sm" />
+          </span>
         </h1>
         <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted">
           聚焦三条投资主线 — 人工智能、去中心化金融、太空经济。
           <br />
-          财报 Presentation / Shareholder Letter / 会议 Transcript 实录中英文全文对照深度解读
+          <span className="text-white/70">不做二手搬运</span>
+          {" — "}
+          财报 Presentation · Shareholder Letter · Earnings Call 实录
           <br />
-          10-K · 10-Q 报告解读 · 管理层采访全文翻译 · 机构研报解读
+          10-K / 10-Q 全文解读 · 管理层采访翻译 · 机构研报中英对照
         </p>
         <HeroCTA />
       </section>
+
+      {/* Live Updates Feed */}
+      <UpdatesFeed updates={latestUpdates} />
 
       {/* Three Theme Cards */}
       <section className="mb-16">
