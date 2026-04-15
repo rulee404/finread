@@ -7,10 +7,12 @@ import RevenueTable from "@/components/RevenueTable";
 import Link from "next/link";
 
 export default function OverviewPanel({ company }: { company: CompanyData }) {
+  const overviewPeriod = company.overviewPeriod ?? "Q4/FY2025";
+
   return (
     <div className="space-y-4">
       {/* 30-second KPIs */}
-      <Card title="⚡ 30 秒速览 · Q4/FY2025">
+      <Card title={`⚡ 30 秒速览 · ${overviewPeriod}`}>
         <KPIGrid items={company.kpis.slice(0, 4)} />
         <div className="mt-2.5">
           <KPIGrid items={company.kpis.slice(4, 8)} />

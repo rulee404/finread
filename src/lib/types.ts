@@ -52,6 +52,8 @@ export interface CompanyData {
   exchange: string;
   sector: string;
   theme: "ai" | "defi" | "space";
+  /** Shown in overview KPI card title and browser tab, e.g. "Q1/FY2026" */
+  overviewPeriod?: string;
   tagline: string;
   iconLetter: string;
   iconGradient: string;

@@ -16,8 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { ticker } = await params;
   const company = getCompany(ticker);
   if (!company) return { title: "Not Found" };
+  const period = company.overviewPeriod ?? "Q4/FY2025";
   return {
-    title: `${company.ticker} ${company.name} · Q4/FY2025 一手财报 | FinRead`,
+    title: `${company.ticker} ${company.name} · ${period} 一手财报 | FinRead`,
     description: company.tagline,
   };
 }

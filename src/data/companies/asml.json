@@ -4,6 +4,7 @@
   "exchange": "Euronext AMS / NASDAQ",
   "sector": "半导体光刻设备",
   "theme": "ai",
+  "overviewPeriod": "Q1/FY2026",
   "tagline": "The Enabler of Moore's Law — 全球唯一 EUV 光刻机供应商，AI 芯片制造的关键瓶颈",
   "iconLetter": "A",
   "iconGradient": "linear-gradient(135deg, #00a3e0 0%, #004b87 100%)",
