@@ -9,7 +9,7 @@ const navItems = [
   {
     href: "/theme/ai",
     label: "AI",
-    match: (p: string) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda"),
+    match: (p: string) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda") || p.startsWith("/company/asml"),
     color: "text-theme-ai",
     activeBg: "bg-theme-ai-dim border-theme-ai/30",
   },

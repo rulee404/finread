@@ -1,0 +1,114 @@
+{
+  "ticker": "ASML",
+  "name": "ASML Holding N.V.",
+  "exchange": "Euronext AMS / NASDAQ",
+  "sector": "半导体光刻设备",
+  "theme": "ai",
+  "tagline": "The Enabler of Moore's Law — 全球唯一 EUV 光刻机供应商，AI 芯片制造的关键瓶颈",
+  "iconLetter": "A",
+  "iconGradient": "linear-gradient(135deg, #00a3e0 0%, #004b87 100%)",
+  "tags": [
+    { "label": "Q1 2026 Revenue", "value": "€8.8B" },
+    { "label": "FY2026 Guidance", "value": "€36-40B" },
+    { "label": "Gross Margin", "value": "53.0%" },
+    { "label": "Net Income", "value": "€2.8B" },
+    { "label": "EUV 产能", "value": "≥60 台 (2026)" }
+  ],
+  "kpis": [
+    { "label": "Q1 总收入", "value": "€8.8B", "change": "+13.2% Y/Y", "direction": "up" },
+    { "label": "净系统销售", "value": "€6.3B", "note": "含 EUV + DUV" },
+    { "label": "Installed Base", "value": "€2.5B", "change": "高于指引", "direction": "up" },
+    { "label": "Gross Margin", "value": "53.0%", "change": "指引高端", "direction": "up" },
+    { "label": "Net Income", "value": "€2.8B", "change": "+17.1% Y/Y", "direction": "up" },
+    { "label": "EPS (basic)", "value": "€7.15", "change": "+19.2% Y/Y", "direction": "up" },
+    { "label": "FY2026 指引", "value": "€36-40B", "change": "上调窄幅", "direction": "up" },
+    { "label": "Low NA EUV 2027", "value": "≥80 台", "note": "产能目标" }
+  ],
+  "summaries": [
+    {
+      "title": "I. Q1 2026 业绩",
+      "content": "总收入 €8.8B（指引内）· 净系统销售 €6.3B · Installed Base €2.5B（高于指引）\n毛利率 53%（指引高端）· 营业利润率 36% · 净利润 €2.8B\nInstalled Base 中高毛利率组件推动整体毛利表现\n出货光刻系统 79 台"
+    },
+    {
+      "title": "II. EUV 技术路线图",
+      "content": "1,000W 光源演示 — 确保 Low NA EUV 可延伸至 2031 年及以后\nNXE:3800E 产能提升 220→230 WpH · PEP-E 已发布\nNXE:3800F 规格上调至 260 WpH（原 250）· ~2028 年量产\n2031 年目标 330 WpH · 全栈光刻成本持续下降"
+    },
+    {
+      "title": "III. 产能扩张",
+      "content": "2026 年 Low NA EUV 产出目标 ≥60 台\n2027 年 Low NA EUV 产出目标 ≥80 台（季度环比递增）\nDUV immersion: 去年需求走低致慢启动 → 现已反转 → 全年接近去年出货量\nDry 和 Applications 业务同样增长 · Non-EUV 整体好于预期"
+    },
+    {
+      "title": "IV. High NA 进展",
+      "content": "客户在 SPIE 首次公开讨论 High NA\nDRAM + Logic 客户报告 EUV 掩模从 3 减至 1（High NA）\n工艺步骤从 100 步减至 10 步 · 成本显著降低\n光刻胶生态就绪 · Logic 可达 18nm L/S · Memory 可达 28nm hole\nHigh NA 可延伸 3-4 个节点 · 设备可用率持续改善"
+    },
+    {
+      "title": "V. 市场前瞻",
+      "content": "半导体行业增长持续巩固 · AI 基础设施投资驱动\n先进 Memory + 先进 Logic 需求旺盛 · 供不应求延续至 2026 年后\nMemory 客户 2026 年已 sold out · Logic 客户同时推进多节点 + 2nm 量产\n客户资本开支增加 · EUV 和 immersion 采用率提升 → 光刻强度增高\n2030 年收入目标 €44-60B · 毛利率 56-60%（2024 Investor Day）"
+    },
+    {
+      "title": "VI. 风险因素",
+      "content": "① 出口管制 — 对华销售限制持续演进，指引已包含潜在影响\n② 地缘政治 — 关税公告与贸易环境不确定性\n③ 客户集中度 — 前三大客户占收入绝大部分\n④ 产能爬坡执行风险 — 供应链零部件与关键设备交付\n⑤ High NA 量产时间线 — 良率与生态成熟度"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "Christophe Fouquet",
+      "role": "CEO",
+      "text": "The semiconductor industry growth continues to solidify. This is still very much driven by investments in AI infrastructure. We expect that the supply will not meet the demand for the foreseeable future.",
+      "textCn": "半导体行业增长持续巩固。这仍然主要由 AI 基础设施投资驱动。我们预计在可预见的未来，供给将无法满足需求。",
+      "color": "green"
+    },
+    {
+      "speaker": "Roger Dassen",
+      "role": "CFO",
+      "text": "We are actually narrowing the window, and also increasing the window of our expectation to €36 to €40 billion for this year. We believe we can accommodate potential outcomes of the export control discussions that are currently ongoing.",
+      "textCn": "我们实际上在收窄预期区间的同时也上调了区间，将今年的预期提高到 360-400 亿欧元。我们相信可以应对目前正在进行的出口管制讨论的潜在结果。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "Christophe Fouquet",
+      "role": "CEO",
+      "text": "We demonstrated the 1,000 Watt source. This means that we can secure the extensibility of Low NA EUV for many, many years. By 2031 we will be able to run this tool at 330 wafers per hour.",
+      "textCn": "我们演示了 1,000 瓦光源。这意味着我们可以确保 Low NA EUV 在未来很多很多年的可延伸性。到 2031 年，我们将能以每小时 330 片晶圆的速度运行这台设备。",
+      "color": "green"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Q1 2025", "fy2025": "€7,742M", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q2 2025", "fy2025": "€7,692M", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q3 2025", "fy2025": "€7,516M", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q4 2025", "fy2025": "€9,718M", "fy2024": "", "yoy": "", "direction": "up", "note": "季度最高" },
+    { "label": "Q1 2026", "fy2025": "€8,767M", "fy2024": "€7,742M (Q1'25)", "yoy": "+13.2%", "direction": "up", "isTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "Gross Margin Q1'26", "fy2025": "53.0%", "fy2024": "54.0% (Q1'25)", "yoy": "-1.0pp", "direction": "down", "isSectionTotal": true },
+    { "label": "Net Income Q1'26", "fy2025": "€2,757M", "fy2024": "€2,355M (Q1'25)", "yoy": "+17.1%", "direction": "up", "isSectionTotal": true }
+  ],
+  "docs": [
+    { "type": "transcript", "typeLabel": "实录", "title": "Q1 2026 Video Interview Transcript", "meta": "CEO Christophe Fouquet · CFO Roger Dassen", "links": [{ "label": "中英对照全文", "href": "/company/asml/doc/asml-q1fy26-transcript", "primary": true }, { "label": "PDF 原文", "href": "https://ourbrand.asml.com/asset/844a0685-bbac-42f3-8f68-5f2453a03a27/ASML-Transcript-video-Q1-2026.pdf" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "Q1 2026 Investor Relations Presentation", "meta": "19 页投资者演示稿 · 含财务报表", "links": [{ "label": "中英对照全文", "href": "/company/asml/doc/asml-q1fy26-presentation", "primary": true }, { "label": "PDF 原文", "href": "https://ourbrand.asml.com/asset/d7b914e6-fdd1-4262-b805-d80f3efcb39a/2026_04_15_Presentation-Investor-Relations-Q1-2026.pdf" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "Christophe Fouquet",
+      "role": "CEO — 市场展望",
+      "text": "The semiconductor industry growth continues to solidify. This is still very much driven by investments in AI infrastructure. So, this translates into a lot of demand for advanced Memory, for advanced Logic. We expect in fact that the supply will not meet the demand for the foreseeable future.",
+      "textCn": "半导体行业增长持续巩固。这仍然主要由 AI 基础设施投资驱动。这转化为对先进存储和先进逻辑芯片的大量需求。我们预计在可预见的未来，供给将无法满足需求。",
+      "color": "green"
+    },
+    {
+      "speaker": "Roger Dassen",
+      "role": "CFO — 业绩回顾",
+      "text": "For the quarter, total net sales came in at €8.8 billion. That was within guidance. If you look at the gross margin for Q1, 53%. That was at the high end of the gross margin that we guided. Net income for the quarter €2.8 billion.",
+      "textCn": "本季度总净销售额为 88 亿欧元，在指引范围内。Q1 毛利率为 53%，处于我们指引的高端。本季度净利润为 28 亿欧元。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "Roger Dassen",
+      "role": "CFO — 全年指引",
+      "text": "2026 is panning out very nicely. It's a very strong year. We're looking at a strong growth year. We are actually narrowing the window, and also increasing the window of our expectation to €36 to €40 billion for this year.",
+      "textCn": "2026 年进展非常好。这是非常强劲的一年。我们正在看到强劲增长。我们实际上在收窄预期区间的同时也上调了区间，将今年的预期提高到 360-400 亿欧元。",
+      "color": "cyan"
+    }
+  ],
+  "weeklyRefs": []
+}

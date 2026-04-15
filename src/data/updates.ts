@@ -22,6 +22,15 @@ export interface SiteUpdate {
  */
 const updates: SiteUpdate[] = [
   {
+    id: "u-20260416-asml-q1",
+    date: "2026-04-16",
+    type: "earnings",
+    theme: "ai",
+    title: "新增：ASML Q1 2026 Transcript + IR Presentation 全文中英对照（含 PDF 下载）",
+    href: "/company/asml",
+    isNew: true,
+  },
+  {
     id: "u-20250414-opinion-ai-index",
     date: "2026-04-14",
     type: "opinion",

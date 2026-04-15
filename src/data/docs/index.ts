@@ -4,6 +4,14 @@ import {
   crclQ4TranscriptPaidContent,
   crclQ4SummaryCards,
 } from "./crcl-q4fy25-transcript-full";
+import {
+  asmlQ1TranscriptFreePreview,
+  asmlQ1TranscriptPaidContent,
+} from "./asml-q1fy26-transcript-full";
+import {
+  asmlQ1PresentationFreePreview,
+  asmlQ1PresentationPaidContent,
+} from "./asml-q1fy26-presentation-full";
 
 /* ═══════════════════════════════════════════
    HOOD — Robinhood
@@ -554,6 +562,51 @@ const rklbDiscussions: Discussion[] = [
 ];
 
 /* ═══════════════════════════════════════════
+   ASML — ASML Holding
+   ═══════════════════════════════════════════ */
+
+const asmlDocs: CompanyDoc[] = [
+  {
+    id: "asml-q1fy26-transcript",
+    ticker: "ASML",
+    quarter: "Q1 2026",
+    category: "transcript",
+    categoryLabel: "Video Interview Transcript",
+    title: "Q1 2026 Video Interview Transcript 全文中英对照",
+    date: "2026-04-16",
+    summary:
+      "CEO Christophe Fouquet 与 CFO Roger Dassen Q1 2026 业绩视频访谈全文。涵盖 Q1 业绩回顾（总收入 €8.8B、毛利率 53%）、市场展望（AI 驱动半导体需求）、产能扩张（2026 年 ≥60 台 Low NA EUV、2027 年 ≥80 台）、全年指引上调至 €36-40B、EUV 技术路线图（1,000W 光源演示）和 High NA 进展。",
+    price: 0,
+    wordCount: 4200,
+    externalUrl:
+      "https://ourbrand.asml.com/asset/844a0685-bbac-42f3-8f68-5f2453a03a27/ASML-Transcript-video-Q1-2026.pdf",
+    freePreview: asmlQ1TranscriptFreePreview,
+    paidContent: asmlQ1TranscriptPaidContent,
+  },
+  {
+    id: "asml-q1fy26-presentation",
+    ticker: "ASML",
+    quarter: "Q1 2026",
+    category: "earnings-ppt",
+    categoryLabel: "Investor Relations Presentation",
+    title: "Q1 2026 Investor Relations Presentation 全文中英对照",
+    date: "2026-04-16",
+    summary:
+      "ASML Q1 2026 投资者关系演示文稿全 19 页中英对照。包含投资者关键信息、Q1 业绩数据、EUV 技术路线图、High NA 进展、净系统销售明细、出货数量、终端用途拆分、净订单额、股东回报、展望与指引、2030 年收入目标，以及完整的合并利润表、现金流量表和资产负债表。",
+    price: 0,
+    wordCount: 8500,
+    externalUrl:
+      "https://ourbrand.asml.com/asset/d7b914e6-fdd1-4262-b805-d80f3efcb39a/2026_04_15_Presentation-Investor-Relations-Q1-2026.pdf",
+    freePreview: asmlQ1PresentationFreePreview,
+    paidContent: asmlQ1PresentationPaidContent,
+  },
+];
+
+const asmlRelated: RelatedContent[] = [];
+
+const asmlDiscussions: Discussion[] = [];
+
+/* ═══════════════════════════════════════════
    Exports
    ═══════════════════════════════════════════ */
 
@@ -563,6 +616,7 @@ const allDocs: CompanyDoc[] = [
   ...coinDocs,
   ...nvdaDocs,
   ...rklbDocs,
+  ...asmlDocs,
 ];
 
 const allRelated: RelatedContent[] = [
@@ -571,6 +625,7 @@ const allRelated: RelatedContent[] = [
   ...coinRelated,
   ...nvdaRelated,
   ...rklbRelated,
+  ...asmlRelated,
 ];
 
 const allDiscussions: Discussion[] = [
@@ -579,6 +634,7 @@ const allDiscussions: Discussion[] = [
   ...coinDiscussions,
   ...nvdaDiscussions,
   ...rklbDiscussions,
+  ...asmlDiscussions,
 ];
 
 export function getDocsByTicker(ticker: string): CompanyDoc[] {
