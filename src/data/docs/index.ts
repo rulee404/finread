@@ -11,6 +11,7 @@ import {
 import {
   asmlQ1PresentationFreePreview,
   asmlQ1PresentationPaidContent,
+  asmlQ1PresentationSummaryCards,
 } from "./asml-q1fy26-presentation-full";
 
 /* ═══════════════════════════════════════════
@@ -590,11 +591,12 @@ const asmlDocs: CompanyDoc[] = [
     category: "earnings-ppt",
     categoryLabel: "Investor Relations Presentation",
     title: "Q1 2026 Investor Relations Presentation 全文中英对照",
-    date: "2026-04-16",
+    date: "2026-04-15",
     summary:
-      "ASML Q1 2026 投资者关系演示文稿全 19 页中英对照。包含投资者关键信息、Q1 业绩数据、EUV 技术路线图、High NA 进展、净系统销售明细、出货数量、终端用途拆分、净订单额、股东回报、展望与指引、2030 年收入目标，以及完整的合并利润表、现金流量表和资产负债表。",
+      "ASML Q1 2026 投资者关系演示文稿全 19 页逐页中英对照翻译。包含投资者关键信息（7 大战略要点）、Q1 业绩摘要（总收入 €8.8B、毛利率 53.0%、EPS €7.15）、NXE:3800E 升级、EUV 产品路线图、净系统销售明细、终端用途拆分、股东回报（2025 年度总股息 €7.50/股）、Q2 与全年展望（€36-40B），以及完整的五季度合并经营报表、现金流量表和资产负债表。",
+    summaryCards: asmlQ1PresentationSummaryCards,
     price: 0,
-    wordCount: 8500,
+    wordCount: 7200,
     externalUrl:
       "https://ourbrand.asml.com/asset/d7b914e6-fdd1-4262-b805-d80f3efcb39a/2026_04_15_Presentation-Investor-Relations-Q1-2026.pdf",
     freePreview: asmlQ1PresentationFreePreview,
