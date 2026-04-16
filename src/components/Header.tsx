@@ -4,19 +4,26 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AuthButton from "./AuthButton";
 
-const navItems = [
-  { href: "/", label: "首页", match: (p: string) => p === "/" },
+interface NavItem {
+  href: string;
+  label: string;
+  match: (p: string) => boolean;
+  color?: string;
+  activeBg?: string;
+}
+
+const tracks: NavItem[] = [
   {
     href: "/theme/ai",
     label: "AI",
-    match: (p: string) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda") || p.startsWith("/company/asml"),
+    match: (p) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda") || p.startsWith("/company/asml"),
     color: "text-theme-ai",
     activeBg: "bg-theme-ai-dim border-theme-ai/30",
   },
   {
     href: "/theme/defi",
     label: "DeFi",
-    match: (p: string) =>
+    match: (p) =>
       p.startsWith("/theme/defi") ||
       ["/company/hood", "/company/coin", "/company/crcl"].some((c) => p.startsWith(c)),
     color: "text-theme-defi",
@@ -25,27 +32,45 @@ const navItems = [
   {
     href: "/theme/space",
     label: "Space",
-    match: (p: string) => p.startsWith("/theme/space") || p.startsWith("/company/rklb"),
+    match: (p) => p.startsWith("/theme/space") || p.startsWith("/company/rklb"),
     color: "text-theme-space",
     activeBg: "bg-theme-space-dim border-theme-space/30",
   },
-  { href: "/opinions", label: "观点", match: (p: string) => p.startsWith("/opinions") },
-  { href: "/weekly", label: "周报", match: (p: string) => p.startsWith("/weekly") },
+];
+
+const content: NavItem[] = [
+  { href: "/opinions", label: "观点", match: (p) => p.startsWith("/opinions") },
+  { href: "/weekly", label: "周报", match: (p) => p.startsWith("/weekly") },
   {
     href: "/reports",
     label: "研报",
-    match: (p: string) => p.startsWith("/reports"),
+    match: (p) => p.startsWith("/reports"),
     color: "text-accent-blue",
     activeBg: "bg-accent-blue/10 border-accent-blue/30",
   },
-  {
-    href: "/pro",
-    label: "Pro",
-    match: (p: string) => p.startsWith("/pro"),
-    color: "text-gold",
-    activeBg: "bg-gold-dim border-gold/30",
-  },
 ];
+
+function NavPill({ item, pathname }: { item: NavItem; pathname: string }) {
+  const isActive = item.match(pathname);
+  const activeClasses = item.activeBg ?? "border-gold/30 bg-gold-dim";
+  const activeText = item.color ?? "text-ink";
+  return (
+    <Link
+      href={item.href}
+      className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
+        isActive
+          ? `${activeClasses} ${activeText}`
+          : "border-border text-muted hover:border-gold/20 hover:text-ink"
+      }`}
+    >
+      {item.label}
+    </Link>
+  );
+}
+
+function Separator() {
+  return <span className="mx-0.5 h-4 w-px bg-border" aria-hidden />;
+}
 
 export default function Header() {
   const pathname = usePathname();
@@ -53,34 +78,37 @@ export default function Header() {
   return (
     <header className="border-b border-border">
       <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-between gap-3 px-5 py-3 max-lg:pr-16">
+        {/* Logo = Home */}
         <Link href="/" className="flex items-center gap-2 text-[15px] font-bold tracking-tight text-ink">
           Fin<span className="text-gold">Read</span>
-          <span className="rounded-md bg-surface2 px-1.5 py-0.5 text-[9px] font-medium text-muted">
-            AI · DeFi · Space
-          </span>
         </Link>
 
         <nav className="flex flex-wrap items-center gap-1.5">
-          {navItems.map((item) => {
-            const isActive = item.match(pathname);
-            const activeClasses = item.activeBg
-              ? item.activeBg
-              : "border-gold/30 bg-gold-dim";
-            const activeText = item.color ?? "text-ink";
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
-                  isActive
-                    ? `${activeClasses} ${activeText}`
-                    : "border-border text-muted hover:border-gold/20 hover:text-ink"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {/* Group 1: Tracks */}
+          {tracks.map((item) => (
+            <NavPill key={item.href} item={item} pathname={pathname} />
+          ))}
+
+          <Separator />
+
+          {/* Group 2: Content */}
+          {content.map((item) => (
+            <NavPill key={item.href} item={item} pathname={pathname} />
+          ))}
+
+          <Separator />
+
+          {/* Group 3: Account */}
+          <Link
+            href="/pro"
+            className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
+              pathname.startsWith("/pro")
+                ? "border-gold/30 bg-gold-dim text-gold"
+                : "border-border text-muted hover:border-gold/20 hover:text-gold"
+            }`}
+          >
+            Pro
+          </Link>
           <AuthButton />
         </nav>
       </div>
