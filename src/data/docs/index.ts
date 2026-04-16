@@ -13,6 +13,18 @@ import {
   asmlQ1PresentationPaidContent,
   asmlQ1PresentationSummaryCards,
 } from "./asml-q1fy26-presentation-full";
+import {
+  tsmcQ1EarningsReleaseFreePreview,
+  tsmcQ1EarningsReleasePaidContent,
+} from "./tsmc-q1-26-earnings-release-full";
+import {
+  tsmcQ1PresentationFreePreview,
+  tsmcQ1PresentationPaidContent,
+} from "./tsmc-q1-26-presentation-full";
+import {
+  tsmcQ1MgmtReportFreePreview,
+  tsmcQ1MgmtReportPaidContent,
+} from "./tsmc-q1-26-management-report-full";
 
 /* ═══════════════════════════════════════════
    HOOD — Robinhood
@@ -609,6 +621,68 @@ const asmlRelated: RelatedContent[] = [];
 const asmlDiscussions: Discussion[] = [];
 
 /* ═══════════════════════════════════════════
+   TSM — TSMC
+   ═══════════════════════════════════════════ */
+
+const tsmDocs: CompanyDoc[] = [
+  {
+    id: "tsmc-q1-26-management-report",
+    ticker: "TSM",
+    quarter: "Q1 2026",
+    category: "transcript",
+    categoryLabel: "Quarterly Management Report",
+    title: "Q1 2026 Management Report 全文中英对照",
+    date: "2026-04-16",
+    summary:
+      "台积电 Q1 2026 季度管理报告全文中英对照。收入 NT$1,134.1B（US$35.9B，+35.1% YoY）、毛利率 66.2%（+7.4pp YoY）、营业利润率 58.1%、净利润 NT$572.5B（+58.3% YoY）。含收入分析（制程/平台/地区）、利润分析（毛利/营业/非营业/净利）、财务状况、现金流及资本支出详解。",
+    price: 0,
+    wordCount: 6000,
+    externalUrl:
+      "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/9f060092ba29ff3630cfdaefd67774026195e135/1Q26ManagementReport.pdf",
+    freePreview: tsmcQ1MgmtReportFreePreview,
+    paidContent: tsmcQ1MgmtReportPaidContent,
+  },
+  {
+    id: "tsmc-q1-26-presentation",
+    ticker: "TSM",
+    quarter: "Q1 2026",
+    category: "earnings-ppt",
+    categoryLabel: "Earnings Presentation",
+    title: "Q1 2026 Earnings Presentation 全文中英对照",
+    date: "2026-04-16",
+    summary:
+      "台积电 Q1 2026 业绩发布会投资者演示文稿全文翻译。CFO 黄仁昭与董事长魏哲家主讲。含损益表、按制程/平台收入拆分、资产负债表、现金流及近期重大事项。",
+    price: 0,
+    wordCount: 3500,
+    externalUrl:
+      "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/184cd5041fbd5abe8a3ace9863d60bfe14e73be8/1Q26%20Presentation%20%28E%29_WoG.pdf",
+    freePreview: tsmcQ1PresentationFreePreview,
+    paidContent: tsmcQ1PresentationPaidContent,
+  },
+  {
+    id: "tsmc-q1-26-earnings-release",
+    ticker: "TSM",
+    quarter: "Q1 2026",
+    category: "press-release",
+    categoryLabel: "Earnings Release",
+    title: "Q1 2026 Earnings Release 全文中英对照",
+    date: "2026-04-16",
+    summary:
+      "台积电 Q1 2026 业绩公告。EPS NT$22.08（US$3.49/ADR），收入 NT$1,134.1B（+35.1% YoY），毛利率 66.2%，营业利润率 58.1%，净利润率 50.5%。先进制程（≤7nm）占晶圆收入 74%。",
+    price: 0,
+    wordCount: 1200,
+    externalUrl:
+      "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/bd8eb0403902fdea59a2f5e390e48d010b50edc9/1Q26%20EarningsRelease_WoG.pdf",
+    freePreview: tsmcQ1EarningsReleaseFreePreview,
+    paidContent: tsmcQ1EarningsReleasePaidContent,
+  },
+];
+
+const tsmRelated: RelatedContent[] = [];
+
+const tsmDiscussions: Discussion[] = [];
+
+/* ═══════════════════════════════════════════
    Exports
    ═══════════════════════════════════════════ */
 
@@ -619,6 +693,7 @@ const allDocs: CompanyDoc[] = [
   ...nvdaDocs,
   ...rklbDocs,
   ...asmlDocs,
+  ...tsmDocs,
 ];
 
 const allRelated: RelatedContent[] = [
@@ -628,6 +703,7 @@ const allRelated: RelatedContent[] = [
   ...nvdaRelated,
   ...rklbRelated,
   ...asmlRelated,
+  ...tsmRelated,
 ];
 
 const allDiscussions: Discussion[] = [
@@ -637,6 +713,7 @@ const allDiscussions: Discussion[] = [
   ...nvdaDiscussions,
   ...rklbDiscussions,
   ...asmlDiscussions,
+  ...tsmDiscussions,
 ];
 
 export function getDocsByTicker(ticker: string): CompanyDoc[] {

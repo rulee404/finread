@@ -16,7 +16,7 @@ const tracks: NavItem[] = [
   {
     href: "/theme/ai",
     label: "AI",
-    match: (p) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda") || p.startsWith("/company/asml"),
+    match: (p) => p.startsWith("/theme/ai") || p.startsWith("/company/nvda") || p.startsWith("/company/asml") || p.startsWith("/company/tsm"),
     color: "text-theme-ai",
     activeBg: "bg-theme-ai-dim border-theme-ai/30",
   },

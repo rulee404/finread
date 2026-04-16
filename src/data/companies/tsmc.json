@@ -1,0 +1,116 @@
+{
+  "ticker": "TSM",
+  "name": "台积电 TSMC",
+  "exchange": "TWSE 2330 / NYSE TSM",
+  "sector": "半导体代工",
+  "theme": "ai",
+  "overviewPeriod": "Q1/2026",
+  "tagline": "全球最大芯片代工厂 — AI 芯片制造核心，3nm/5nm 先进制程占比 74%",
+  "iconLetter": "T",
+  "iconGradient": "linear-gradient(135deg, #e30613 0%, #8b0000 100%)",
+  "tags": [
+    { "label": "Q1 Revenue", "value": "US$35.9B" },
+    { "label": "Gross Margin", "value": "66.2%" },
+    { "label": "Operating Margin", "value": "58.1%" },
+    { "label": "Net Income", "value": "NT$572.5B" },
+    { "label": "先进制程占比", "value": "74%" }
+  ],
+  "kpis": [
+    { "label": "Q1 总收入", "value": "US$35.9B", "change": "+40.6% Y/Y", "direction": "up" },
+    { "label": "NT$ 收入", "value": "NT$1,134.1B", "change": "+35.1% Y/Y", "direction": "up" },
+    { "label": "Gross Margin", "value": "66.2%", "change": "+7.4pp Y/Y", "direction": "up" },
+    { "label": "Operating Margin", "value": "58.1%", "change": "+9.6pp Y/Y", "direction": "up" },
+    { "label": "Net Income", "value": "NT$572.5B", "change": "+58.3% Y/Y", "direction": "up" },
+    { "label": "EPS", "value": "NT$22.08", "change": "+58.3% Y/Y", "direction": "up" },
+    { "label": "先进制程 (≤7nm)", "value": "74%", "note": "3nm 25% · 5nm 36% · 7nm 13%" },
+    { "label": "CapEx", "value": "US$11.1B", "note": "季度资本开支" }
+  ],
+  "summaries": [
+    {
+      "title": "I. Q1 2026 业绩亮点",
+      "content": "收入 NT$1,134.1B（US$35.9B）· QoQ +8.4% · YoY +35.1%\n毛利率 66.2%（QoQ +3.9pp · YoY +7.4pp）— 成本改善 + 产能利用率提升 + 有利汇率\n营业利润率 58.1%（QoQ +4.1pp）· 净利润率 50.5%\n净利润 NT$572.5B（+58.3% Y/Y）· EPS NT$22.08（US$3.49/ADR）"
+    },
+    {
+      "title": "II. 收入结构 — 制程",
+      "content": "3nm: 25%（4Q25: 28%）· 5nm: 36%（4Q25: 35%）· 7nm: 13%（4Q25: 14%）\n先进制程（≤7nm）合计占总晶圆收入 74%\n16/20nm: 7% · 28nm: 7% · 40/45nm: 3% · 成熟制程需求稳定\n出货量 4,174K 片 12 寸等效晶圆（QoQ +5.4% · YoY +28.1%）"
+    },
+    {
+      "title": "III. 收入结构 — 平台 & 地区",
+      "content": "HPC（高性能计算）: 61%（QoQ 从 55% 大幅上升）— AI 驱动\nSmartphone: 26%（QoQ 从 32% 下降）· IoT: 6% · Automotive: 4%\n北美: 76% · 亚太: 9% · 中国: 7% · 日本: 4% · EMEA: 4%\nHPC 季度环比增长 20%，IoT +12%，DCE +28%"
+    },
+    {
+      "title": "IV. 利润分析",
+      "content": "销售成本 NT$382.8B · 毛利润 NT$751.3B\n研发费用 NT$67.8B · SG&A NT$26.3B · 运营费用占收入 8.3%（下降）\n营业利润 NT$659.0B · 非营业项目净收益 NT$28.8B（含汇兑收益）\n有效税率 16.8% · 净利润 NT$572.5B"
+    },
+    {
+      "title": "V. 财务状况 & 现金流",
+      "content": "现金及有价证券 NT$3,383.6B · 净现金储备 NT$2,326.3B\n应收账款周转天数 26 天 · 存货周转天数 80 天（因 N2 爬坡 + N3 需求强劲）\n经营性现金流 NT$699.0B · 资本支出 NT$350.8B（US$11.1B）\n自由现金流 NT$348.2B · 流动比率 2.5x"
+    },
+    {
+      "title": "VI. 股东回报 & 近期事项",
+      "content": "董事会批准 2025 年 Q4 现金股利 NT$6.00/股\n除息日 2026/06/11 · 基准日 2026/06/17 · 发放日 2026/07/09\n季度现金股利 NT$129.66B · 年化股息收益率约 1.5%"
+    }
+  ],
+  "quotes": [
+    {
+      "speaker": "TSMC",
+      "role": "Earnings Release",
+      "text": "TSMC today announced consolidated revenue of NT$1,134.10 billion, net income of NT$572.48 billion, and diluted earnings per share of NT$22.08 for the first quarter ended March 31, 2026.",
+      "textCn": "台积电今日宣布截至 2026 年 3 月 31 日的第一季度合并收入为新台币 1,134.10 亿元，净利润新台币 572.48 亿元，摊薄每股收益新台币 22.08 元。",
+      "color": "green"
+    },
+    {
+      "speaker": "TSMC",
+      "role": "Revenue Analysis",
+      "text": "In the first quarter, revenue increased 8.4% quarter-over-quarter, as our business was supported by strong demand for our leading-edge process technologies. Advanced technologies (7nm and below) accounted for 74% of total wafer revenue.",
+      "textCn": "第一季度收入环比增长 8.4%，业务受到先进制程技术强劲需求的支撑。先进技术（7 纳米及以下）占总晶圆收入的 74%。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "TSMC",
+      "role": "Gross Margin Analysis",
+      "text": "Gross margin was 66.2% in 1Q26, 3.9 percentage points higher than 4Q25, primarily due to cost improvement efforts, a higher capacity utilization rate and a more favorable foreign exchange rate.",
+      "textCn": "Q1 2026 毛利率为 66.2%，较 Q4 2025 高 3.9 个百分点，主要得益于成本改善措施、更高的产能利用率和更有利的汇率。",
+      "color": "green"
+    }
+  ],
+  "revenueTable": [
+    { "label": "Q1 2025", "fy2025": "NT$839.3B", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q2 2025", "fy2025": "NT$936.2B", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q3 2025", "fy2025": "NT$868.5B", "fy2024": "", "yoy": "", "direction": "flat" },
+    { "label": "Q4 2025", "fy2025": "NT$1,046.1B", "fy2024": "", "yoy": "", "direction": "up", "note": "季度最高" },
+    { "label": "Q1 2026", "fy2025": "NT$1,134.1B", "fy2024": "NT$839.3B (Q1'25)", "yoy": "+35.1%", "direction": "up", "isTotal": true },
+    { "label": "", "fy2025": "", "fy2024": "", "yoy": "", "direction": "flat", "isSpacer": true },
+    { "label": "GM Q1'26", "fy2025": "66.2%", "fy2024": "58.8% (Q1'25)", "yoy": "+7.4pp", "direction": "up", "isSectionTotal": true },
+    { "label": "Net Income Q1'26", "fy2025": "NT$572.5B", "fy2024": "NT$361.6B (Q1'25)", "yoy": "+58.3%", "direction": "up", "isSectionTotal": true }
+  ],
+  "docs": [
+    { "type": "transcript", "typeLabel": "管报", "title": "Q1 2026 Management Report", "meta": "6 页季度管理报告 · 含收入/利润/现金流分析", "links": [{ "label": "中英对照全文", "href": "/company/tsm/doc/tsmc-q1-26-management-report", "primary": true }, { "label": "PDF 原文", "href": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/9f060092ba29ff3630cfdaefd67774026195e135/1Q26ManagementReport.pdf" }] },
+    { "type": "ppt", "typeLabel": "PPT", "title": "Q1 2026 Earnings Presentation", "meta": "10 页投资者演示稿 · 含财务报表", "links": [{ "label": "中英对照全文", "href": "/company/tsm/doc/tsmc-q1-26-presentation", "primary": true }, { "label": "PDF 原文", "href": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/184cd5041fbd5abe8a3ace9863d60bfe14e73be8/1Q26%20Presentation%20%28E%29_WoG.pdf" }] },
+    { "type": "8k", "typeLabel": "新闻稿", "title": "Q1 2026 Earnings Release", "meta": "2 页业绩公告", "links": [{ "label": "中英对照全文", "href": "/company/tsm/doc/tsmc-q1-26-earnings-release", "primary": true }, { "label": "PDF 原文", "href": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-04/bd8eb0403902fdea59a2f5e390e48d010b50edc9/1Q26%20EarningsRelease_WoG.pdf" }] }
+  ],
+  "transcriptPreview": [
+    {
+      "speaker": "TSMC",
+      "role": "Q1 2026 业绩亮点",
+      "text": "Net revenue was NT$1,134.10 billion, representing an 8.4% increase from NT$1,046.09 billion in 4Q25 and a 35.1% increase from NT$839.25 billion in 1Q25.",
+      "textCn": "净收入为新台币 1,134.10 亿元，较 Q4 2025 的新台币 1,046.09 亿元增长 8.4%，较 Q1 2025 的新台币 839.25 亿元增长 35.1%。",
+      "color": "green"
+    },
+    {
+      "speaker": "TSMC",
+      "role": "毛利率表现",
+      "text": "Gross margin was 66.2%, 3.9 percentage points higher than 4Q25 and 7.4 percentage points higher than 1Q25. Operating margin was 58.1%, up 4.1 percentage points from 4Q25.",
+      "textCn": "毛利率为 66.2%，较 Q4 2025 高 3.9 个百分点，较 Q1 2025 高 7.4 个百分点。营业利润率为 58.1%，较 Q4 2025 上升 4.1 个百分点。",
+      "color": "cyan"
+    },
+    {
+      "speaker": "TSMC",
+      "role": "先进制程驱动",
+      "text": "3-nanometer accounted for 25% of total wafer revenue; 5-nanometer accounted for 36%; 7-nanometer accounted for 13%. Advanced technologies accounted for 74% of total wafer revenue.",
+      "textCn": "3 纳米占总晶圆收入的 25%；5 纳米占 36%；7 纳米占 13%。先进技术合计占总晶圆收入的 74%。",
+      "color": "green"
+    }
+  ],
+  "weeklyRefs": []
+}

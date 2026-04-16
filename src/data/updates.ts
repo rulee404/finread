@@ -22,6 +22,15 @@ export interface SiteUpdate {
  */
 const updates: SiteUpdate[] = [
   {
+    id: "u-20260416-tsmc-q1",
+    date: "2026-04-16",
+    type: "earnings",
+    theme: "ai",
+    title: "新增：台积电 TSMC Q1 2026 财报三件套 — Management Report + Presentation + Earnings Release 全文中英对照",
+    href: "/company/tsm",
+    isNew: true,
+  },
+  {
     id: "u-20260416-asml-q1",
     date: "2026-04-16",
     type: "earnings",

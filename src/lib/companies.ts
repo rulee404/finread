@@ -7,6 +7,7 @@ import crclData from "@/data/companies/crcl.json";
 import nvdaData from "@/data/companies/nvda.json";
 import rklbData from "@/data/companies/rklb.json";
 import asmlData from "@/data/companies/asml.json";
+import tsmcData from "@/data/companies/tsmc.json";
 
 const companies: Record<string, CompanyData> = {
   hood: hoodData as CompanyData,
@@ -15,6 +16,7 @@ const companies: Record<string, CompanyData> = {
   nvda: nvdaData as CompanyData,
   rklb: rklbData as CompanyData,
   asml: asmlData as CompanyData,
+  tsm: tsmcData as CompanyData,
 };
 
 export function getCompany(ticker: string): CompanyData | undefined {
